@@ -231,6 +231,19 @@ class Direction(Enum):
             case _:
                 return Direction.UNKNOWN
 
+    def to_coords(self) -> tuple[int, int]:
+        match self:
+            case Direction.UP:
+                return (0, 1)
+            case Direction.DOWN:
+                return (0, -1)
+            case Direction.RIGHT:
+                return (1, 0)
+            case Direction.LEFT:
+                return (-1, 0)
+            case _:
+                return (0, 0)
+
 
 class ZombieType(Enum):
     UNKNOWN = 0
@@ -296,49 +309,10 @@ class Zombie:
             "x": self.location.x,
             "y": self.location.y,
         }
-    
-    @staticmethod
-    def direction_map(direction: Direction) -> tuple:
-        match direction:
-            case Direction.UP:
-                return (0, 1)
-            case Direction.DOWN:
-                return (0, -1)
-            case Direction.RIGHT:
-                return (1, 0)
-            case Direction.LEFT:
-                return (-1, 0)
 
-
-    def get_affected_coordinates(self) -> list[(int, int)]:
-        """че надо написать неебаться хуйню да со свитчами по типу
-        """
-        zombie_type = self.type
-        direction = Zombie.direction_map(self.direction)
-        match zombie_type:
-            case ZombieType.NORMAL:
-                return [(self.x+direction[0], self.y+direction[1])]
-            case ZombieType.FAST:
-                return [(self.x+2*direction[0], self.y+2*direction[1])]
-            case ZombieType.BOMBER:
-                delta = [-1, 0, 1]
-                res = []
-                for dx in delta:
-                    for dy in delta:
-                        res.append((self.x+direction[0]+dx, self.y+direction[1]+dy))
-                return res
-            case ZombieType.LINER:
-                return [(self.x+direction[0], self.y+direction[1]), (self.x+2*direction[0], self.y+2*direction[1])]
-            case ZombieType.JUGGERNAUT:
-                return [(self.x+direction[0], self.y+direction[1])]
-            case ZombieType.CHAOS_KNIGHT:
-                if direction[0]==0:
-                    return [(self.x+1, self.y+3*direction[1]), (self.x-1, self.y+3*direction[1])]
-                else:
-                    return [(self.x+3*direction[0], self.y+1), (self.x+3*direction[0], self.y-1)] 
-            case _:
-                return [()]
-
+    def get_affected_coordinates(self) -> list[Location]:
+        """че надо написать неебаться хуйню да со свитчами по типу"""
+        ...
 
 
 @dataclass

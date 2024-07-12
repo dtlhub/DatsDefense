@@ -20,7 +20,6 @@ def main():
     api = gameserver.consumer.ApiConsumer(TEST_HOST, TOKEN)
     storage = gameserver.storage.RoundStorage(STORAGE)
     runner = gameserver.runner.Runner()
-
     runner.run()
 
 
