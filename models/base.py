@@ -1,4 +1,8 @@
-class BasePoint:
+from .point  import Point
+from .zombie import Zombie
+
+
+class BasePoint(Point):
     def __init__(self, attack, health, id, is_head, last_attack, range, x, y):
         self.attack = attack
         self.health = health
@@ -27,6 +31,17 @@ class Base:
     def __init__(self, base_points: list[BasePoint]):
         self.base_points = base_points
 
+    def attack_zombie(self, zombie: Zombie) -> list[BasePoint]:
+        accumulated_damage = 0
+        attackers = []
+        for point in self.base_points:
+            if point.distance(zombie) <= point.range:
+                attackers.append(point)
+                accumulated_damage += point.attack
+            if accumulated_damage >= zombie.health:
+                break
+        
+        return attackers
 
 
 def base_from_json(base_data: list) -> Base:

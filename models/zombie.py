@@ -1,4 +1,6 @@
-class Zombie:
+from .point import Point
+
+class Zombie(Point):
     def __init__(self, x, y, direction, id, health, speed, type, wait_turns, attack):
         self.x = x
         self.y = y
