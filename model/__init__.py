@@ -271,10 +271,14 @@ class GetUnitsResponse:
     def attack(self) -> list[AttackCommand]:
         accumulated_damage = 0
         attackers: list[MyBaseLocation] = []
+        used_attackers = []
         attacks = []
         for zombie in self.zombies:
             attackers = []
             for point in self.base:
+                if point in used_attackers:
+                    continue
+                
                 if point.location.distance(zombie.location) <= point.range:
                     attackers.append(point)
                     accumulated_damage += point.attack
@@ -285,6 +289,7 @@ class GetUnitsResponse:
                 continue
             for attacker in attackers:
                 attacks.append(AttackCommand(attacker.id, zombie.location))
+                used_attackers.append(attacker)
             
                 
         return attackers
