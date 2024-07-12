@@ -23,8 +23,7 @@ def load(path: Path) -> list[PassedRound]:
 class RoundStorage:
     def __init__(self, path: Path):
         self.path = path
-        self._rounds = []
-        self._current_round = 0
+        self._rounds = load(path)
 
     def get_stored(self) -> list[PassedRound]:
         return self._rounds

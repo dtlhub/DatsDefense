@@ -1,8 +1,9 @@
+import time
 import threading
 from typing import cast
 
 from model import Command
-from model.state import RoundSnapshot, State
+from model.state import RoundSnapshot, State, PassedRound
 from .consumer import ApiConsumer
 from .storage import RoundStorage
 from .strategy import Strategy
@@ -78,4 +79,15 @@ class Runner(threading.Thread):
                     self.next_round_strategy = cast(str, next_strategy)
         self._api.send_command(command)
 
-    def run(self): ...
+        self._storage.add(
+            PassedRound(
+                game=self.get_round_cached(),
+                command=command,
+            )
+        )
+
+    def run(self):
+        while True:
+            current_round = self.get_round_cached()
+            time.sleep(current_round.units.turn_ends_in_ms / 1000)
+            self.run_round()

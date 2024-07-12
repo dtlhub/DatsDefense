@@ -4,6 +4,9 @@ from pathlib import Path
 import gameserver.consumer
 import gameserver.storage
 import gameserver.runner
+import gameserver.strategies.idle
+
+import visualisation.app
 
 
 TEST_HOST = "https://games-test.datsteam.dev"
@@ -17,10 +20,18 @@ logging.basicConfig(level=logging.INFO)
 
 
 def main():
+    STORAGE.mkdir(parents=True, exist_ok=True)
+
     api = gameserver.consumer.ApiConsumer(TEST_HOST, TOKEN)
     storage = gameserver.storage.RoundStorage(STORAGE)
-    runner = gameserver.runner.Runner()
-    runner.run()
+    strategy = gameserver.strategies.idle.IdleStrategy()
+
+    runner = gameserver.runner.Runner(api, storage, strategy)
+    runner.start()
+
+    visualise = visualisation.app.create_app(storage)
+    visualise.run("0.0.0.0", 5000, debug=False)
+    runner.join()
 
 
 if __name__ == "__main__":
