@@ -365,6 +365,17 @@ class GetUnitsResponse:
             zombies=[Zombie.from_json(obj) for obj in json["zombies"]],
         )
 
+    def to_json(self):
+        return {
+            "base": [base.to_json() for base in self.base],
+            "enemyBlocks": [enemy_base.to_json() for enemy_base in self.enemy_bases],
+            "player": self.player.to_json(),
+            "realmName": self.realm_name,
+            "turn": self.turn,
+            "turnEndsInMs": self.turn_ends_in_ms,
+            "zombies": [zombie.to_json() for zombie in self.zombies],
+        }
+
     def attack(self) -> list[AttackCommand]:
         accumulated_damage = 0
         attackers: list[MyBaseLocation] = []
@@ -421,6 +432,13 @@ class Zpot:
             type=ZpotType.from_typestr(json["type"]),
         )
 
+    def to_json(self):
+        return {
+            "x": self.x,
+            "y": self.y,
+            "type": self.type.name.lower(),
+        }
+
 
 @dataclass
 class GetWorldResponse:
@@ -433,6 +451,12 @@ class GetWorldResponse:
             realm_name=json["realmName"],
             zpots=[Zpot.from_json(obj) for obj in json["zpots"]],
         )
+
+    def to_json(self):
+        return {
+            "realmName": self.realm_name,
+            "zpots": [zpot.to_json() for zpot in self.zpots],
+        }
 
 
 @dataclass
@@ -457,6 +481,16 @@ class GameRound:
             status=json["status"],
         )
 
+    def to_json(self):
+        return {
+            "duration": self.duration,
+            "endAt": self.endAt.isoformat(),
+            "name": self.name,
+            "repeat": self.repeat,
+            "startAt": self.startAt.isoformat(),
+            "status": self.status,
+        }
+
 
 @dataclass
 class GetRoundsResponse:
@@ -471,3 +505,10 @@ class GetRoundsResponse:
             now=json["now"],
             rounds=[GameRound.from_json(obj) for obj in json["rounds"]],
         )
+
+    def to_json(self):
+        return {
+            "gameName": self.game_name,
+            "now": self.now,
+            "rounds": [round.to_json() for round in self.rounds],
+        }

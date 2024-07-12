@@ -5,6 +5,10 @@ from model.state import State
 
 
 class Strategy(metaclass=ABCMeta):
-    @abstractmethod
     @staticmethod
+    @abstractmethod
     def command(state: State) -> Command: ...
+
+    @staticmethod
+    @abstractmethod
+    def name() -> str: ...
