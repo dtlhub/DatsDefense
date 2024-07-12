@@ -1,8 +1,6 @@
 import logging
 import requests
 from dataclasses import dataclass
-from datetime import timedelta
-from pathlib import Path
 
 import model
 
@@ -11,8 +9,6 @@ import model
 class Config:
     api_url: str
     token: str
-    round_tick: timedelta
-    round_storage: Path
 
 
 class ApiConsumer:
@@ -65,5 +61,3 @@ class ApiConsumer:
     def get_game_rounds(self) -> model.GetRoundsResponse:
         response = self.s.get(self.url("/rounds/zombidef"))
         return model.GetRoundsResponse.from_json(response.json())
-
-    def run(self): ...

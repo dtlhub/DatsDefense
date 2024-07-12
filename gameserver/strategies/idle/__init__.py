@@ -12,3 +12,7 @@ class IdleStrategy(Strategy):
             build=[],
             move_base=None,
         )
+
+    @staticmethod
+    def name() -> str:
+        return "idle"
