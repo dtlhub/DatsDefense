@@ -13,10 +13,10 @@ class Base:
 def base_from_json(base_data: dict) -> Base:
     return Base(
         base_data['attack'],
-        base_data['health']
+        base_data['health'],
         base_data['id'],
         base_data['is_head'],
         base_data['range'],
         base_data['x'],
         base_data['y']
-    )
+        )
