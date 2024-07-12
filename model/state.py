@@ -32,9 +32,17 @@ class PassedRound:
     command: Command
 
     @classmethod
-    def from_json(cls) -> Self: ...
+    def from_json(cls, json) -> Self:
+        return cls(
+            game=RoundSnapshot.from_json(json["game"]),
+            command=Command.from_json(json["command"]),
+        )
 
-    def to_json(): ...
+    def to_json(self):
+        return {
+            "game": self.game.to_json(),
+            "command": self.command.to_json(),
+        }
 
 
 @dataclass
