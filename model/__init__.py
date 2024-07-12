@@ -22,11 +22,9 @@ class Location:
             "x": self.x,
             "y": self.y,
         }
-    
+
     def distance(self, other: Self) -> float:
-        return sqrt(
-            (self.x**2 - other.x**2) + (self.y**2 - other.y**2)
-        )
+        return sqrt((self.x**2 - other.x**2) + (self.y**2 - other.y**2))
 
 
 @dataclass
@@ -88,6 +86,12 @@ class CommandResponse:
             errors=json["errors"],
         )
 
+    def to_json(self):
+        return {
+            "acceptedCommands": self.accepted.to_json(),
+            "errors": self.errors,
+        }
+
 
 @dataclass
 class PlayResponse:
@@ -98,6 +102,11 @@ class PlayResponse:
         return cls(
             starts_in_sec=json["startsInSec"],
         )
+
+    def to_json(self):
+        return {
+            "startsInSec": self.starts_in_sec,
+        }
 
 
 @dataclass
@@ -122,6 +131,18 @@ class MyBaseLocation:
             location=Location.from_json(json),
         )
 
+    def to_json(self):
+        return {
+            "id": self.id,
+            "attack": self.attack,
+            "health": self.health,
+            "isHead": self.is_head,
+            "range": self.range,
+            "lastAttack": self.last_attack.to_json(),
+            "x": self.location.x,
+            "y": self.location.y,
+        }
+
 
 @dataclass
 class EnemyBaseLocation:
@@ -145,6 +166,18 @@ class EnemyBaseLocation:
             location=Location.from_json(json),
         )
 
+    def to_json(self):
+        return {
+            "name": self.name,
+            "attack": self.attack,
+            "health": self.health,
+            "isHead": self.is_head,
+            "range": self.range,
+            "lastAttack": self.last_attack.to_json(),
+            "x": self.location.x,
+            "y": self.location.y,
+        }
+
 
 @dataclass
 class Player:
@@ -165,6 +198,16 @@ class Player:
             points=json["points"],
             zombie_kills=json["zombieKills"],
         )
+
+    def to_json(self):
+        return {
+            "enemyBlockKills": self.enemy_block_kills,
+            "gameEndedAt": self.game_ended_at.isoformat(),
+            "gold": self.gold,
+            "name": self.name,
+            "points": self.points,
+            "zombieKills": self.zombie_kills,
+        }
 
 
 class Direction(Enum):
@@ -226,8 +269,7 @@ class Zombie:
     speed: int
     type: ZombieType
     wait_turns: int
-    x: int
-    y: int
+    location: Location
 
     @classmethod
     def from_json(cls, json) -> Self:
@@ -239,9 +281,21 @@ class Zombie:
             speed=json["speed"],
             type=ZombieType.from_typestr(json["type"]),
             wait_turns=json["waitTurns"],
-            x=json["x"],
-            y=json["y"],
+            location=Location.from_json(json),
         )
+
+    def to_json(self):
+        return {
+            "attack": self.attack,
+            "direction": self.direction.name.lower(),
+            "health": self.health,
+            "id": self.id,
+            "speed": self.speed,
+            "type": self.type.name.lower(),
+            "waitTurns": self.wait_turns,
+            "x": self.location.x,
+            "y": self.location.y,
+        }
 
 
 @dataclass
@@ -267,7 +321,7 @@ class GetUnitsResponse:
             turn_ends_in_ms=json["turnEndsInMs"],
             zombies=[Zombie.from_json(obj) for obj in json["zombies"]],
         )
-    
+
     def attack(self) -> list[AttackCommand]:
         accumulated_damage = 0
         attackers: list[MyBaseLocation] = []
@@ -290,7 +344,7 @@ class GetUnitsResponse:
             for attacker in attackers:
                 attacks.append(AttackCommand(attacker.id, zombie.location))
                 used_attackers.append(attacker)
-            
+
         return attacks
 
 
@@ -351,10 +405,12 @@ class GameRound:
     def from_json(cls, json) -> Self:
         return cls(
             duration=json["duration"],
-            endAt=datetime.datetime.fromisoformat(json["endAt"].replace('Z', '+00:00')),
+            endAt=datetime.datetime.fromisoformat(json["endAt"].replace("Z", "+00:00")),
             name=json["name"],
             repeat=json.get("repeat"),
-            startAt=datetime.datetime.fromisoformat(json["startAt"].replace('Z', '+00:00')),
+            startAt=datetime.datetime.fromisoformat(
+                json["startAt"].replace("Z", "+00:00")
+            ),
             status=json["status"],
         )
 

@@ -1,4 +1,6 @@
 from dataclasses import dataclass
+from typing_extensions import Self
+
 from . import GetWorldResponse, GetUnitsResponse, GetRoundsResponse, Command
 
 
@@ -8,11 +10,31 @@ class RoundSnapshot:
     units: GetUnitsResponse
     rounds: GetRoundsResponse
 
+    @classmethod
+    def from_json(cls, json) -> Self:
+        return cls(
+            world=GetWorldResponse.from_json(json["world"]),
+            units=GetUnitsResponse.from_json(json["units"]),
+            rounds=GetRoundsResponse.from_json(json["rounds"]),
+        )
+
+    def to_json(self):
+        return {
+            "world": self.world.to_json(),
+            "units": self.units.to_json(),
+            "rounds": self.rounds.to_json(),
+        }
+
 
 @dataclass
 class PassedRound:
     game: RoundSnapshot
-    command: Command | None
+    command: Command
+
+    @classmethod
+    def from_json(cls) -> Self: ...
+
+    def to_json(): ...
 
 
 @dataclass
@@ -32,7 +54,7 @@ class State:
     def record_command(self, command: Command):
         if getattr(self, "command") is not None:
             raise ValueError("Tried to record command twice in a row")
-        self.command = command
+        self._command = command
 
     def record_round_snapshot(self, snapshot: RoundSnapshot):
         command = getattr(self, "command")
@@ -46,4 +68,4 @@ class State:
             )
         )
         self.current_round = snapshot
-        self.command = None
+        self._command = None
