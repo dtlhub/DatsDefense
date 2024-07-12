@@ -1,34 +1,28 @@
 import logging
 import requests
-from dataclasses import dataclass
 
 import model
 
 
-@dataclass
-class Config:
-    api_url: str
-    token: str
+logger = logging.getLogger("api")
 
 
 class ApiConsumer:
-    def __init__(self, logger: logging.Logger, config: Config):
-        self.config = config
-        self.logger = logger
+    def __init__(self, api_url: str, token: str):
+        self.api_url = api_url
+        self.token = token
 
         self.s = requests.Session()
-        self.s.headers["X-Auth-Token"] = self.config.token
+        self.s.headers["X-Auth-Token"] = self.token
         self.s.hooks["response"].append(self.check_response)
 
     def url(self, path: str) -> str:
-        return self.config.api_url + path + "/"
+        return self.api_url + path + "/"
 
     def check_response(self, response: requests.Response, *args, **kwargs):
         request = response.request
-        self.logger.debug(
-            f"Request: {request.method = } {request.url = } {request.body = }"
-        )
-        self.logger.debug(f"Response: {response.status_code = } {response.text = }")
+        logger.debug(f"Request: {request.method = } {request.url = } {request.body = }")
+        logger.debug(f"Response: {response.status_code = } {response.text = }")
 
         if response.status_code != 200:
             raise ValueError(
@@ -41,9 +35,8 @@ class ApiConsumer:
             json=command.to_json(),
         )
         response = model.CommandResponse.from_json(response.json())
-        error = "\n\n".join(response.errors)
-        if error != "":
-            raise ValueError(error)
+        for error in response.errors:
+            logger.error(f"Command execution error: {error}")
         return response
 
     def play(self) -> model.PlayResponse:
