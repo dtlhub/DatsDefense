@@ -3,7 +3,7 @@ import requests
 from dataclasses import dataclass
 from datetime import timedelta
 
-from .models import Move, State
+from model import model
 
 
 @dataclass
@@ -37,10 +37,10 @@ class ApiConsumer:
                 f"Failed to {request.method} {request.url}: {response.status_code = }, {response.text = }"
             )
 
-    def make_move(self, move: Move):
+    def make_move(self, command: model.Command):
         response = self.s.post(
             self.url("/play/zombidef/command"),
-            json=move.to_json(),
+            json=command.model_dump_json(),
         )
         self.check_response(response, "make move")
         return response.json()
