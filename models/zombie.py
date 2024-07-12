@@ -25,6 +25,6 @@ def zombie_from_json(zombie_data: dict) -> Zombie:
         zombie_data['health'],
         zombie_data['speed'],
         zombie_data['type'],
-        zombie_data['wait_turns'],
+        zombie_data['waitTurns'],
         zombie_data['attack']
     )

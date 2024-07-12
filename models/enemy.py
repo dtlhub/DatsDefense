@@ -14,8 +14,8 @@ def enemy_from_json(enemy_data: dict) -> Enemy:
     return Enemy(
         enemy_data['attack'],
         enemy_data['health'],
-        enemy_data['is_head'],
-        enemy_data['last_attack'],
+        enemy_data['isHead'],
+        enemy_data['lastAttack'],
         enemy_data['name'],
         enemy_data['x'],
         enemy_data['y']
