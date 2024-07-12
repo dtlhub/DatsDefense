@@ -1,6 +1,7 @@
 from .point  import Point
 from .zombie import Zombie
 from .enemy import Enemy
+from typing_extensions import Self, cast
 
 
 class BasePoint(Point):
@@ -14,17 +15,17 @@ class BasePoint(Point):
         self.x = x
         self.y = y
 
-
-def base_points_from_json(base_point_data: dict) -> BasePoint:
-    return BasePoint(
-        base_point_data['attack'],
-        base_point_data['health'],
-        base_point_data['id'],
-        base_point_data['isHead'],
-        base_point_data['lastAttack'],
-        base_point_data['range'],
-        base_point_data['x'],
-        base_point_data['y']
+    @classmethod
+    def from_json(cls, base_point_data) -> Self:
+        return BasePoint(
+            base_point_data['attack'],
+            base_point_data['health'],
+            base_point_data['id'],
+            base_point_data['isHead'],
+            base_point_data['lastAttack'],
+            base_point_data['range'],
+            base_point_data['x'],
+            base_point_data['y']
     )
 
 
@@ -43,8 +44,8 @@ class Base:
                 break
         
         return attackers
-
-
-def base_from_json(base_data: list) -> Base:
-     points = [base_points_from_json(i) for i in base_data]
-     return Base(points)
+    
+    @classmethod
+    def from_json(cls, base_data) -> Self:
+        points = [BasePoint.from_json(i) for i in base_data]
+        return Base(points)

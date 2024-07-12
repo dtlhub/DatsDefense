@@ -1,4 +1,6 @@
 from .point import Point
+from typing_extensions import Self, cast
+
 
 class Zombie(Point):
     def __init__(self, x, y, direction, id, health, speed, type, wait_turns, attack):
@@ -17,16 +19,17 @@ class Zombie(Point):
         """
         pass
 
-
-def zombie_from_json(zombie_data: dict) -> Zombie:
-    return Zombie(
-        zombie_data['x'],
-        zombie_data['y'],
-        zombie_data['direction'],
-        zombie_data['id'],
-        zombie_data['health'],
-        zombie_data['speed'],
-        zombie_data['type'],
-        zombie_data['waitTurns'],
-        zombie_data['attack']
-    )
+    
+    @classmethod
+    def from_json(cls, zombie_data: dict) -> Self:
+        return Zombie(
+            zombie_data['x'],
+            zombie_data['y'],
+            zombie_data['direction'],
+            zombie_data['id'],
+            zombie_data['health'],
+            zombie_data['speed'],
+            zombie_data['type'],
+            zombie_data['waitTurns'],
+            zombie_data['attack']
+        )

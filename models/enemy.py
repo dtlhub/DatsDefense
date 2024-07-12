@@ -1,4 +1,5 @@
 from .point  import Point
+from typing_extensions import Self, cast
 
 
 class EnemyPoint(Point):
@@ -12,24 +13,24 @@ class EnemyPoint(Point):
         self.x = x
         self.y = y
 
-
-def enemy_points_from_json(enemy_data: dict) -> EnemyPoint:
-    return EnemyPoint(
-        enemy_data['attack'],
-        enemy_data['health'],
-        enemy_data['isHead'],
-        enemy_data['lastAttack'],
-        enemy_data['name'],
-        enemy_data['x'],
-        enemy_data['y']
-    )
+    @classmethod
+    def from_json(cls, enemy_data: dict) -> Self:
+        return EnemyPoint(
+            enemy_data['attack'],
+            enemy_data['health'],
+            enemy_data['isHead'],
+            enemy_data['lastAttack'],
+            enemy_data['name'],
+            enemy_data['x'],
+            enemy_data['y']
+        )
 
 
 class Enemy:
     def __init__(self, enemy_points: list[EnemyPoint]):
         self.enemy_points = enemy_points
 
-
-def enemy_from_json(enemy_data: list) -> Base:
-     points = [enemy_points_from_json(i) for i in enemy_data]
-     return Enemy(points)
+    @classmethod
+    def from_json(enemy_data: list) -> Self:
+        points = [EnemyPoint.from_json(i) for i in enemy_data]
+        return Enemy(points)
