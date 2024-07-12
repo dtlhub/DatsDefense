@@ -2,6 +2,7 @@ import datetime
 from dataclasses import dataclass
 from typing_extensions import Self
 from enum import Enum
+from math import sqrt
 
 
 @dataclass
@@ -21,6 +22,11 @@ class Location:
             "x": self.x,
             "y": self.y,
         }
+    
+    def distance(self, other: Self) -> float:
+        return sqrt(
+            (self.x**2 - other.x**2) + (self.y**2 - other.y**2)
+        )
 
 
 @dataclass
@@ -261,6 +267,18 @@ class GetUnitsResponse:
             turn_ends_in_ms=json["turnEndsInMs"],
             zombies=[Zombie.from_json(obj) for obj in json["zombies"]],
         )
+    
+    def attack(self, zombie: Zombie | EnemyBaseLocation) -> list[BasePoint]:
+        accumulated_damage = 0
+        attackers = []
+        for point in self.base:
+            if point.location.distance(zombie.location) <= point.range:
+                attackers.append(point)
+                accumulated_damage += point.attack
+            if accumulated_damage >= zombie.health:
+                break
+        
+        return attackers
 
 
 class ZpotType(Enum):
