@@ -2,8 +2,9 @@ import logging
 import requests
 from dataclasses import dataclass
 from datetime import timedelta
+from pathlib import Path
 
-from model import model
+import model
 
 
 @dataclass
@@ -11,6 +12,7 @@ class Config:
     api_url: str
     token: str
     round_tick: timedelta
+    round_storage: Path
 
 
 class ApiConsumer:
@@ -37,28 +39,31 @@ class ApiConsumer:
                 f"Failed to {request.method} {request.url}: {response.status_code = }, {response.text = }"
             )
 
-    def make_move(self, command: model.Command):
+    def make_move(self, command: model.Command) -> model.CommandResponse:
         response = self.s.post(
             self.url("/play/zombidef/command"),
-            json=command.model_dump_json(),
+            json=command.to_json(),
         )
-        self.check_response(response, "make move")
-        return response.json()
+        response = model.CommandResponse.from_json(response.json())
+        error = "\n\n".join(response.errors)
+        if error != "":
+            raise ValueError(error)
+        return response
 
-    def play(self):
+    def play(self) -> model.PlayResponse:
         response = self.s.put(self.url("/play/zombidef/participate"))
-        return response.json()
+        return model.PlayResponse.from_json(response.json())
 
-    def get_units_around(self):
+    def get_units_around(self) -> model.GetUnitsResponse:
         response = self.s.get(self.url("/play/zombidef/units"))
-        return response.json()
+        return model.GetUnitsResponse.from_json(response.json())
 
-    def get_world_around(self):
+    def get_world_around(self) -> model.GetWorldResponse:
         response = self.s.get(self.url("/play/zombidef/world"))
-        return response.json()
+        return model.GetWorldResponse.from_json(response.json())
 
-    def get_game_rounds(self):
+    def get_game_rounds(self) -> model.GetRoundsResponse:
         response = self.s.get(self.url("/rounds/zombidef"))
-        return response.json()
+        return model.GetRoundsResponse.from_json(response.json())
 
     def run(self): ...
