@@ -1,24 +1,27 @@
 import logging
+from pathlib import Path
+
 import gameserver.consumer
+import gameserver.storage
+import gameserver.runner
 
 
 TEST_HOST = "https://games-test.datsteam.dev"
 PRODUCTION_HOST = "https://games.datsteam.dev"
 
-CONFIG = gameserver.consumer.Config(
-    api_url="https://games-test.datsteam.dev",
-    token="66843ff3b401c66843ff3b401f",
-)
+TOKEN = "66843ff3b401c66843ff3b401f"
+
+STORAGE = Path.cwd() / "storage"
+
+logging.basicConfig(level=logging.INFO)
 
 
 def main():
-    logging.basicConfig(level=logging.INFO)
-    logger = logging.getLogger("api_consumer")
+    api = gameserver.consumer.ApiConsumer(TEST_HOST, TOKEN)
+    storage = gameserver.storage.RoundStorage(STORAGE)
+    runner = gameserver.runner.Runner()
 
-    consumer = gameserver.consumer.ApiConsumer(
-        logger=logger,
-        config=CONFIG,
-    )
+    runner.run()
 
 
 if __name__ == "__main__":

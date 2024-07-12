@@ -73,7 +73,9 @@ class Runner(threading.Thread):
             command = result
         else:
             next_strategy, command = result
-            self.next_round_strategy = cast(str, next_strategy)
+            with self._strategy_lock:
+                if self.next_round_strategy is None:
+                    self.next_round_strategy = cast(str, next_strategy)
         self._api.send_command(command)
 
     def run(self): ...
