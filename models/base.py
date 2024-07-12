@@ -16,7 +16,8 @@ def base_from_json(base_data: dict) -> Base:
         base_data['health'],
         base_data['id'],
         base_data['is_head'],
+        base_data['last_attack'],
         base_data['range'],
         base_data['x'],
         base_data['y']
-        )
+    )
