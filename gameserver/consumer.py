@@ -64,4 +64,5 @@ class ApiConsumer:
         response = self.s.get(self.url("/rounds/zombidef"))
         return model.GetRoundsResponse.from_json(response.json())
 
-    def run(self): ...
+    def run(self):
+        ...
