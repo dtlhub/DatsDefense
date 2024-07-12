@@ -10,7 +10,7 @@ class Zombie:
         self.wait_turns = wait_turns
         self.attack = attack
 
-    def get_affected_coordinates(self) -> list[int]:
+    def get_affected_coordinates(self) -> list[(int, int)]:
         """че надо написать неебаться хуйню да со свитчами по типу
         """
         pass 
