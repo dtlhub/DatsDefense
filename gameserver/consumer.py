@@ -35,7 +35,7 @@ class ApiConsumer:
                 f"Failed to {request.method} {request.url}: {response.status_code = }, {response.text = }"
             )
 
-    def make_move(self, command: model.Command) -> model.CommandResponse:
+    def send_command(self, command: model.Command) -> model.CommandResponse:
         response = self.s.post(
             self.url("/play/zombidef/command"),
             json=command.to_json(),
