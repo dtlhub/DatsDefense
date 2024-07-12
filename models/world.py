@@ -1,13 +1,13 @@
 class Zpot:
     def __init__(self, x, y, type):
-        self.x = x 
+        self.x = x
         self.y = y
-        self.type = type 
+        self.type = type
 
 class World:
     def __init__(self, realm_name, zpots):
         self.realm_name = realm_name
-        self.zpots = zpots 
+        self.zpots = zpots
 
 
 def world_from_json(world_data: dict) -> World:

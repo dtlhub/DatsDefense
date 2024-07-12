@@ -1,12 +1,12 @@
 class EnemyPoint:
     def __init__(self, attack, health, is_head, last_attack, name, x, y):
         self.attack = attack
-        self.health = health 
+        self.health = health
         self.id = id
-        self.is_head = is_head 
+        self.is_head = is_head
         self.last_attack = last_attack
         self.name = name
-        self.x = x 
+        self.x = x
         self.y = y
 
 
