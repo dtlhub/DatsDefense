@@ -17,7 +17,44 @@ class Zombie(Point):
     def get_affected_coordinates(self) -> list[(int, int)]:
         """че надо написать неебаться хуйню да со свитчами по типу
         """
-        pass
+        zombie_type = self.type
+        direction = Zombie.direction_map(self.direction)
+        match zombie_type:
+            case 'normal':
+                return [(self.x+direction[0], self.y+direction[1])]
+            case 'fast':
+                return [(self.x+2*direction[0], self.y+2*direction[1])]
+            case 'bomber':
+                delta = [-1, 0, 1]
+                res = []
+                for dx in delta:
+                    for dy in delta:
+                        res.append((self.x+direction[0]+dx, self.y+direction[1]+dy))
+                return res
+            case 'liner':
+                return [(self.x+direction[0], self.y+direction[1]), (self.x+2*direction[0], self.y+2*direction[1])]
+            case 'juggernaut':
+                return [(self.x+direction[0], self.y+direction[1])]
+            case 'chaos_knight':
+                if direction[0]==0:
+                    return [(self.x+1, self.y+3*direction[1]), (self.x-1, self.y+3*direction[1])]
+                else:
+                    return [(self.x+3*direction[0], self.y+1), (self.x+3*direction[0], self.y-1)] 
+
+
+    # Возвращает кортеж с направлением где если первым параметром 1 значит наверх -1 значит вниз вторым параметром если 1 значит вправо иначе влево
+    @staticmethod
+    def direction_map(direction: str) -> tuple:
+        match direction:
+            case 'up':
+                return (0, 1)
+            case 'down':
+                return (0, -1)
+            case 'right':
+                return (1, 0)
+            case 'left':
+                return (-1, 0)
+
 
     
     @classmethod
