@@ -1,5 +1,6 @@
 from .point  import Point
 from .zombie import Zombie
+from .enemy import Enemy
 
 
 class BasePoint(Point):
@@ -31,7 +32,7 @@ class Base:
     def __init__(self, base_points: list[BasePoint]):
         self.base_points = base_points
 
-    def attack_zombie(self, zombie: Zombie) -> list[BasePoint]:
+    def attack(self, zombie: Zombie | Enemy) -> list[BasePoint]:
         accumulated_damage = 0
         attackers = []
         for point in self.base_points:
