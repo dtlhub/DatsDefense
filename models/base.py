@@ -1,12 +1,12 @@
 class Base:
     def __init__(self, attack, health, id, is_head, last_attack, range, x, y):
         self.attack = attack
-        self.health = health 
+        self.health = health
         self.id = id
-        self.is_head = is_head 
+        self.is_head = is_head
         self.last_attack = last_attack
         self.range = range
-        self.x = x 
+        self.x = x
         self.y = y
 
 

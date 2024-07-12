@@ -13,9 +13,9 @@ class Zombie:
     def get_affected_coordinates(self) -> list[int]:
         """че надо написать неебаться хуйню да со свитчами по типу
         """
-        pass 
+        pass
 
-    
+
 def zombie_from_json(zombie_data: dict) -> Zombie:
     return Zombie(
         zombie_data['x'],
