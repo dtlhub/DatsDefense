@@ -268,16 +268,25 @@ class GetUnitsResponse:
             zombies=[Zombie.from_json(obj) for obj in json["zombies"]],
         )
     
-    def attack(self, zombie: Zombie | EnemyBaseLocation) -> list[MyBaseLocation]:
+    def attack(self) -> list[AttackCommand]:
         accumulated_damage = 0
-        attackers = []
-        for point in self.base:
-            if point.location.distance(zombie.location) <= point.range:
-                attackers.append(point)
-                accumulated_damage += point.attack
-            if accumulated_damage >= zombie.health:
-                break
-        
+        attackers: list[MyBaseLocation] = []
+        attacks = []
+        for zombie in self.zombies:
+            attackers = []
+            for point in self.base:
+                if point.location.distance(zombie.location) <= point.range:
+                    attackers.append(point)
+                    accumulated_damage += point.attack
+                if accumulated_damage >= zombie.health:
+                    break
+            else:
+                # Если не брейкнулся изза того что аккумулированыный урон больше хп зомби
+                continue
+            for attacker in attackers:
+                attacks.append(AttackCommand(attacker.id, zombie.location))
+            
+                
         return attackers
 
 
