@@ -298,15 +298,15 @@ class Zombie:
         }
     
     @staticmethod
-    def direction_map(direction: str) -> tuple:
+    def direction_map(direction: Direction) -> tuple:
         match direction:
-            case 'up':
+            case Direction.UP:
                 return (0, 1)
-            case 'down':
+            case Direction.DOWN:
                 return (0, -1)
-            case 'right':
+            case Direction.RIGHT:
                 return (1, 0)
-            case 'left':
+            case Direction.LEFT:
                 return (-1, 0)
 
 
