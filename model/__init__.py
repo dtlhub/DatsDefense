@@ -330,7 +330,7 @@ class GameRound:
     duration: int
     endAt: datetime.datetime
     name: str
-    repeat: int
+    repeat: int | None
     startAt: datetime.datetime
     status: str
 
@@ -338,24 +338,24 @@ class GameRound:
     def from_json(cls, json) -> Self:
         return cls(
             duration=json["duration"],
-            endAt=datetime.datetime.fromisoformat(json["endAt"]),
+            endAt=datetime.datetime.fromisoformat(json["endAt"].replace('Z', '+00:00')),
             name=json["name"],
-            repeat=json["repeat"],
-            startAt=datetime.datetime.fromisoformat(json["startAt"]),
-            status=json["active"],
+            repeat=json.get("repeat"),
+            startAt=datetime.datetime.fromisoformat(json["startAt"].replace('Z', '+00:00')),
+            status=json["status"],
         )
 
 
 @dataclass
 class GetRoundsResponse:
     game_name: str
-    now: datetime.datetime
+    now: str
     rounds: list[GameRound]
 
     @classmethod
     def from_json(cls, json) -> Self:
         return cls(
             game_name=json["gameName"],
-            now=datetime.datetime.fromisoformat(json["now"]),
+            now=json["now"],
             rounds=[GameRound.from_json(obj) for obj in json["rounds"]],
         )
