@@ -268,7 +268,7 @@ class GetUnitsResponse:
             zombies=[Zombie.from_json(obj) for obj in json["zombies"]],
         )
     
-    def attack(self, zombie: Zombie | EnemyBaseLocation) -> list[BasePoint]:
+    def attack(self, zombie: Zombie | EnemyBaseLocation) -> list[MyBaseLocation]:
         accumulated_damage = 0
         attackers = []
         for point in self.base:
