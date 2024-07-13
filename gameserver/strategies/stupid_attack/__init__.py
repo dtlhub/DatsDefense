@@ -80,6 +80,10 @@ class StupidAttackStrategy(Strategy):
             StupidAttackStrategy.head_connected_blocks(state),
             prioritize_enemies=False,
         )
+
+        # if len(state.history) < 100:
+        #     build = StupidAttackStrategy.build_palka(state)
+        # else:
         build = StupidAttackStrategy.build_circle(state)
 
         new_center = StupidAttackStrategy.calculate_head_location(state, build)
@@ -89,6 +93,13 @@ class StupidAttackStrategy(Strategy):
             build=build,
             move_base=new_center,
         )
+
+    @staticmethod
+    def build_palka(state: State) -> list[Location]:
+        direction = Direction.UP
+        center = state.current_round.units.base_head
+        assert center is not None
+        return list(direction_generator(center.location, direction, amount=20))
 
     @staticmethod
     def build_circle(state: State) -> list[Location]:
@@ -140,20 +151,20 @@ class StupidAttackStrategy(Strategy):
 
         def calculate_weight(loc: Location) -> float:
             dist = center.distance(loc)
-            atc = get_attractiveness(
-                state,
-                loc,
-                explore_radius=4,
-                preset=Preset(
-                    wall=0.2,
-                    zpot=1.0,
-                    zombie=2.0,
-                    enemy=0.5,
-                    empty=0.8,
-                    my_base=1.0,
-                ),
-            )
-            return dist * atc
+            # atc = get_attractiveness(
+            #     state,
+            #     loc,
+            #     explore_radius=3,
+            # #     preset=Preset(
+            # #         wall=0.5,
+            # #         zpot=0.5,
+            # #         zombie=5.0,
+            # #         enemy=0,
+            # #         empty=1.0,
+            # #         my_base=1.0,
+            # #     ),
+            # )
+            return dist
 
         sorted_by_proximity_to_center = sorted(
             to_build,

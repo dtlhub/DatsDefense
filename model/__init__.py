@@ -454,7 +454,7 @@ class GetUnitsResponse:
         pre, npre = self.__sort_enemies(self.enemy_bases)
         prl, prz, nprz = self.__sort_by_danger(self.zombies)
         if prioritize_enemies:
-            uebki = pre + npre + prl + prz + nprz
+            uebki = pre  + prl + prz + npre + nprz
         else:
             uebki = prl + pre + prz + nprz + npre
         can_kill = []
