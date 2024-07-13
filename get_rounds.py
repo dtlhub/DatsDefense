@@ -15,7 +15,7 @@ STORAGE = Path.cwd() / "storage"
 
 
 def main():
-    api = gameserver.consumer.ApiConsumer(TEST_HOST, TOKEN)
+    api = gameserver.consumer.ApiConsumer(PRODUCTION_HOST, TOKEN)
 
     rounds = api.get_game_rounds()
     print(rounds.game_name, rounds.now)
