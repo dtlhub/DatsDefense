@@ -90,11 +90,14 @@
         },
         {
           "x": 0,
+<<<<<<< HEAD
           "y": 215,
           "type": "default"
         },
         {
           "x": 0,
+=======
+>>>>>>> 631a07b121f042062b5e6fef7afa499519079669
           "y": 191,
           "type": "default"
         },
@@ -283,13 +286,31 @@
     "units": {
       "base": [
         {
+<<<<<<< HEAD
           "id": "0190ab7b-4964-7f3f-b480-f46f74cdec65",
+=======
+          "id": "0190ab7b-4964-7f30-9083-5fb28e2606f0",
+>>>>>>> 631a07b121f042062b5e6fef7afa499519079669
           "attack": 10,
           "health": 100,
           "isHead": false,
           "range": 5,
+<<<<<<< HEAD
           "x": 8,
           "y": 201
+=======
+          "x": 7,
+          "y": 204
+        },
+        {
+          "id": "0190ab7b-4964-7f2a-ba12-05faeb5ee97b",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 6,
+          "y": 203
+>>>>>>> 631a07b121f042062b5e6fef7afa499519079669
         },
         {
           "id": "0190ab7b-41dc-7bae-9291-75bc5f14a33c",
@@ -301,6 +322,7 @@
           "y": 203
         },
         {
+<<<<<<< HEAD
           "id": "0190ab7b-4964-7f30-9083-5fb28e2606f0",
           "attack": 10,
           "health": 99,
@@ -347,11 +369,15 @@
         },
         {
           "id": "0190ab7b-41dc-7ba3-87b6-8b5d1ac8fc98",
+=======
+          "id": "0190ab7b-4965-7009-a0c7-3c6629e29acb",
+>>>>>>> 631a07b121f042062b5e6fef7afa499519079669
           "attack": 10,
           "health": 100,
           "isHead": false,
           "range": 5,
           "x": 8,
+<<<<<<< HEAD
           "y": 202
         },
         {
@@ -361,6 +387,8 @@
           "isHead": false,
           "range": 5,
           "x": 5,
+=======
+>>>>>>> 631a07b121f042062b5e6fef7afa499519079669
           "y": 204
         },
         {
@@ -373,6 +401,7 @@
           "y": 203
         },
         {
+<<<<<<< HEAD
           "id": "0190ab7b-41dc-7ba9-96fa-120edcdb8f42",
           "attack": 10,
           "health": 99,
@@ -389,6 +418,15 @@
           "range": 5,
           "x": 6,
           "y": 203
+=======
+          "id": "0190ab7b-41dc-7b9c-b039-ce41088fbfa5",
+          "attack": 40,
+          "health": 300,
+          "isHead": true,
+          "range": 8,
+          "x": 7,
+          "y": 202
+>>>>>>> 631a07b121f042062b5e6fef7afa499519079669
         },
         {
           "id": "0190ab7b-4964-7f3a-92d0-0890592514ad",
@@ -400,12 +438,26 @@
           "y": 202
         },
         {
+<<<<<<< HEAD
           "id": "0190ab7b-4965-7009-a0c7-3c6629e29acb",
+=======
+          "id": "0190ab7b-41dc-7ba9-96fa-120edcdb8f42",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 7,
+          "y": 203
+        },
+        {
+          "id": "0190ab7b-41dc-7ba3-87b6-8b5d1ac8fc98",
+>>>>>>> 631a07b121f042062b5e6fef7afa499519079669
           "attack": 10,
           "health": 100,
           "isHead": false,
           "range": 5,
           "x": 8,
+<<<<<<< HEAD
           "y": 204
         }
       ],
@@ -423,11 +475,30 @@
       "player": {
         "enemyBlockKills": 0,
         "gold": 0,
+=======
+          "y": 202
+        },
+        {
+          "id": "0190ab7b-4964-7f3f-b480-f46f74cdec65",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 8,
+          "y": 201
+        }
+      ],
+      "enemyBlocks": [],
+      "player": {
+        "enemyBlockKills": 0,
+        "gold": 4,
+>>>>>>> 631a07b121f042062b5e6fef7afa499519079669
         "name": "dtl",
         "points": 0,
         "zombieKills": 0
       },
       "realmName": "test-day2-9",
+<<<<<<< HEAD
       "turn": 26,
       "turnEndsInMs": 1771,
       "zombies": [
@@ -876,6 +947,15 @@
     "rounds": {
       "gameName": "zombidef-test",
       "now": "2024-07-13T09:45:52",
+=======
+      "turn": 1,
+      "turnEndsInMs": 930,
+      "zombies": []
+    },
+    "rounds": {
+      "gameName": "zombidef-test",
+      "now": "2024-07-13T09:45:03",
+>>>>>>> 631a07b121f042062b5e6fef7afa499519079669
       "rounds": [
         {
           "duration": 1200,

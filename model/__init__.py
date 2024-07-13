@@ -21,8 +21,8 @@ class Location:
     @classmethod
     def from_json(cls, json) -> Self:
         return cls(
-            x=json.get("x"),
-            y=json.get("y"),
+            x=json["x"],
+            y=json["y"],
         )
 
     def to_json(self):

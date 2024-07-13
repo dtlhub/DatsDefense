@@ -14,11 +14,14 @@
           "type": "default"
         },
         {
+<<<<<<< HEAD
           "x": 0,
           "y": 214,
           "type": "default"
         },
         {
+=======
+>>>>>>> 631a07b121f042062b5e6fef7afa499519079669
           "x": 12,
           "y": 195,
           "type": "default"
@@ -89,6 +92,7 @@
           "type": "default"
         },
         {
+<<<<<<< HEAD
           "x": 0,
           "y": 215,
           "type": "default"
@@ -99,6 +103,8 @@
           "type": "default"
         },
         {
+=======
+>>>>>>> 631a07b121f042062b5e6fef7afa499519079669
           "x": 7,
           "y": 210,
           "type": "default"
@@ -283,11 +289,16 @@
     "units": {
       "base": [
         {
+<<<<<<< HEAD
           "id": "0190ab7b-4964-7f3f-b480-f46f74cdec65",
+=======
+          "id": "0190ab7b-41dc-7ba9-96fa-120edcdb8f42",
+>>>>>>> 631a07b121f042062b5e6fef7afa499519079669
           "attack": 10,
           "health": 100,
           "isHead": false,
           "range": 5,
+<<<<<<< HEAD
           "x": 8,
           "y": 201
         },
@@ -337,6 +348,12 @@
           "y": 202
         },
         {
+=======
+          "x": 7,
+          "y": 203
+        },
+        {
+>>>>>>> 631a07b121f042062b5e6fef7afa499519079669
           "id": "0190ab7b-41dc-7ba3-87b6-8b5d1ac8fc98",
           "attack": 10,
           "health": 100,
@@ -346,6 +363,7 @@
           "y": 202
         },
         {
+<<<<<<< HEAD
           "id": "0190ab7b-5905-7267-8057-60760c4ebac7",
           "attack": 10,
           "health": 92,
@@ -392,11 +410,15 @@
         },
         {
           "id": "0190ab7b-4965-7009-a0c7-3c6629e29acb",
+=======
+          "id": "0190ab7b-41dc-7bae-9291-75bc5f14a33c",
+>>>>>>> 631a07b121f042062b5e6fef7afa499519079669
           "attack": 10,
           "health": 100,
           "isHead": false,
           "range": 5,
           "x": 8,
+<<<<<<< HEAD
           "y": 204
         }
       ],
@@ -414,11 +436,30 @@
       "player": {
         "enemyBlockKills": 0,
         "gold": 1,
+=======
+          "y": 203
+        },
+        {
+          "id": "0190ab7b-41dc-7b9c-b039-ce41088fbfa5",
+          "attack": 40,
+          "health": 300,
+          "isHead": true,
+          "range": 8,
+          "x": 7,
+          "y": 202
+        }
+      ],
+      "enemyBlocks": [],
+      "player": {
+        "enemyBlockKills": 0,
+        "gold": 10,
+>>>>>>> 631a07b121f042062b5e6fef7afa499519079669
         "name": "dtl",
         "points": 0,
         "zombieKills": 0
       },
       "realmName": "test-day2-9",
+<<<<<<< HEAD
       "turn": 25,
       "turnEndsInMs": 596,
       "zombies": [
@@ -812,6 +853,15 @@
     "rounds": {
       "gameName": "zombidef-test",
       "now": "2024-07-13T09:45:51",
+=======
+      "turn": 0,
+      "turnEndsInMs": 0,
+      "zombies": []
+    },
+    "rounds": {
+      "gameName": "zombidef-test",
+      "now": "2024-07-13T09:45:00",
+>>>>>>> 631a07b121f042062b5e6fef7afa499519079669
       "rounds": [
         {
           "duration": 1200,

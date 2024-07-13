@@ -1,5 +1,7 @@
+import base64
 import requests
 import json
+from io import BytesIO
 from matplotlib import pyplot as plt
 from model.state import PassedRound
 from model import (
@@ -94,6 +96,19 @@ class RoundVisualizer:
                 label=str(kek),
                 marker=markers.get(kek, '.'),
             )
+
+    def get_png_bytes(self):
+        self.__add_base()
+        self.__add_zombies()
+        self.__add_enemy()
+        self.__add_world()
+        plt.legend()
+
+        fig = plt.figure()
+        tmpfile = BytesIO()
+        fig.savefig(tmpfile, format='png')
+        return tmpfile.getvalue()
+
     def visualize(self):
         self.__add_base()
         self.__add_zombies()
@@ -107,6 +122,12 @@ def visualize_state(passed_round_json):
     round = PassedRound.from_json(passed_round_json)
     vis = RoundVisualizer(round)
     vis.visualize()
+
+
+def get_png_bytes(passed_round_json):
+    round = PassedRound.from_json(passed_round_json)
+    vis = RoundVisualizer(round)
+    return vis.get_png_bytes()
 
 
 if __name__ == "__main__":

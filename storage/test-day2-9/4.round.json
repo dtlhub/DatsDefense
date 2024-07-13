@@ -283,6 +283,63 @@
     "units": {
       "base": [
         {
+<<<<<<< HEAD
+=======
+          "id": "0190ab7b-5135-7b30-80dd-d262bd0ce68d",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 6,
+          "y": 204
+        },
+        {
+          "id": "0190ab7b-4964-7f30-9083-5fb28e2606f0",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 7,
+          "y": 204
+        },
+        {
+          "id": "0190ab7b-5905-7267-8057-60760c4ebac7",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 5,
+          "y": 204
+        },
+        {
+          "id": "0190ab7b-4964-7f2a-ba12-05faeb5ee97b",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 6,
+          "y": 203
+        },
+        {
+          "id": "0190ab7b-5135-7b3d-b1fc-e07ce010afef",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 7,
+          "y": 205
+        },
+        {
+          "id": "0190ab7b-41dc-7bae-9291-75bc5f14a33c",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 8,
+          "y": 203
+        },
+        {
+>>>>>>> 631a07b121f042062b5e6fef7afa499519079669
           "id": "0190ab7b-4965-7009-a0c7-3c6629e29acb",
           "attack": 10,
           "health": 100,
@@ -301,6 +358,7 @@
           "y": 203
         },
         {
+<<<<<<< HEAD
           "id": "0190ab7b-4964-7f2a-ba12-05faeb5ee97b",
           "attack": 10,
           "health": 93,
@@ -349,12 +407,18 @@
           "id": "0190ab7b-41dc-7b9c-b039-ce41088fbfa5",
           "attack": 40,
           "health": 292,
+=======
+          "id": "0190ab7b-41dc-7b9c-b039-ce41088fbfa5",
+          "attack": 40,
+          "health": 300,
+>>>>>>> 631a07b121f042062b5e6fef7afa499519079669
           "isHead": true,
           "range": 8,
           "x": 7,
           "y": 202
         },
         {
+<<<<<<< HEAD
           "id": "0190ab7b-41dc-7ba3-87b6-8b5d1ac8fc98",
           "attack": 10,
           "health": 100,
@@ -364,6 +428,8 @@
           "y": 202
         },
         {
+=======
+>>>>>>> 631a07b121f042062b5e6fef7afa499519079669
           "id": "0190ab7b-4964-7f3a-92d0-0890592514ad",
           "attack": 10,
           "health": 100,
@@ -373,6 +439,7 @@
           "y": 202
         },
         {
+<<<<<<< HEAD
           "id": "0190ab7b-5135-7b30-80dd-d262bd0ce68d",
           "attack": 10,
           "health": 93,
@@ -385,12 +452,29 @@
           "id": "0190ab7b-41dc-7ba9-96fa-120edcdb8f42",
           "attack": 10,
           "health": 99,
+=======
+          "id": "0190ab7b-41dc-7ba9-96fa-120edcdb8f42",
+          "attack": 10,
+          "health": 100,
+>>>>>>> 631a07b121f042062b5e6fef7afa499519079669
           "isHead": false,
           "range": 5,
           "x": 7,
           "y": 203
         },
         {
+<<<<<<< HEAD
+=======
+          "id": "0190ab7b-41dc-7ba3-87b6-8b5d1ac8fc98",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 8,
+          "y": 202
+        },
+        {
+>>>>>>> 631a07b121f042062b5e6fef7afa499519079669
           "id": "0190ab7b-4964-7f3f-b480-f46f74cdec65",
           "attack": 10,
           "health": 100,
@@ -398,6 +482,7 @@
           "range": 5,
           "x": 8,
           "y": 201
+<<<<<<< HEAD
         },
         {
           "id": "0190ab7b-5135-7b3d-b1fc-e07ce010afef",
@@ -407,13 +492,19 @@
           "range": 5,
           "x": 7,
           "y": 205
+=======
+>>>>>>> 631a07b121f042062b5e6fef7afa499519079669
         }
       ],
       "enemyBlocks": [
         {
           "name": "unknown",
           "attack": 10,
+<<<<<<< HEAD
           "health": 93,
+=======
+          "health": 100,
+>>>>>>> 631a07b121f042062b5e6fef7afa499519079669
           "isHead": false,
           "range": 5,
           "x": 7,
@@ -422,12 +513,17 @@
       ],
       "player": {
         "enemyBlockKills": 0,
+<<<<<<< HEAD
         "gold": 0,
+=======
+        "gold": 1,
+>>>>>>> 631a07b121f042062b5e6fef7afa499519079669
         "name": "dtl",
         "points": 0,
         "zombieKills": 0
       },
       "realmName": "test-day2-9",
+<<<<<<< HEAD
       "turn": 29,
       "turnEndsInMs": 1784,
       "zombies": [
@@ -909,6 +1005,15 @@
     "rounds": {
       "gameName": "zombidef-test",
       "now": "2024-07-13T09:45:58",
+=======
+      "turn": 4,
+      "turnEndsInMs": 1789,
+      "zombies": []
+    },
+    "rounds": {
+      "gameName": "zombidef-test",
+      "now": "2024-07-13T09:45:08",
+>>>>>>> 631a07b121f042062b5e6fef7afa499519079669
       "rounds": [
         {
           "duration": 1200,
