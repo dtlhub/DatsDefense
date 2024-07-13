@@ -15,7 +15,7 @@ STORAGE = Path.cwd() / "storage"
 
 
 def main():
-    api = gameserver.consumer.ApiConsumer(TEST_HOST, TOKEN)
+    api = gameserver.consumer.ApiConsumer(PRODUCTION_HOST, TOKEN)
 
     response = api.play()
     print(f'{response.starts_in_sec = }')

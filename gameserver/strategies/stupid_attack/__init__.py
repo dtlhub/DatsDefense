@@ -121,22 +121,6 @@ class StupidAttackStrategy(Strategy):
             map(lambda x: x.location, state.current_round.units.base)
         ) | set(will_be_built)
 
-        dist: dict[Location | None, int] = {}
-        dist[None] = -1
-        q: Queue[Location] = Queue()
-
-        for b in base_cells:
-            if all(n for n in neighbours(b)):
-                q.put(b)
-                dist[b] = 1
-
-        while not q.empty():
-            loc = q.get()
-            for n in neighbours(loc):
-                if n not in dist and n in base_cells:
-                    q.put(n)
-                    dist[n] = dist[loc] + 1
-
         in_target_of_liner: set[Location] = set()
         for zomb in state.current_round.units.zombies:
             if zomb.type == ZombieType.LINER:
@@ -153,9 +137,27 @@ class StupidAttackStrategy(Strategy):
                             break
                         in_target_of_liner.add(loc)
 
-        head = state.current_round.units.base_head
-        max_loc = None if head is None else head.location
+        dist: dict[Location | None, int] = {}
+        q: Queue[Location] = Queue()
+
+        for b in base_cells:
+            if any(n not in base_cells for n in neighbours(b)):
+                q.put(b)
+                dist[b] = 1
+
+        while not q.empty():
+            loc = q.get()
+            for n in neighbours(loc):
+                if n not in dist and n in base_cells:
+                    q.put(n)
+                    dist[n] = dist[loc] + 1
+
+        dist[None] = -1
+        max_loc = None
         for loc in dist.keys():
+            if loc in in_target_of_liner:
+                continue
+
             if dist[loc] > dist[max_loc]:
                 max_loc = loc
         return max_loc
