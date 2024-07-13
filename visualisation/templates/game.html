@@ -22,10 +22,10 @@
         let round = params.get("round");
 
         if (round === null) {
-          round = (await getMaxRound()) - 1;
+          return (await getMaxRound()) - 1;
+        } else {
+          return parseInt(round);
         }
-
-        return round;
       }
 
       async function getImage(roundIndex) {

@@ -106,7 +106,7 @@ class RoundVisualizer:
         self.__add_zombies()
         self.__add_enemy()
         self.__add_world()
-        plt.legend(bbox_to_anchor=(1.04, 1), loc="upper left")
+        self.fig.legend(bbox_to_anchor=(1.04, 1), loc="upper left")
 
         tmpfile = BytesIO()
         self.fig.savefig(tmpfile, format='png')
@@ -118,7 +118,6 @@ class RoundVisualizer:
         self.__add_enemy()
         self.__add_world()
         plt.legend(bbox_to_anchor=(1.04, 1), loc="upper left")
-
 
         plt.show()
 
