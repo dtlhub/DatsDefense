@@ -401,11 +401,11 @@ class GetUnitsResponse:
         }
 
     def attack(self) -> list[AttackCommand]:
-        accumulated_damage = 0
         attackers: list[MyBaseLocation] = []
         used_attackers = []
         attacks = []
         for zombie in self.zombies:
+            accumulated_damage = 0
             attackers = []
             for point in self.base:
                 if point in used_attackers:
