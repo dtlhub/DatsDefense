@@ -54,6 +54,7 @@ class Runner(threading.Thread):
             self._cached_round = RoundSnapshot(
                 world=self._api.get_world_around(),
                 units=self._api.get_units_around(),
+                rounds=self._api.get_game_rounds(),
             )
             return self._cached_round
 
