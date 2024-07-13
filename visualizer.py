@@ -1,6 +1,7 @@
 import base64
 import requests
 import json
+from pathlib import Path
 from io import BytesIO
 from matplotlib import pyplot as plt
 from model.state import PassedRound
@@ -13,6 +14,7 @@ from model import (
     ZpotType,
     Location
 )
+from functools import lru_cache
 
 
 URL = 'http://0.0.0.0:1234'
@@ -128,13 +130,19 @@ def visualize_state(passed_round_json):
     vis.visualize()
 
 
-def get_png_bytes(passed_round_json):
-    round = PassedRound.from_json(passed_round_json)
+@lru_cache(256)
+def get_png_bytes(game: str, round_index: str):
+    with open(Path.cwd() / "storage" / game / f'{round_index}.round.json', 'r') as f:
+        data = json.load(f)
+    round = PassedRound.from_json(data)
     vis = RoundVisualizer(round)
-    return vis.get_png_bytes()
+    bts = vis.get_png_bytes()
+    plt.close(vis.fig)
+    return bts
 
 
 if __name__ == "__main__":
     round = json.loads(open('./storage/test-day2-6/3.round.json', 'r').read())
     visualize_state(round)
     print('done')
+

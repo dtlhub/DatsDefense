@@ -31,10 +31,8 @@ def create_app() -> Flask:
 
     @app.get("/api/<game>/round/<round>")
     def get_round(game, round):
-        with open(storage_base / game / f'{round}.round.json', 'r') as f:
-            jsn = json.load(f)
         return jsonify({
-            "data": b64encode(get_png_bytes(jsn)).decode()
+            "data": b64encode(get_png_bytes(game, round)).decode()
         })
 
     @app.get("/game/<game>")
