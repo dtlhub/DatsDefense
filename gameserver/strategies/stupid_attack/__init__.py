@@ -20,11 +20,6 @@ class StupidAttackStrategy(Strategy):
             build.append(Location(x + 1, y))
             build.append(Location(x, y - 1))
             build.append(Location(x, y + 1))
-            build.append(Location(x + 1, y + 1))
-            build.append(Location(x - 1, y + 1))
-            build.append(Location(x + 1, y - 1))
-            build.append(Location(x - 1, y - 1))
-            build.append(Location(x, y))
         return Command(
             attack=attacks,
             build=build,
