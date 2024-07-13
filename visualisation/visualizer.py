@@ -100,7 +100,7 @@ class RoundVisualizer:
         self.__add_enemy()
         self.__add_world()
         plt.legend()
-        fig = plt.figure()
+        plt.show()
 
 
 def visualize_state(passed_round_json):
