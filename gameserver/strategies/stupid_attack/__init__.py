@@ -6,12 +6,12 @@ from itertools import chain
 from typing import Generator
 
 
-def neighbours(loc: Location) -> Generator[Location, None]:
+def neighbours(loc: Location) -> Generator[Location, None, None]:
     for dx, dy in [(1, 0), (0, 1), (-1, 0), (0, -1)]:
         yield Location(loc.x + dx, loc.y + dy)
 
 
-def neighbours_with_diag(loc: Location) -> Generator[Location, None]:
+def neighbours_with_diag(loc: Location) -> Generator[Location, None, None]:
     for dx, dy in [
         (1, 0),
         (0, 1),
