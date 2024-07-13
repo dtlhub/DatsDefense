@@ -49,7 +49,7 @@ class AttackCommand:
 
     def to_json(self):
         return {
-            "block_id": self.block_id,
+            "blockId": self.block_id,
             "target": self.target.to_json(),
         }
 
