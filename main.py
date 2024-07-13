@@ -1,5 +1,3 @@
-import logging
-
 import gameserver.consumer
 import gameserver.storage
 import gameserver.runner
@@ -10,8 +8,6 @@ TEST_HOST = "https://games-test.datsteam.dev"
 PRODUCTION_HOST = "https://games.datsteam.dev"
 
 TOKEN = "66843ff3b401c66843ff3b401f"
-
-logging.basicConfig(level=logging.DEBUG)
 
 
 def main():

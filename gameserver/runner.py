@@ -1,5 +1,4 @@
 import time
-import logging
 import datetime
 import traceback
 import threading
@@ -13,8 +12,10 @@ from .storage import RoundStorage
 from .strategy import Strategy
 from .strategies import ALL_STRATEGIES
 
+from logger import logger as globlog
 
-logger = logging.getLogger("runner")
+
+logger = globlog.getChild("runner")
 
 
 class Runner(threading.Thread):
