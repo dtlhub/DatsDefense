@@ -1,0 +1,449 @@
+{
+  "game": {
+    "world": {
+      "realmName": "test-day2-5",
+      "zpots": [
+        {
+          "x": 32,
+          "y": 177,
+          "type": "wall"
+        },
+        {
+          "x": 32,
+          "y": 172,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 189,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 175,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 184,
+          "type": "wall"
+        },
+        {
+          "x": 32,
+          "y": 187,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 170,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 190,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 186,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 173,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 191,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 188,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 176,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 171,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 185,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 174,
+          "type": "default"
+        }
+      ]
+    },
+    "units": {
+      "base": [
+        {
+          "id": "0190ab32-03d9-76b9-b38f-f409f74318d5",
+          "attack": 10,
+          "health": 99,
+          "isHead": false,
+          "range": 5,
+          "x": 32,
+          "y": 181
+        },
+        {
+          "id": "0190ab32-03d9-76b5-ab11-478884c62246",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 31,
+          "y": 181
+        },
+        {
+          "id": "0190ab32-03d9-76b2-bcc8-1ec19def13ce",
+          "attack": 10,
+          "health": 93,
+          "isHead": false,
+          "range": 5,
+          "x": 32,
+          "y": 180
+        },
+        {
+          "id": "0190ab32-03d9-76ad-9bf0-5913d393132a",
+          "attack": 40,
+          "health": 300,
+          "isHead": true,
+          "range": 8,
+          "x": 31,
+          "y": 180
+        }
+      ],
+      "enemyBlocks": [],
+      "player": {
+        "enemyBlockKills": 0,
+        "gold": 10,
+        "name": "dtl",
+        "points": 0,
+        "zombieKills": 0
+      },
+      "realmName": "test-day2-5",
+      "turn": 32,
+      "turnEndsInMs": 1510,
+      "zombies": [
+        {
+          "attack": 7,
+          "direction": "up",
+          "health": 7,
+          "id": "ec7a50dd-d3a3-4ba2-82a2-713ac087bdfc",
+          "speed": 3,
+          "type": "chaos_knight",
+          "waitTurns": 1,
+          "x": 26,
+          "y": 184
+        },
+        {
+          "attack": 13,
+          "direction": "left",
+          "health": 9,
+          "id": "1a67527c-2d79-4c37-ae81-b27291cd24f5",
+          "speed": 2,
+          "type": "fast",
+          "waitTurns": 1,
+          "x": 25,
+          "y": 170
+        },
+        {
+          "attack": 1,
+          "direction": "left",
+          "health": 5,
+          "id": "c856f446-c8d2-4390-9060-834cd246f554",
+          "speed": 1,
+          "type": "normal",
+          "waitTurns": 1,
+          "x": 24,
+          "y": 179
+        },
+        {
+          "attack": 999999,
+          "direction": "left",
+          "health": 7,
+          "id": "55f1f188-3bd8-4e9a-8be6-e9b37b5f6dd2",
+          "speed": 1,
+          "type": "juggernaut",
+          "waitTurns": 1,
+          "x": 24,
+          "y": 175
+        },
+        {
+          "attack": 13,
+          "direction": "right",
+          "health": 9,
+          "id": "00c87a63-478b-4b2e-992b-956cb0364404",
+          "speed": 2,
+          "type": "fast",
+          "waitTurns": 1,
+          "x": 33,
+          "y": 176
+        },
+        {
+          "attack": 7,
+          "direction": "right",
+          "health": 7,
+          "id": "cc4a4ce8-e53d-479b-8273-faa436f12136",
+          "speed": 1,
+          "type": "bomber",
+          "waitTurns": 1,
+          "x": 28,
+          "y": 184
+        },
+        {
+          "attack": 999999,
+          "direction": "right",
+          "health": 7,
+          "id": "973784da-f1c4-4f7b-bf66-dea70ee7548b",
+          "speed": 1,
+          "type": "juggernaut",
+          "waitTurns": 2,
+          "x": 26,
+          "y": 183
+        },
+        {
+          "attack": 999999,
+          "direction": "right",
+          "health": 7,
+          "id": "273709dc-3e02-4770-bb79-4b001dbf3322",
+          "speed": 1,
+          "type": "juggernaut",
+          "waitTurns": 1,
+          "x": 39,
+          "y": 190
+        },
+        {
+          "attack": 13,
+          "direction": "right",
+          "health": 9,
+          "id": "a80b4709-6925-4860-ba28-e5da00d188f7",
+          "speed": 1,
+          "type": "liner",
+          "waitTurns": 1,
+          "x": 35,
+          "y": 191
+        },
+        {
+          "attack": 13,
+          "direction": "up",
+          "health": 9,
+          "id": "c0c2adba-880a-4da8-a065-e6e0b392a242",
+          "speed": 3,
+          "type": "chaos_knight",
+          "waitTurns": 1,
+          "x": 37,
+          "y": 190
+        },
+        {
+          "attack": 1,
+          "direction": "right",
+          "health": 5,
+          "id": "c6e96b20-f9fe-4280-bdc6-cb599dbbb84e",
+          "speed": 1,
+          "type": "normal",
+          "waitTurns": 1,
+          "x": 24,
+          "y": 186
+        }
+      ]
+    },
+    "rounds": {
+      "gameName": "zombidef-test",
+      "now": "2024-07-13T08:26:04",
+      "rounds": [
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T11:00:00+00:00",
+          "name": "test-day2-12",
+          "repeat": 100,
+          "startAt": "2024-07-13T10:40:00+00:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T10:40:00+00:00",
+          "name": "test-day2-11",
+          "repeat": null,
+          "startAt": "2024-07-13T10:20:00+00:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T10:20:00+00:00",
+          "name": "test-day2-10",
+          "repeat": null,
+          "startAt": "2024-07-13T10:00:00+00:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T10:00:00+00:00",
+          "name": "test-day2-9",
+          "repeat": null,
+          "startAt": "2024-07-13T09:40:00+00:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T09:40:00+00:00",
+          "name": "test-day2-8",
+          "repeat": null,
+          "startAt": "2024-07-13T09:20:00+00:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T09:20:00+00:00",
+          "name": "test-day2-7",
+          "repeat": null,
+          "startAt": "2024-07-13T09:00:00+00:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T09:00:00+00:00",
+          "name": "test-day2-6",
+          "repeat": null,
+          "startAt": "2024-07-13T08:40:00+00:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T08:40:00+00:00",
+          "name": "test-day2-5",
+          "repeat": null,
+          "startAt": "2024-07-13T08:20:00+00:00",
+          "status": "active"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T08:20:00+00:00",
+          "name": "test-day2-4",
+          "repeat": null,
+          "startAt": "2024-07-13T08:00:00+00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T08:00:00+00:00",
+          "name": "test-day2-3",
+          "repeat": null,
+          "startAt": "2024-07-13T07:40:00+00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T07:40:00+00:00",
+          "name": "test-day2-2",
+          "repeat": null,
+          "startAt": "2024-07-13T07:20:00+00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T07:20:00+00:00",
+          "name": "test-day2-1",
+          "repeat": null,
+          "startAt": "2024-07-13T07:00:00+00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T19:00:00+00:00",
+          "name": "test-day1-9",
+          "repeat": null,
+          "startAt": "2024-07-12T18:40:00+00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T18:40:00+00:00",
+          "name": "test-day1-8",
+          "repeat": null,
+          "startAt": "2024-07-12T18:20:00+00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T18:20:00+00:00",
+          "name": "test-day1-7",
+          "repeat": null,
+          "startAt": "2024-07-12T18:00:00+00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 600,
+          "endAt": "2024-07-12T18:00:00+00:00",
+          "name": "test-day1-6-2",
+          "repeat": null,
+          "startAt": "2024-07-12T17:50:00+00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 600,
+          "endAt": "2024-07-12T17:50:00+00:00",
+          "name": "test-day1-6-1",
+          "repeat": null,
+          "startAt": "2024-07-12T17:40:00+00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T17:40:00+00:00",
+          "name": "test-day1-5",
+          "repeat": null,
+          "startAt": "2024-07-12T17:20:00+00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T17:20:00+00:00",
+          "name": "test-day1-4",
+          "repeat": null,
+          "startAt": "2024-07-12T17:00:00+00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T17:00:00+00:00",
+          "name": "test-day1-3",
+          "repeat": null,
+          "startAt": "2024-07-12T16:40:00+00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T16:40:00+00:00",
+          "name": "test-day1-2",
+          "repeat": null,
+          "startAt": "2024-07-12T16:20:00+00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T16:20:00+00:00",
+          "name": "test-day1-1",
+          "repeat": null,
+          "startAt": "2024-07-12T16:00:00+00:00",
+          "status": "ended"
+        }
+      ]
+    }
+  },
+  "command": {
+    "attack": [],
+    "build": []
+  }
+}

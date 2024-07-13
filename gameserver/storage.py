@@ -26,6 +26,7 @@ def load(path: Path) -> list[PassedRound]:
 
 class RoundStorage:
     def __init__(self, path: Path):
+        path.mkdir(parents=True, exist_ok=True)
         self.path = path
         self._rounds = load(path)
 
