@@ -400,18 +400,36 @@ class GetUnitsResponse:
             "zombies": [zombie.to_json() for zombie in self.zombies],
         }
 
-    def __sort_by_danger(self, points):
-        points = points.copy()
-        return points
+    def __sort_enemies(self, en: list[EnemyBaseLocation]):
+        pr = []
+        npr = []
+        for p in en:
+            if p.is_head:
+                pr.append(p)
+            else:
+                npr.append(p)
+        return pr, npr
 
-
+    def __sort_by_danger(self, zmbs: list[Zombie]):
+        pr = []
+        npr = []
+        
+        for zm in zmbs:
+            if point.type == ZombieType.JUGGERNAUT or zm.type == ZombieType.LINER:
+                pr.append(zm)
+            else:
+                npr.append(zm)
+        return pr, npr
 
     def attack(self) -> list[AttackCommand]:
         attackers: list[MyBaseLocation] = []
         used_attackers = []
         attacks = []
         possible_attackers = self.base.copy()
-        uebki = self.__sort_by_danger(self.zombies + self.enemy_bases)
+        pre, npre = self.__sort_enemies(self.enemy_bases)
+        prz, nprz = self.__sort_by_danger(self.zombies)
+
+        uebki = pre + prz + npre + nprz
 
         for zombie in uebki:
             accumulated_damage = 0
