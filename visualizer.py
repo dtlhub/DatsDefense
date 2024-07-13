@@ -44,7 +44,7 @@ class RoundVisualizer:
                             point.location.y, 
                             label='Our base', 
                             marker='*', 
-                            color='green' if point.is_head == False else 'blue', 
+                            color='green' if point.is_head == False else 'blue',
                             s=100)
 
     def __add_zombies(self):
