@@ -76,15 +76,8 @@ class Runner(threading.Thread):
             history=storage.get_stored(),
             current_round=self.get_round_cached(),
         )
-        result = self._strategy.command(state)
-        if isinstance(result, Command):
-            command = result
-        else:
-            next_strategy, command = result
-            with self._strategy_lock:
-                if self.next_round_strategy is None:
-                    self.next_round_strategy = cast(str, next_strategy)
 
+        command = self._strategy.command(state)
         accepted_command = self._api.send_command(command)
         storage.add(
             PassedRound(
@@ -94,7 +87,7 @@ class Runner(threading.Thread):
         )
 
         end = datetime.datetime.now()
-        logger.info(f"Made move in {(end - now).total_seconds()} seconds")
+        logger.info(f"Run round in {(end - now).total_seconds()}")
         return "you are dead" not in accepted_command.errors
 
     def play_until_dead(self, storage: RoundStorage):
