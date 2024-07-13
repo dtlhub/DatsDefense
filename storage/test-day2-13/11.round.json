@@ -1,0 +1,743 @@
+{
+  "game": {
+    "world": {
+      "realmName": "test-day2-13",
+      "zpots": [
+        {
+          "x": 133,
+          "y": 150,
+          "type": "default"
+        },
+        {
+          "x": 135,
+          "y": 136,
+          "type": "default"
+        },
+        {
+          "x": 135,
+          "y": 137,
+          "type": "default"
+        },
+        {
+          "x": 150,
+          "y": 147,
+          "type": "default"
+        },
+        {
+          "x": 135,
+          "y": 130,
+          "type": "default"
+        },
+        {
+          "x": 152,
+          "y": 135,
+          "type": "default"
+        },
+        {
+          "x": 150,
+          "y": 143,
+          "type": "default"
+        },
+        {
+          "x": 150,
+          "y": 152,
+          "type": "default"
+        },
+        {
+          "x": 150,
+          "y": 149,
+          "type": "default"
+        },
+        {
+          "x": 151,
+          "y": 135,
+          "type": "default"
+        },
+        {
+          "x": 148,
+          "y": 135,
+          "type": "default"
+        },
+        {
+          "x": 134,
+          "y": 150,
+          "type": "default"
+        },
+        {
+          "x": 150,
+          "y": 151,
+          "type": "default"
+        },
+        {
+          "x": 135,
+          "y": 135,
+          "type": "default"
+        },
+        {
+          "x": 130,
+          "y": 150,
+          "type": "default"
+        },
+        {
+          "x": 150,
+          "y": 145,
+          "type": "default"
+        },
+        {
+          "x": 150,
+          "y": 153,
+          "type": "default"
+        },
+        {
+          "x": 153,
+          "y": 135,
+          "type": "default"
+        },
+        {
+          "x": 138,
+          "y": 150,
+          "type": "default"
+        },
+        {
+          "x": 135,
+          "y": 134,
+          "type": "default"
+        },
+        {
+          "x": 142,
+          "y": 150,
+          "type": "default"
+        },
+        {
+          "x": 149,
+          "y": 135,
+          "type": "default"
+        },
+        {
+          "x": 147,
+          "y": 135,
+          "type": "default"
+        },
+        {
+          "x": 135,
+          "y": 150,
+          "type": "default"
+        },
+        {
+          "x": 150,
+          "y": 135,
+          "type": "default"
+        },
+        {
+          "x": 135,
+          "y": 142,
+          "type": "default"
+        },
+        {
+          "x": 154,
+          "y": 135,
+          "type": "default"
+        },
+        {
+          "x": 140,
+          "y": 150,
+          "type": "default"
+        },
+        {
+          "x": 150,
+          "y": 146,
+          "type": "default"
+        },
+        {
+          "x": 135,
+          "y": 140,
+          "type": "default"
+        },
+        {
+          "x": 136,
+          "y": 150,
+          "type": "default"
+        },
+        {
+          "x": 144,
+          "y": 135,
+          "type": "default"
+        },
+        {
+          "x": 143,
+          "y": 135,
+          "type": "default"
+        },
+        {
+          "x": 135,
+          "y": 141,
+          "type": "default"
+        },
+        {
+          "x": 137,
+          "y": 150,
+          "type": "default"
+        },
+        {
+          "x": 135,
+          "y": 133,
+          "type": "default"
+        },
+        {
+          "x": 139,
+          "y": 150,
+          "type": "default"
+        },
+        {
+          "x": 135,
+          "y": 139,
+          "type": "default"
+        },
+        {
+          "x": 146,
+          "y": 135,
+          "type": "default"
+        },
+        {
+          "x": 150,
+          "y": 154,
+          "type": "default"
+        },
+        {
+          "x": 135,
+          "y": 132,
+          "type": "default"
+        },
+        {
+          "x": 135,
+          "y": 138,
+          "type": "default"
+        },
+        {
+          "x": 145,
+          "y": 135,
+          "type": "default"
+        },
+        {
+          "x": 150,
+          "y": 144,
+          "type": "default"
+        },
+        {
+          "x": 150,
+          "y": 150,
+          "type": "default"
+        },
+        {
+          "x": 150,
+          "y": 148,
+          "type": "default"
+        },
+        {
+          "x": 131,
+          "y": 150,
+          "type": "default"
+        },
+        {
+          "x": 135,
+          "y": 131,
+          "type": "default"
+        },
+        {
+          "x": 141,
+          "y": 150,
+          "type": "default"
+        },
+        {
+          "x": 132,
+          "y": 150,
+          "type": "default"
+        }
+      ]
+    },
+    "units": {
+      "base": [
+        {
+          "id": "0190abc4-873e-75e9-b6b1-540fdaebb839",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 142,
+          "y": 144
+        },
+        {
+          "id": "0190abc4-8305-7c81-b53c-33d7cf799a53",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 143,
+          "y": 142
+        },
+        {
+          "id": "0190abc4-8305-7c7d-86de-f2a1f63a1bbc",
+          "attack": 40,
+          "health": 300,
+          "isHead": true,
+          "range": 8,
+          "x": 142,
+          "y": 142
+        },
+        {
+          "id": "0190abc4-873e-75ee-a8d1-2069cf3a310c",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 144,
+          "y": 143
+        },
+        {
+          "id": "0190abc4-8305-7c88-811b-5a9ff36d036c",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 143,
+          "y": 143
+        },
+        {
+          "id": "0190abc4-873e-75a6-b12d-22346cf1f980",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 142,
+          "y": 141
+        },
+        {
+          "id": "0190abc4-873e-75cd-9a47-8f44204fcd5e",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 141,
+          "y": 142
+        },
+        {
+          "id": "0190abc4-8f0e-7dd9-9a01-35c6a9d8ca87",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 140,
+          "y": 142
+        },
+        {
+          "id": "0190abc4-8f0e-7dce-9495-c9e01bd6a72b",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 141,
+          "y": 141
+        },
+        {
+          "id": "0190abc4-873e-75e3-888c-218b75eada23",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 144,
+          "y": 142
+        },
+        {
+          "id": "0190abc4-d55e-7d83-a5db-17230a816e3a",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 144,
+          "y": 141
+        },
+        {
+          "id": "0190abc4-873e-75d6-a642-488bcc3a33d6",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 141,
+          "y": 143
+        },
+        {
+          "id": "0190abc4-8305-7c85-8b06-5dc25dd8098e",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 142,
+          "y": 143
+        },
+        {
+          "id": "0190abc4-bdee-7407-850f-9590c8d39bca",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 142,
+          "y": 140
+        },
+        {
+          "id": "0190abc4-873e-75db-bb30-8fe3de469943",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 143,
+          "y": 141
+        },
+        {
+          "id": "0190abc4-c5be-7ba0-8a49-b692b37c6c73",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 143,
+          "y": 140
+        },
+        {
+          "id": "0190abc4-873e-75f4-b6c8-c5f34a5e0fa6",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 143,
+          "y": 144
+        }
+      ],
+      "enemyBlocks": [],
+      "player": {
+        "enemyBlockKills": 0,
+        "gold": 0,
+        "name": "dtl",
+        "points": 0,
+        "zombieKills": 3
+      },
+      "realmName": "test-day2-13",
+      "turn": 11,
+      "turnEndsInMs": 1820,
+      "zombies": [
+        {
+          "attack": 1,
+          "direction": "left",
+          "health": 5,
+          "id": "f005ed2a-87a1-4597-b42d-9f952cb241ef",
+          "speed": 1,
+          "type": "normal",
+          "waitTurns": 1,
+          "x": 145,
+          "y": 149
+        },
+        {
+          "attack": 1,
+          "direction": "up",
+          "health": 5,
+          "id": "08ec1845-9751-49af-bed8-e02e149a7cd6",
+          "speed": 1,
+          "type": "bomber",
+          "waitTurns": 1,
+          "x": 138,
+          "y": 148
+        },
+        {
+          "attack": 1,
+          "direction": "left",
+          "health": 5,
+          "id": "c0e493a1-800c-4b27-be9f-612ff868a181",
+          "speed": 1,
+          "type": "normal",
+          "waitTurns": 1,
+          "x": 132,
+          "y": 131
+        },
+        {
+          "attack": 1,
+          "direction": "left",
+          "health": 5,
+          "id": "ede94ca9-29f8-4e4d-a1c1-72ca5c91a4ae",
+          "speed": 2,
+          "type": "fast",
+          "waitTurns": 1,
+          "x": 150,
+          "y": 130
+        }
+      ]
+    },
+    "rounds": {
+      "gameName": "zombidef-test",
+      "now": "2024-07-13T11:05:22",
+      "rounds": [
+        {
+          "duration": 1140,
+          "endAt": "2024-07-13T13:59:00",
+          "name": "test-day2-21",
+          "repeat": null,
+          "startAt": "2024-07-13T13:40:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1140,
+          "endAt": "2024-07-13T13:39:00",
+          "name": "test-day2-20",
+          "repeat": null,
+          "startAt": "2024-07-13T13:20:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1140,
+          "endAt": "2024-07-13T13:19:00",
+          "name": "test-day2-19",
+          "repeat": null,
+          "startAt": "2024-07-13T13:00:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1140,
+          "endAt": "2024-07-13T12:59:00",
+          "name": "test-day2-18",
+          "repeat": null,
+          "startAt": "2024-07-13T12:40:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1140,
+          "endAt": "2024-07-13T12:39:00",
+          "name": "test-day2-17",
+          "repeat": null,
+          "startAt": "2024-07-13T12:20:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1140,
+          "endAt": "2024-07-13T12:19:00",
+          "name": "test-day2-16",
+          "repeat": null,
+          "startAt": "2024-07-13T12:00:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1140,
+          "endAt": "2024-07-13T11:59:00",
+          "name": "test-day2-15",
+          "repeat": null,
+          "startAt": "2024-07-13T11:40:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1140,
+          "endAt": "2024-07-13T11:39:00",
+          "name": "test-day2-14",
+          "repeat": null,
+          "startAt": "2024-07-13T11:20:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1140,
+          "endAt": "2024-07-13T11:19:00",
+          "name": "test-day2-13",
+          "repeat": null,
+          "startAt": "2024-07-13T11:00:00",
+          "status": "active"
+        },
+        {
+          "duration": 1140,
+          "endAt": "2024-07-13T10:59:00",
+          "name": "test-day2-12",
+          "repeat": null,
+          "startAt": "2024-07-13T10:40:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1140,
+          "endAt": "2024-07-13T10:39:00",
+          "name": "test-day2-11",
+          "repeat": null,
+          "startAt": "2024-07-13T10:20:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T10:20:00",
+          "name": "test-day2-10",
+          "repeat": null,
+          "startAt": "2024-07-13T10:00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T10:00:00",
+          "name": "test-day2-9",
+          "repeat": null,
+          "startAt": "2024-07-13T09:40:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T09:40:00",
+          "name": "test-day2-8",
+          "repeat": null,
+          "startAt": "2024-07-13T09:20:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T09:20:00",
+          "name": "test-day2-7",
+          "repeat": null,
+          "startAt": "2024-07-13T09:00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T09:00:00",
+          "name": "test-day2-6",
+          "repeat": null,
+          "startAt": "2024-07-13T08:40:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T08:40:00",
+          "name": "test-day2-5",
+          "repeat": null,
+          "startAt": "2024-07-13T08:20:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T08:20:00",
+          "name": "test-day2-4",
+          "repeat": null,
+          "startAt": "2024-07-13T08:00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T08:00:00",
+          "name": "test-day2-3",
+          "repeat": null,
+          "startAt": "2024-07-13T07:40:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T07:40:00",
+          "name": "test-day2-2",
+          "repeat": null,
+          "startAt": "2024-07-13T07:20:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T07:20:00",
+          "name": "test-day2-1",
+          "repeat": null,
+          "startAt": "2024-07-13T07:00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T19:00:00",
+          "name": "test-day1-9",
+          "repeat": null,
+          "startAt": "2024-07-12T18:40:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T18:40:00",
+          "name": "test-day1-8",
+          "repeat": null,
+          "startAt": "2024-07-12T18:20:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T18:20:00",
+          "name": "test-day1-7",
+          "repeat": null,
+          "startAt": "2024-07-12T18:00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 600,
+          "endAt": "2024-07-12T18:00:00",
+          "name": "test-day1-6-2",
+          "repeat": null,
+          "startAt": "2024-07-12T17:50:00",
+          "status": "ended"
+        },
+        {
+          "duration": 600,
+          "endAt": "2024-07-12T17:50:00",
+          "name": "test-day1-6-1",
+          "repeat": null,
+          "startAt": "2024-07-12T17:40:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T17:40:00",
+          "name": "test-day1-5",
+          "repeat": null,
+          "startAt": "2024-07-12T17:20:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T17:20:00",
+          "name": "test-day1-4",
+          "repeat": null,
+          "startAt": "2024-07-12T17:00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T17:00:00",
+          "name": "test-day1-3",
+          "repeat": null,
+          "startAt": "2024-07-12T16:40:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T16:40:00",
+          "name": "test-day1-2",
+          "repeat": null,
+          "startAt": "2024-07-12T16:20:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T16:20:00",
+          "name": "test-day1-1",
+          "repeat": null,
+          "startAt": "2024-07-12T16:00:00",
+          "status": "ended"
+        }
+      ]
+    }
+  },
+  "command": {
+    "attack": [
+      {
+        "blockId": "0190abc4-8305-7c7d-86de-f2a1f63a1bbc",
+        "target": {
+          "x": 145,
+          "y": 149
+        }
+      }
+    ],
+    "build": [],
+    "moveBase": {
+      "x": 142,
+      "y": 142
+    }
+  }
+}

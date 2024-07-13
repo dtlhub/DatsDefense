@@ -2,6 +2,27 @@ from gameserver.strategy import Strategy
 
 from model import Command, Location
 from model.state import State
+from itertools import chain
+from typing import Generator
+
+
+def neighbours(loc: Location) -> Generator[Location, None]:
+    for dx, dy in [(1, 0), (0, 1), (-1, 0), (0, -1)]:
+        yield Location(loc.x + dx, loc.y + dy)
+
+
+def neighbours_with_diag(loc: Location) -> Generator[Location, None]:
+    for dx, dy in [
+        (1, 0),
+        (0, 1),
+        (-1, 0),
+        (0, -1),
+        (1, 1),
+        (1, -1),
+        (-1, 1),
+        (-1, -1),
+    ]:
+        yield Location(loc.x + dx, loc.y + dy)
 
 
 class StupidAttackStrategy(Strategy):
@@ -26,12 +47,16 @@ class StupidAttackStrategy(Strategy):
         limit = state.current_round.units.player.gold
 
         base = state.current_round.units.base
+        zombies = state.current_round.units.zombies
+        zpots = state.current_round.world.zpots
+        enemy_bases = state.current_round.units.enemy_bases
+
         if len(base) == 0:
             return [], None
 
-        for b in base:
-            xs.append(b.location.x)
-            ys.append(b.location.y)
+        for obj in base:
+            xs.append(obj.location.x)
+            ys.append(obj.location.y)
 
         center_x = sum(xs) / len(xs)
         center_y = sum(ys) / len(ys)
@@ -40,14 +65,21 @@ class StupidAttackStrategy(Strategy):
             y=round(center_y),
         )
 
-        base_locations: set[Location] = set()
-        for b in base:
-            base_locations.add(b.location)
+        unavailable: set[Location] = set()
+        for obj in chain(base, zombies):
+            unavailable.add(obj.location)
+        for enemy_base in enemy_bases:
+            for loc in neighbours_with_diag(enemy_base.location):
+                unavailable.add(loc)
+        for zpot in zpots:
+            for loc in neighbours(Location(zpot.x, zpot.y)):
+                unavailable.add(loc)
 
-        neighbours: set[Location] = set()
+        to_build: set[Location] = set()
+
         def add_neighbour(loc: Location):
-            if loc not in base_locations:
-                neighbours.add(loc)
+            if loc not in unavailable:
+                to_build.add(loc)
 
         for b in base:
             x, y = b.location.x, b.location.y
@@ -57,11 +89,12 @@ class StupidAttackStrategy(Strategy):
             add_neighbour(Location(x, y + 1))
 
         sorted_by_proximity_to_center = sorted(
-            neighbours, key=lambda loc: center.distance(loc)
+            to_build, key=lambda loc: center.distance(loc)
         )
         available = sorted_by_proximity_to_center[:limit]
 
         new_head = None
+        base_locations: set[Location] = set(map(lambda b: b.location, base))
         if center in base_locations or center in available:
             new_head = center
 
