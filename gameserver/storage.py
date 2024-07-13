@@ -1,7 +1,11 @@
 import json
+import logging
 from pathlib import Path
 
 from model.state import PassedRound
+
+
+logger = logging.getLogger("storage")
 
 
 def load(path: Path) -> list[PassedRound]:
@@ -13,7 +17,7 @@ def load(path: Path) -> list[PassedRound]:
     filenames = sorted(filenames)
     rounds = []
     for filename in filenames:
-        with open(filename) as f:
+        with open(path / filename) as f:
             data = json.load(f)
         round = PassedRound.from_json(data)
         rounds.append(round)
@@ -30,6 +34,6 @@ class RoundStorage:
 
     def add(self, round: PassedRound):
         filename = f"{len(self._rounds)}.round.json"
-        with open(filename, "w") as f:
-            json.dump(round.to_json(), f)
+        with open(self.path / filename, "w") as f:
+            json.dump(round.to_json(), f, indent=2)
         self._rounds.append(round)
