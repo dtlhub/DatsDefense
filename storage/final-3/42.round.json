@@ -1,0 +1,1482 @@
+{
+  "game": {
+    "world": {
+      "realmName": "final-3",
+      "zpots": [
+        {
+          "x": 555,
+          "y": 440,
+          "type": "default"
+        },
+        {
+          "x": 545,
+          "y": 450,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 453,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 430,
+          "type": "default"
+        },
+        {
+          "x": 548,
+          "y": 435,
+          "type": "default"
+        },
+        {
+          "x": 552,
+          "y": 450,
+          "type": "default"
+        },
+        {
+          "x": 550,
+          "y": 450,
+          "type": "default"
+        },
+        {
+          "x": 551,
+          "y": 435,
+          "type": "default"
+        },
+        {
+          "x": 550,
+          "y": 435,
+          "type": "default"
+        },
+        {
+          "x": 548,
+          "y": 450,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 451,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 443,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 437,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 454,
+          "type": "default"
+        },
+        {
+          "x": 547,
+          "y": 450,
+          "type": "default"
+        },
+        {
+          "x": 544,
+          "y": 450,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 438,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 447,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 446,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 428,
+          "type": "default"
+        },
+        {
+          "x": 541,
+          "y": 450,
+          "type": "default"
+        },
+        {
+          "x": 553,
+          "y": 450,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 455,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 433,
+          "type": "default"
+        },
+        {
+          "x": 552,
+          "y": 435,
+          "type": "default"
+        },
+        {
+          "x": 547,
+          "y": 435,
+          "type": "default"
+        },
+        {
+          "x": 542,
+          "y": 435,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 441,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 445,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 435,
+          "type": "default"
+        },
+        {
+          "x": 549,
+          "y": 450,
+          "type": "default"
+        },
+        {
+          "x": 546,
+          "y": 435,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 452,
+          "type": "default"
+        },
+        {
+          "x": 543,
+          "y": 435,
+          "type": "default"
+        },
+        {
+          "x": 554,
+          "y": 435,
+          "type": "default"
+        },
+        {
+          "x": 546,
+          "y": 450,
+          "type": "default"
+        },
+        {
+          "x": 554,
+          "y": 450,
+          "type": "default"
+        },
+        {
+          "x": 540,
+          "y": 450,
+          "type": "default"
+        },
+        {
+          "x": 545,
+          "y": 435,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 448,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 450,
+          "type": "default"
+        },
+        {
+          "x": 544,
+          "y": 435,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 434,
+          "type": "default"
+        },
+        {
+          "x": 543,
+          "y": 450,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 432,
+          "type": "default"
+        },
+        {
+          "x": 553,
+          "y": 435,
+          "type": "default"
+        },
+        {
+          "x": 542,
+          "y": 450,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 456,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 431,
+          "type": "default"
+        },
+        {
+          "x": 551,
+          "y": 450,
+          "type": "default"
+        },
+        {
+          "x": 540,
+          "y": 435,
+          "type": "default"
+        },
+        {
+          "x": 549,
+          "y": 435,
+          "type": "default"
+        },
+        {
+          "x": 541,
+          "y": 435,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 444,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 449,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 429,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 436,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 442,
+          "type": "default"
+        },
+        {
+          "x": 555,
+          "y": 439,
+          "type": "default"
+        }
+      ]
+    },
+    "units": {
+      "base": [
+        {
+          "id": "0190ac61-63a3-7651-8cea-5d3d23c34208",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 547,
+          "y": 438
+        },
+        {
+          "id": "0190ac60-24b5-768c-b68f-d2308c039b50",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 548,
+          "y": 443
+        },
+        {
+          "id": "0190ac60-24b5-7686-ad11-2b4850ada662",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 549,
+          "y": 442
+        },
+        {
+          "id": "0190ac60-2b23-7048-89ce-5151b2c9c357",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 548,
+          "y": 441
+        },
+        {
+          "id": "0190ac61-1d53-70b5-b5a3-5ecd9a97198b",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 546,
+          "y": 445
+        },
+        {
+          "id": "0190ac60-ee72-7485-ac84-63541a8859fa",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 547,
+          "y": 445
+        },
+        {
+          "id": "0190ac60-d703-7009-ad3f-d41338f9b22f",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 551,
+          "y": 442
+        },
+        {
+          "id": "0190ac60-a052-7ef4-b135-33c1f7ba68d2",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 550,
+          "y": 444
+        },
+        {
+          "id": "0190ac60-fe13-756e-9609-f61ffc2c0945",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 545,
+          "y": 443
+        },
+        {
+          "id": "0190ac60-2b23-7056-977a-c133ffaf0f22",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 549,
+          "y": 441
+        },
+        {
+          "id": "0190ac61-5402-785c-b4b5-95e66fc158ab",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 544,
+          "y": 442
+        },
+        {
+          "id": "0190ac60-24b5-767d-8028-515ead69ec84",
+          "attack": 40,
+          "health": 300,
+          "isHead": true,
+          "range": 8,
+          "x": 548,
+          "y": 442
+        },
+        {
+          "id": "0190ac60-61d2-76b1-a6f9-446234f060be",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 550,
+          "y": 441,
+          "lastAttack": {
+            "x": 554,
+            "y": 439
+          }
+        },
+        {
+          "id": "0190ac60-90b2-796b-9a78-20df9a18639c",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 546,
+          "y": 443
+        },
+        {
+          "id": "0190ac61-4c33-7b9f-9ff6-e89a7cb84047",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 551,
+          "y": 444
+        },
+        {
+          "id": "0190ac60-4a62-75c0-950d-e841d9466639",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 546,
+          "y": 442
+        },
+        {
+          "id": "0190ac60-61d2-76a2-b3ca-aaf39a0ce21f",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 547,
+          "y": 444
+        },
+        {
+          "id": "0190ac61-5402-784e-bfc8-8904edf79c58",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 548,
+          "y": 438,
+          "lastAttack": {
+            "x": 551,
+            "y": 434
+          }
+        },
+        {
+          "id": "0190ac60-e6a2-7e4e-8f7b-0cd7ae2f3f87",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 548,
+          "y": 445
+        },
+        {
+          "id": "0190ac60-aff2-749c-b12a-0898e02f96a1",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 550,
+          "y": 440
+        },
+        {
+          "id": "0190ac61-5bd2-7e7f-80c2-1fb50d7eab99",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 552,
+          "y": 441
+        },
+        {
+          "id": "0190ac61-2522-7deb-9b79-7b0a47098ce1",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 546,
+          "y": 439
+        },
+        {
+          "id": "0190ac60-32f3-722c-b284-b1dbe175bc60",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 548,
+          "y": 440
+        },
+        {
+          "id": "0190ac60-e6a2-7e46-b5f7-db24945d698e",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 548,
+          "y": 439
+        },
+        {
+          "id": "0190ac60-2b23-7061-a2a8-06fbcc3421f0",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 548,
+          "y": 444
+        },
+        {
+          "id": "0190ac60-e6a2-7e57-8aaf-954b95bdaa83",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 551,
+          "y": 443,
+          "lastAttack": {
+            "x": 554,
+            "y": 439
+          }
+        },
+        {
+          "id": "0190ac60-2b23-7066-a2e7-8063d0f534ff",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 550,
+          "y": 442
+        },
+        {
+          "id": "0190ac60-aff2-74a3-b7b8-a5ac10c68a87",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 546,
+          "y": 444
+        },
+        {
+          "id": "0190ac61-4462-71ac-95b5-270f1b5eceec",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 550,
+          "y": 445
+        },
+        {
+          "id": "0190ac61-2522-7df3-9b74-6b98cf8df914",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 545,
+          "y": 440,
+          "lastAttack": {
+            "x": 541,
+            "y": 437
+          }
+        },
+        {
+          "id": "0190ac60-24b5-7690-a671-f1f357c59b9e",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 549,
+          "y": 443
+        },
+        {
+          "id": "0190ac60-fe13-755a-9960-f5bbc6fa40df",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 549,
+          "y": 445,
+          "lastAttack": {
+            "x": 551,
+            "y": 449
+          }
+        },
+        {
+          "id": "0190ac61-05e3-737e-b30a-536785869bd9",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 551,
+          "y": 440,
+          "lastAttack": {
+            "x": 554,
+            "y": 436
+          }
+        },
+        {
+          "id": "0190ac61-3c93-767c-ab85-3d83aa73b05c",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 550,
+          "y": 439,
+          "lastAttack": {
+            "x": 554,
+            "y": 436
+          }
+        },
+        {
+          "id": "0190ac60-88e2-7c16-98f8-dcf4326cfdec",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 547,
+          "y": 440
+        },
+        {
+          "id": "0190ac60-8112-7a87-a10f-978fd217ee89",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 549,
+          "y": 440
+        },
+        {
+          "id": "0190ac60-fe13-7565-8330-89c3759194ef",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 545,
+          "y": 441
+        },
+        {
+          "id": "0190ac61-5bd2-7e85-8f5d-817e60a669b1",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 544,
+          "y": 443,
+          "lastAttack": {
+            "x": 541,
+            "y": 446
+          }
+        },
+        {
+          "id": "0190ac61-5bd2-7e78-b70a-9a3f93eb9888",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 549,
+          "y": 446,
+          "lastAttack": {
+            "x": 550,
+            "y": 449
+          }
+        },
+        {
+          "id": "0190ac60-c763-7340-b608-599b8d9d3817",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 545,
+          "y": 442
+        },
+        {
+          "id": "0190ac60-88e2-7c0a-84d6-549489173c2d",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 546,
+          "y": 441
+        },
+        {
+          "id": "0190ac60-2b23-705b-8095-734d94da3e27",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 547,
+          "y": 443
+        },
+        {
+          "id": "0190ac60-32f3-7226-9dc2-2f1b71bcc1ac",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 547,
+          "y": 441
+        },
+        {
+          "id": "0190ac61-5402-7856-b020-2483c2c4fde5",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 548,
+          "y": 446,
+          "lastAttack": {
+            "x": 551,
+            "y": 449
+          }
+        },
+        {
+          "id": "0190ac60-2b23-706b-93c6-abfd3548e525",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 549,
+          "y": 444
+        },
+        {
+          "id": "0190ac61-63a3-764b-ba35-5266d5d376fe",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 552,
+          "y": 443
+        },
+        {
+          "id": "0190ac60-ee72-748d-8333-5e1974470955",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 549,
+          "y": 439
+        },
+        {
+          "id": "0190ac60-2b23-704f-a11d-99d380f9368e",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 547,
+          "y": 442
+        },
+        {
+          "id": "0190ac61-05e3-7377-b6ac-ba8742b04ec1",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 551,
+          "y": 441
+        },
+        {
+          "id": "0190ac60-b7c2-79d5-806d-741effa50a59",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 546,
+          "y": 440
+        },
+        {
+          "id": "0190ac60-ee72-747d-bf0c-2d028da724ce",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 547,
+          "y": 439,
+          "lastAttack": {
+            "x": 547,
+            "y": 434
+          }
+        },
+        {
+          "id": "0190ac60-2b23-7071-a974-edb0af2e61e1",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 550,
+          "y": 443
+        },
+        {
+          "id": "0190ac61-5bd2-7e72-a4c2-10a5ba320af1",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 547,
+          "y": 446,
+          "lastAttack": {
+            "x": 550,
+            "y": 449
+          }
+        },
+        {
+          "id": "0190ac61-5402-7862-b776-9b5c614bb0f8",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 552,
+          "y": 442
+        },
+        {
+          "id": "0190ac61-5402-7868-9f70-db3836b4d567",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 544,
+          "y": 441,
+          "lastAttack": {
+            "x": 541,
+            "y": 437
+          }
+        },
+        {
+          "id": "0190ac61-1d53-70af-9b05-0d04d9db26b9",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 545,
+          "y": 444,
+          "lastAttack": {
+            "x": 541,
+            "y": 446
+          }
+        }
+      ],
+      "enemyBlocks": [
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 68,
+          "isHead": false,
+          "range": 5,
+          "x": 550,
+          "y": 428,
+          "lastAttack": {
+            "x": 552,
+            "y": 426
+          }
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 545,
+          "y": 456,
+          "lastAttack": {
+            "x": 545,
+            "y": 451
+          }
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 74,
+          "isHead": false,
+          "range": 5,
+          "x": 550,
+          "y": 429
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 545,
+          "y": 454,
+          "lastAttack": {
+            "x": 549,
+            "y": 451
+          }
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 548,
+          "y": 428
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 548,
+          "y": 456,
+          "lastAttack": {
+            "x": 552,
+            "y": 453
+          }
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 545,
+          "y": 455,
+          "lastAttack": {
+            "x": 541,
+            "y": 452
+          }
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 547,
+          "y": 456
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 546,
+          "y": 456
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 547,
+          "y": 455
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 545,
+          "y": 453,
+          "lastAttack": {
+            "x": 549,
+            "y": 451
+          }
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 544,
+          "y": 456,
+          "lastAttack": {
+            "x": 541,
+            "y": 452
+          }
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 55,
+          "isHead": false,
+          "range": 5,
+          "x": 551,
+          "y": 428
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 548,
+          "y": 429
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 549,
+          "y": 456
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 548,
+          "y": 455,
+          "lastAttack": {
+            "x": 545,
+            "y": 451
+          }
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 87,
+          "isHead": false,
+          "range": 5,
+          "x": 549,
+          "y": 429
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 544,
+          "y": 455,
+          "lastAttack": {
+            "x": 545,
+            "y": 451
+          }
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 547,
+          "y": 429
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 87,
+          "isHead": false,
+          "range": 5,
+          "x": 546,
+          "y": 429
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 549,
+          "y": 428
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 546,
+          "y": 454
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 546,
+          "y": 455
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 544,
+          "y": 454
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 543,
+          "y": 456
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 547,
+          "y": 428
+        }
+      ],
+      "player": {
+        "enemyBlockKills": 0,
+        "gold": 6,
+        "name": "dtl",
+        "points": 0,
+        "zombieKills": 48
+      },
+      "realmName": "final-3",
+      "turn": 41,
+      "turnEndsInMs": 1787,
+      "zombies": [
+        {
+          "attack": 19,
+          "direction": "left",
+          "health": 17,
+          "id": "cb143a08-47e4-49e3-b218-6bef521cec81",
+          "speed": 1,
+          "type": "normal",
+          "waitTurns": 1,
+          "x": 548,
+          "y": 430
+        },
+        {
+          "attack": 19,
+          "direction": "up",
+          "health": 17,
+          "id": "99d7cb4d-15b3-42ef-a599-7324cf7ab1ab",
+          "speed": 1,
+          "type": "liner",
+          "waitTurns": 1,
+          "x": 543,
+          "y": 449
+        },
+        {
+          "attack": 19,
+          "direction": "left",
+          "health": 17,
+          "id": "78a5b4fd-bd73-4518-9fd0-a2ef4e23cd09",
+          "speed": 1,
+          "type": "liner",
+          "waitTurns": 1,
+          "x": 554,
+          "y": 446
+        },
+        {
+          "attack": 19,
+          "direction": "left",
+          "health": 17,
+          "id": "b904f6c1-2bb4-4f6e-b27d-66119487a303",
+          "speed": 2,
+          "type": "fast",
+          "waitTurns": 1,
+          "x": 554,
+          "y": 444
+        },
+        {
+          "attack": 19,
+          "direction": "left",
+          "health": 17,
+          "id": "e0ce9c35-98b0-428a-82e3-f66665b5d379",
+          "speed": 1,
+          "type": "bomber",
+          "waitTurns": 1,
+          "x": 554,
+          "y": 454
+        },
+        {
+          "attack": 19,
+          "direction": "left",
+          "health": 17,
+          "id": "4b0a848d-069c-4a0a-97a3-ccb89e99034e",
+          "speed": 3,
+          "type": "chaos_knight",
+          "waitTurns": 1,
+          "x": 554,
+          "y": 442
+        },
+        {
+          "attack": 19,
+          "direction": "left",
+          "health": 17,
+          "id": "55ea3b16-52a5-4e75-b25e-e56aa5d90ef9",
+          "speed": 1,
+          "type": "bomber",
+          "waitTurns": 1,
+          "x": 554,
+          "y": 430
+        },
+        {
+          "attack": 999999,
+          "direction": "down",
+          "health": 17,
+          "id": "b212b15e-e2fc-4667-82e2-f3b6b71cb273",
+          "speed": 1,
+          "type": "juggernaut",
+          "waitTurns": 2,
+          "x": 550,
+          "y": 436
+        },
+        {
+          "attack": 19,
+          "direction": "up",
+          "health": 7,
+          "id": "9ebf4e2d-d1c5-4ded-9003-fed0f6fbb0c9",
+          "speed": 3,
+          "type": "chaos_knight",
+          "waitTurns": 1,
+          "x": 553,
+          "y": 433
+        },
+        {
+          "attack": 999999,
+          "direction": "down",
+          "health": 17,
+          "id": "b9496d67-c180-40e4-991b-57c95ae025b1",
+          "speed": 1,
+          "type": "juggernaut",
+          "waitTurns": 2,
+          "x": 545,
+          "y": 451
+        },
+        {
+          "attack": 999999,
+          "direction": "right",
+          "health": 9,
+          "id": "57ac2f9b-ba90-4292-bea4-682cabf340c0",
+          "speed": 1,
+          "type": "juggernaut",
+          "waitTurns": 2,
+          "x": 538,
+          "y": 450
+        },
+        {
+          "attack": 19,
+          "direction": "left",
+          "health": 17,
+          "id": "84ab00fd-732e-4511-86c1-f474aa1824a6",
+          "speed": 1,
+          "type": "normal",
+          "waitTurns": 1,
+          "x": 547,
+          "y": 431
+        },
+        {
+          "attack": 19,
+          "direction": "left",
+          "health": 7,
+          "id": "87fb0378-3f74-410f-b486-3946cb758c20",
+          "speed": 3,
+          "type": "chaos_knight",
+          "waitTurns": 1,
+          "x": 548,
+          "y": 432
+        },
+        {
+          "attack": 19,
+          "direction": "left",
+          "health": 17,
+          "id": "248c9656-3822-4912-a4e8-345efd3001c4",
+          "speed": 1,
+          "type": "bomber",
+          "waitTurns": 1,
+          "x": 553,
+          "y": 428
+        },
+        {
+          "attack": 19,
+          "direction": "left",
+          "health": 17,
+          "id": "fe47a450-b8a2-4057-9ab1-e909506ee88c",
+          "speed": 3,
+          "type": "chaos_knight",
+          "waitTurns": 1,
+          "x": 552,
+          "y": 434
+        }
+      ]
+    },
+    "rounds": {
+      "gameName": "zombidef",
+      "now": "2024-07-13T13:56:22",
+      "rounds": [
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T17:05:00",
+          "name": "final-10",
+          "repeat": null,
+          "startAt": "2024-07-13T16:45:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T16:40:00",
+          "name": "final-9",
+          "repeat": null,
+          "startAt": "2024-07-13T16:20:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T16:15:00",
+          "name": "final-8",
+          "repeat": null,
+          "startAt": "2024-07-13T15:55:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T15:50:00",
+          "name": "final-7",
+          "repeat": null,
+          "startAt": "2024-07-13T15:30:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T15:25:00",
+          "name": "final-6",
+          "repeat": null,
+          "startAt": "2024-07-13T15:05:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T15:00:00",
+          "name": "final-5",
+          "repeat": null,
+          "startAt": "2024-07-13T14:40:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T14:35:00",
+          "name": "final-4",
+          "repeat": null,
+          "startAt": "2024-07-13T14:15:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T14:10:00",
+          "name": "final-3",
+          "repeat": null,
+          "startAt": "2024-07-13T13:50:00",
+          "status": "active"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T13:45:00",
+          "name": "final-2",
+          "repeat": null,
+          "startAt": "2024-07-13T13:25:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T13:20:00",
+          "name": "final-1",
+          "repeat": null,
+          "startAt": "2024-07-13T13:00:00",
+          "status": "ended"
+        }
+      ]
+    }
+  },
+  "command": {
+    "attack": [
+      {
+        "blockId": "0190ac61-5bd2-7e72-a4c2-10a5ba320af1",
+        "target": {
+          "x": 543,
+          "y": 449
+        }
+      },
+      {
+        "blockId": "0190ac61-1d53-70b5-b5a3-5ecd9a97198b",
+        "target": {
+          "x": 543,
+          "y": 449
+        }
+      },
+      {
+        "blockId": "0190ac61-5bd2-7e78-b70a-9a3f93eb9888",
+        "target": {
+          "x": 554,
+          "y": 446
+        }
+      },
+      {
+        "blockId": "0190ac60-e6a2-7e57-8aaf-954b95bdaa83",
+        "target": {
+          "x": 554,
+          "y": 446
+        }
+      },
+      {
+        "blockId": "0190ac60-8112-7a87-a10f-978fd217ee89",
+        "target": {
+          "x": 550,
+          "y": 436
+        }
+      },
+      {
+        "blockId": "0190ac60-88e2-7c16-98f8-dcf4326cfdec",
+        "target": {
+          "x": 550,
+          "y": 436
+        }
+      },
+      {
+        "blockId": "0190ac60-61d2-76b1-a6f9-446234f060be",
+        "target": {
+          "x": 554,
+          "y": 444
+        }
+      },
+      {
+        "blockId": "0190ac61-05e3-737e-b30a-536785869bd9",
+        "target": {
+          "x": 554,
+          "y": 444
+        }
+      },
+      {
+        "blockId": "0190ac60-a052-7ef4-b135-33c1f7ba68d2",
+        "target": {
+          "x": 554,
+          "y": 442
+        }
+      },
+      {
+        "blockId": "0190ac61-5bd2-7e7f-80c2-1fb50d7eab99",
+        "target": {
+          "x": 554,
+          "y": 442
+        }
+      }
+    ],
+    "build": [],
+    "moveBase": {
+      "x": 548,
+      "y": 442
+    }
+  }
+}

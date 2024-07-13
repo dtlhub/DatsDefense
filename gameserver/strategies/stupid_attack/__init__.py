@@ -1,10 +1,14 @@
+from collections import defaultdict
+
 from gameserver.strategy import Strategy
 
 from model import Command, Location, ZombieType, Direction, MyBaseLocation
-from model.state import State
+from model.state import State, LocationType
 from itertools import chain, count
 from typing import Generator
 from queue import Queue
+
+from .coefs import Preset
 
 
 def neighbours(loc: Location) -> Generator[Location, None, None]:
@@ -41,6 +45,28 @@ def direction_generator(
         yield Location(loc.x + dx * d, loc.y + dy * d)
 
 
+def get_attractiveness(
+    state: State, start: Location, explore_radius: int, preset: Preset
+) -> float:
+    seen: set[Location] = set()
+    q = Queue()
+    q.put(start)
+    seen.add(start)
+
+    d: dict[LocationType, int] = defaultdict(int)
+    while not q.empty():
+        loc = q.get()
+
+        d[state.current_round.location_types[loc]] += 1
+
+        for n in neighbours(loc):
+            if n not in seen and start.distance(n) <= explore_radius:
+                q.put(n)
+                seen.add(n)
+
+    return preset.get_coef(d)
+
+
 class StupidAttackStrategy(Strategy):
     @staticmethod
     def name() -> str:
@@ -48,8 +74,10 @@ class StupidAttackStrategy(Strategy):
 
     @staticmethod
     def command(state: State) -> Command:
-        attacks = state.current_round.units.attack(StupidAttackStrategy.head_connected_blocks(state))
-        build = StupidAttackStrategy.get_builder_commands(state)
+        attacks = state.current_round.units.attack(
+            StupidAttackStrategy.head_connected_blocks(state)
+        )
+        build = StupidAttackStrategy.build_circle(state)
 
         new_center = StupidAttackStrategy.calculate_head_location(state, build)
 
@@ -60,7 +88,7 @@ class StupidAttackStrategy(Strategy):
         )
 
     @staticmethod
-    def get_builder_commands(state: State) -> list[Location]:
+    def build_circle(state: State) -> list[Location]:
         xs: list[int] = []
         ys: list[int] = []
         limit = state.current_round.units.player.gold
@@ -107,8 +135,25 @@ class StupidAttackStrategy(Strategy):
             add_neighbour(Location(x, y - 1))
             add_neighbour(Location(x, y + 1))
 
+        def calculate_weight(loc: Location) -> float:
+            dist = center.distance(loc)
+            atc = get_attractiveness(
+                state,
+                loc,
+                explore_radius=4,
+                preset=Preset(
+                    wall=2.0,
+                    zombie=2.0,
+                ),
+            )
+
+            if len(state.history) < 10:
+                return -dist
+            return dist * atc
+
         sorted_by_proximity_to_center = sorted(
-            to_build, key=lambda loc: center.distance(loc)
+            to_build,
+            key=calculate_weight,
         )
         will_be_built = sorted_by_proximity_to_center[:limit]
         return will_be_built
