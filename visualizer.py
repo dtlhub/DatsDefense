@@ -109,9 +109,8 @@ class RoundVisualizer:
         self.__add_world()
         plt.legend()
 
-        fig = plt.figure()
         tmpfile = BytesIO()
-        fig.savefig(tmpfile, format='png')
+        self.fig.savefig(tmpfile, format='png')
         return tmpfile.getvalue()
 
     def visualize(self):

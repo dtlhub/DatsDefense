@@ -32,7 +32,7 @@
 
       getRound().then((round) => {
         getImage(round).then((data) => {
-          console.log(data);
+          img.src = `data:image/png;base64,${data}`
         });
       });
     </script>
