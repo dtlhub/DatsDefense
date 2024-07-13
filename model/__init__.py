@@ -344,9 +344,25 @@ class Zombie:
             "y": self.location.y,
         }
 
-    def get_affected_coordinates(self) -> list[Location]:
-        """че надо написать неебаться хуйню да со свитчами по типу"""
-        ...
+    @staticmethod
+    def direction_map(direction: Direction) -> tuple:
+        match direction:
+            case Direction.UP:
+                return (0, 1)
+            case Direction.DOWN:
+                return (0, -1)
+            case Direction.RIGHT:
+                return (1, 0)
+            case Direction.LEFT:
+                return (-1, 0)
+
+
+    def get_affected_coordinates(self) -> list[(int, int)]:
+        """че надо написать неебаться хуйню да со свитчами по типу
+        """
+        zombie_type = self.type
+        direction = Zombie.direction_map(self.direction)
+        return [(self.location.x + direction[0] * self.speed, self.location.y + direction[1] * self.speed)]
 
 
 @dataclass
