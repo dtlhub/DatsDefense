@@ -132,7 +132,7 @@ class StupidAttackStrategy(Strategy):
                         first_base_cell = loc
                         break
                 if first_base_cell is not None:
-                    for loc in direction_generator(zomb.location, zomb.direction):
+                    for loc in direction_generator(first_base_cell, zomb.direction):
                         if loc not in base_cells:
                             break
                         in_target_of_liner.add(loc)
