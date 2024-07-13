@@ -32,7 +32,7 @@ class Location:
         }
 
     def distance(self, other: Self) -> float:
-        return sqrt((self.x**2 - other.x**2) + (self.y**2 - other.y**2))
+        return sqrt((self.x - other.x) ** 2 + (self.y - other.y) ** 2)
 
 
 @dataclass
