@@ -1,7 +1,7 @@
 from gameserver.strategy import Strategy
 
-from model import Command
-from model.state import State, Location
+from model import Command, Location
+from model.state import State
 
 
 class StupidAttackStrategy(Strategy):
