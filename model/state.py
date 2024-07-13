@@ -1,28 +1,25 @@
 from dataclasses import dataclass
 from typing_extensions import Self
 
-from . import GetWorldResponse, GetUnitsResponse, GetRoundsResponse, Command
+from . import GetWorldResponse, GetUnitsResponse, Command
 
 
 @dataclass
 class RoundSnapshot:
     world: GetWorldResponse
     units: GetUnitsResponse
-    rounds: GetRoundsResponse
 
     @classmethod
     def from_json(cls, json) -> Self:
         return cls(
             world=GetWorldResponse.from_json(json["world"]),
             units=GetUnitsResponse.from_json(json["units"]),
-            rounds=GetRoundsResponse.from_json(json["rounds"]),
         )
 
     def to_json(self):
         return {
             "world": self.world.to_json(),
             "units": self.units.to_json(),
-            "rounds": self.rounds.to_json(),
         }
 
 

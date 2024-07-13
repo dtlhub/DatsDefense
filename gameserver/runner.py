@@ -17,6 +17,7 @@ class Runner(threading.Thread):
         storage: RoundStorage,
         initial_strategy: Strategy,
     ):
+        super().__init__()
         self._api = api
         self._cached_round: RoundSnapshot | None = None
         self._cache_lock = threading.Lock()
@@ -53,7 +54,6 @@ class Runner(threading.Thread):
             self._cached_round = RoundSnapshot(
                 world=self._api.get_world_around(),
                 units=self._api.get_units_around(),
-                rounds=self._api.get_game_rounds(),
             )
             return self._cached_round
 

@@ -6,8 +6,6 @@ import gameserver.storage
 import gameserver.runner
 import gameserver.strategies.idle
 
-import visualisation.app
-
 
 TEST_HOST = "https://games-test.datsteam.dev"
 PRODUCTION_HOST = "https://games.datsteam.dev"
@@ -20,18 +18,12 @@ logging.basicConfig(level=logging.DEBUG)
 
 
 def main():
-    STORAGE.mkdir(parents=True, exist_ok=True)
-
     api = gameserver.consumer.ApiConsumer(TEST_HOST, TOKEN)
-    storage = gameserver.storage.RoundStorage(STORAGE)
-    strategy = gameserver.strategies.idle.IdleStrategy()
 
-    runner = gameserver.runner.Runner(api, storage, strategy)
-    runner.start()
-
-    visualise = visualisation.app.create_app(storage)
-    visualise.run("0.0.0.0", 5000, debug=False)
-    runner.join()
+    rounds = api.get_game_rounds()
+    print(rounds.game_name, rounds.now)
+    for round in rounds.rounds:
+        print(f"{round.to_json()}")
 
 
 if __name__ == "__main__":
