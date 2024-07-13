@@ -28,6 +28,17 @@
         }
       }
 
+      async function getUpdate() {
+        const params = new URLSearchParams(document.location.search);
+        let update = params.get("update");
+
+        if (update === null) {
+          return false;
+        } else {
+          return update === "1";
+        }
+      }
+
       async function getImage(roundIndex) {
         let response = await fetch(`/api/${game}/round/${roundIndex}`);
         let json = await response.json();
@@ -38,6 +49,14 @@
         getImage(round).then((data) => {
           img.src = `data:image/png;base64,${data}`;
         });
+      });
+
+      getUpdate().then((update) => {
+        if (update) {
+          setTimeout(() => {
+            window.location.reload()
+          }, 2000);
+        }
       });
 
       function clamp(val, min, max) {
