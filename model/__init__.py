@@ -400,17 +400,23 @@ class GetUnitsResponse:
             "zombies": [zombie.to_json() for zombie in self.zombies],
         }
 
+    def __sort_by_danger(self, points):
+        points = points.copy()
+        return points
+
+
+
     def attack(self) -> list[AttackCommand]:
         attackers: list[MyBaseLocation] = []
         used_attackers = []
         attacks = []
-        for zombie in self.zombies + self.enemy_bases:
+        possible_attackers = self.base.copy()
+        uebki = self.__sort_by_danger(self.zombies + self.enemy_bases)
+
+        for zombie in uebki:
             accumulated_damage = 0
             attackers = []
-            for point in self.base:
-                if point in used_attackers:
-                    continue
-
+            for point in possible_attackers:
                 if point.location.distance(zombie.location) <= point.range:
                     attackers.append(point)
                     accumulated_damage += point.attack
@@ -421,7 +427,7 @@ class GetUnitsResponse:
                 continue
             for attacker in attackers:
                 attacks.append(AttackCommand(attacker.id, zombie.location))
-                used_attackers.append(attacker)
+                possible_attackers.remove(attacker)
 
         return attacks
 
