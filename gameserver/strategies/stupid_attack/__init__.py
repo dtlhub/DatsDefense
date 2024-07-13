@@ -4,7 +4,7 @@ from model import Command
 from model.state import State, Location
 
 
-class McmfAttackStrategy(Strategy):
+class StupidAttackStrategy(Strategy):
     @staticmethod
     def name() -> str:
         return "stupid attack"
