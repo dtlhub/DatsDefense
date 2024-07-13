@@ -40,17 +40,10 @@ class RoundVisualizer:
     def __add_base(self):
         points = self.__get_points(self.base)
         for point in self.base:
-<<<<<<< HEAD
-            self.ax.scatter(point.location.x, 
-                            point.location.y, 
-                            label='Our base', 
-                            marker='*', 
-=======
             self.ax.scatter(point.location.x,
                             point.location.y,
                             label='Our base',
                             marker='*',
->>>>>>> c8cb77526e48667c5cbf8522a6c4de394a0fbde6
                             color='green' if point.is_head == False else 'blue',
                             s=100)
 
