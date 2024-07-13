@@ -5,6 +5,14 @@ from enum import Enum
 from math import sqrt
 
 
+def to_date(datestr: str) -> datetime.datetime:
+    if "." in datestr:
+        datestr = datestr.split(".")[0]
+    datestr = datestr.replace("+00:00", "").replace("Z", "")
+    date_format = "%Y-%m-%dT%H:%M:%S"
+    return datetime.datetime.strptime(datestr, date_format)
+
+
 @dataclass
 class Location:
     x: int
@@ -175,7 +183,7 @@ class EnemyBaseLocation:
             last_attack = Location.from_json(la)
 
         return cls(
-            name=json["str"],
+            name=json["name"],
             attack=json["attack"],
             health=json["health"],
             is_head=is_head,
@@ -202,7 +210,7 @@ class EnemyBaseLocation:
 @dataclass
 class Player:
     enemy_block_kills: int
-    game_ended_at: str
+    game_ended_at: datetime.datetime | None
     gold: int
     name: str
     points: int
@@ -210,9 +218,13 @@ class Player:
 
     @classmethod
     def from_json(cls, json) -> Self:
+        game_end = None
+        if json.get("gameEndedAt") is not None:
+            game_end = to_date(json["gameEndedAt"])
+
         return cls(
             enemy_block_kills=json["enemyBlockKills"],
-            game_ended_at=json["gameEndedAt"],
+            game_ended_at=game_end,
             gold=json["gold"],
             name=json["name"],
             points=json["points"],
@@ -220,14 +232,16 @@ class Player:
         )
 
     def to_json(self):
-        return {
+        json = {
             "enemyBlockKills": self.enemy_block_kills,
-            "gameEndedAt": self.game_ended_at,
             "gold": self.gold,
             "name": self.name,
             "points": self.points,
             "zombieKills": self.zombie_kills,
         }
+        if self.game_ended_at is not None:
+            json["gameEndedAt"] = self.game_ended_at.isoformat()
+        return json
 
 
 class Direction(Enum):
@@ -466,12 +480,10 @@ class GameRound:
     def from_json(cls, json) -> Self:
         return cls(
             duration=json["duration"],
-            endAt=datetime.datetime.fromisoformat(json["endAt"].replace("Z", "+00:00")),
+            endAt=to_date(json["endAt"]),
             name=json["name"],
             repeat=json.get("repeat"),
-            startAt=datetime.datetime.fromisoformat(
-                json["startAt"].replace("Z", "+00:00")
-            ),
+            startAt=to_date(json["startAt"]),
             status=json["status"],
         )
 
@@ -489,20 +501,20 @@ class GameRound:
 @dataclass
 class GetRoundsResponse:
     game_name: str
-    now: str
+    now: datetime.datetime
     rounds: list[GameRound]
 
     @classmethod
     def from_json(cls, json) -> Self:
         return cls(
             game_name=json["gameName"],
-            now=json["now"],
+            now=to_date(json["now"]),
             rounds=[GameRound.from_json(obj) for obj in (json["rounds"] or [])],
         )
 
     def to_json(self):
         return {
             "gameName": self.game_name,
-            "now": self.now,
+            "now": self.now.isoformat(),
             "rounds": [round.to_json() for round in self.rounds],
         }
