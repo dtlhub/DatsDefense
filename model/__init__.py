@@ -431,7 +431,7 @@ class GetUnitsResponse:
         npr = []
 
         for zm in zmbs:
-            if zm.type == ZombieType.JUGGERNAUT:
+            if zm.type == ZombieType.JUGGERNAUT or zm.type == ZombieType.BOMBER or zm.type==CHAOS_KNIGHT:
                 pr.append(zm)
             elif zm.type == ZombieType.LINER:
                 prl.append(zm)
