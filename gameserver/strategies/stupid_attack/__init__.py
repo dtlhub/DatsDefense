@@ -161,3 +161,24 @@ class StupidAttackStrategy(Strategy):
             if dist[loc] > dist[max_loc]:
                 max_loc = loc
         return max_loc
+
+    @staticmethod
+    def head_connected_blocks(state: State) -> set[Location]:
+        head = state.current_round.units.base_head
+        if head is None:
+            return set()
+
+        base_cells = set(
+            map(lambda x: x.location, state.current_round.units.base)
+        )
+        used: set[Location] = {head.location}
+        q = Queue()
+        q.put(head.location)
+        while not q.empty():
+            loc = q.get()
+            for n in neighbours(loc):
+                if n not in used and n in base_cells:
+                    q.put(n)
+                    used.add(n)
+        return used
+

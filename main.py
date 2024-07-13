@@ -12,7 +12,7 @@ TOKEN = "66843ff3b401c66843ff3b401f"
 
 
 def main():
-    api = gameserver.consumer.ApiConsumer(TEST_HOST, TOKEN)
+    api = gameserver.consumer.ApiConsumer(PRODUCTION_HOST, TOKEN)
     strategy = gameserver.strategies.stupid_attack.StupidAttackStrategy()
 
     runner = gameserver.runner.Runner(api, strategy)
