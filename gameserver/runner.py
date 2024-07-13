@@ -132,7 +132,7 @@ class Runner(threading.Thread):
         current_round = rounds.rounds[index]
         storage = RoundStorage(Path.cwd() / "storage" / current_round.name)
 
-        logger.info(f"Playing round {current_round.name}")
+        logger.info(f"Playing round {current_round.name};")
         self.play_until_dead(storage)
 
         rounds = self._api.get_game_rounds()

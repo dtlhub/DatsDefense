@@ -139,13 +139,13 @@ class StupidAttackStrategy(Strategy):
             atc = get_attractiveness(
                 state,
                 loc,
-                explore_radius=4,
+                explore_radius=3,
                 preset=Preset(
-                    wall=2.0,
-                    zpot=2.0,
-                    zombie=2.0,
-                    enemy=0.33,
-                    empty=0.66,
+                    wall=1.0,
+                    zpot=1.0,
+                    zombie=1.0,
+                    enemy=0.1,
+                    empty=0.5,
                     my_base=1.0,
                 ),
             )
