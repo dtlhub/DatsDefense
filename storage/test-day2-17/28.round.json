@@ -1,0 +1,683 @@
+{
+  "game": {
+    "world": {
+      "realmName": "test-day2-17",
+      "zpots": [
+        {
+          "x": 32,
+          "y": 156,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 153,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 174,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 172,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 157,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 152,
+          "type": "wall"
+        },
+        {
+          "x": 32,
+          "y": 171,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 173,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 176,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 155,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 169,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 170,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 161,
+          "type": "wall"
+        },
+        {
+          "x": 32,
+          "y": 158,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 168,
+          "type": "wall"
+        },
+        {
+          "x": 32,
+          "y": 154,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 175,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 159,
+          "type": "default"
+        },
+        {
+          "x": 32,
+          "y": 160,
+          "type": "default"
+        }
+      ]
+    },
+    "units": {
+      "base": [
+        {
+          "id": "0190ac0e-1b79-7ae4-8af9-e622ff3a45d1",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 33,
+          "y": 166
+        },
+        {
+          "id": "0190ac0e-0bd9-75c4-af82-e5f3f5a197b8",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 34,
+          "y": 163
+        },
+        {
+          "id": "0190ac0d-c58a-72a7-9aba-b45281a66e96",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 30,
+          "y": 164
+        },
+        {
+          "id": "0190ac0d-c58a-7280-a5e5-1d1c13626a0f",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 32,
+          "y": 163
+        },
+        {
+          "id": "0190ac0e-7939-7984-81a7-8ec22210032a",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 34,
+          "y": 162
+        },
+        {
+          "id": "0190ac0d-bf21-7e62-a439-e563d37bb2a7",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 32,
+          "y": 165
+        },
+        {
+          "id": "0190ac0d-fc39-7a3d-a073-0508b4712250",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 31,
+          "y": 162
+        },
+        {
+          "id": "0190ac0d-bf21-7e51-9894-9d65b86f2853",
+          "attack": 40,
+          "health": 300,
+          "isHead": true,
+          "range": 8,
+          "x": 31,
+          "y": 164,
+          "lastAttack": {
+            "x": 24,
+            "y": 163
+          }
+        },
+        {
+          "id": "0190ac0d-c58a-72ad-9cdf-72cbe36669e2",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 30,
+          "y": 165
+        },
+        {
+          "id": "0190ac0d-c58a-7271-a4f2-7520aba77dca",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 33,
+          "y": 164
+        },
+        {
+          "id": "0190ac0e-59fa-706f-ac2b-de0a4d12c14f",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 34,
+          "y": 165
+        },
+        {
+          "id": "0190ac0e-9879-763a-9136-27dfe0e0cca9",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 30,
+          "y": 162
+        },
+        {
+          "id": "0190ac0d-cd59-7526-b7c9-55609860a2eb",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 33,
+          "y": 163
+        },
+        {
+          "id": "0190ac0d-c58a-7294-92d5-2b4791e8b9e8",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 33,
+          "y": 165
+        },
+        {
+          "id": "0190ac0d-bf21-7e5c-b3fc-c29d095a4d42",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 31,
+          "y": 165
+        },
+        {
+          "id": "0190ac0d-bf21-7e58-977c-bb04f12d2425",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 32,
+          "y": 164
+        },
+        {
+          "id": "0190ac0d-c58a-7289-9ce5-f3545ca60e98",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 31,
+          "y": 163
+        },
+        {
+          "id": "0190ac0e-61c9-784c-9425-bc31f519dc69",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 30,
+          "y": 163
+        },
+        {
+          "id": "0190ac0d-cd59-752e-9a4f-15c4d2a3a21f",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 34,
+          "y": 164
+        },
+        {
+          "id": "0190ac0d-c58a-72b6-b92a-4186d26baf3f",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 31,
+          "y": 166
+        },
+        {
+          "id": "0190ac0d-c58a-729f-91d3-065da1bb5520",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 32,
+          "y": 166
+        },
+        {
+          "id": "0190ac0e-7169-7e3a-8827-0abb3149fa13",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 33,
+          "y": 162
+        }
+      ],
+      "enemyBlocks": [
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 44,
+          "y": 155
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 44,
+          "y": 154
+        }
+      ],
+      "player": {
+        "enemyBlockKills": 0,
+        "gold": 1,
+        "name": "dtl",
+        "points": 0,
+        "zombieKills": 9
+      },
+      "realmName": "test-day2-17",
+      "turn": 28,
+      "turnEndsInMs": 1817,
+      "zombies": [
+        {
+          "attack": 13,
+          "direction": "right",
+          "health": 13,
+          "id": "98e10744-dbd9-4c48-9f51-3d963707eea4",
+          "speed": 2,
+          "type": "fast",
+          "waitTurns": 1,
+          "x": 23,
+          "y": 152
+        },
+        {
+          "attack": 13,
+          "direction": "left",
+          "health": 13,
+          "id": "807f600b-afd7-462d-acfc-374e27f8838d",
+          "speed": 1,
+          "type": "liner",
+          "waitTurns": 1,
+          "x": 31,
+          "y": 155
+        },
+        {
+          "attack": 999999,
+          "direction": "left",
+          "health": 13,
+          "id": "b124edd1-0e42-40bc-a752-47b5136fc7b3",
+          "speed": 1,
+          "type": "juggernaut",
+          "waitTurns": 1,
+          "x": 31,
+          "y": 173
+        },
+        {
+          "attack": 13,
+          "direction": "right",
+          "health": 13,
+          "id": "d3ffa9b8-7ad8-4d68-8d6a-6388f170afbe",
+          "speed": 2,
+          "type": "fast",
+          "waitTurns": 1,
+          "x": 41,
+          "y": 173
+        },
+        {
+          "attack": 999999,
+          "direction": "right",
+          "health": 13,
+          "id": "fe197bd2-a997-4b97-97ef-cb371f077af9",
+          "speed": 1,
+          "type": "juggernaut",
+          "waitTurns": 2,
+          "x": 33,
+          "y": 174
+        }
+      ]
+    },
+    "rounds": {
+      "gameName": "zombidef-test",
+      "now": "2024-07-13T12:25:56",
+      "rounds": [
+        {
+          "duration": 1140,
+          "endAt": "2024-07-13T14:59:00",
+          "name": "test-day2-24",
+          "repeat": null,
+          "startAt": "2024-07-13T14:40:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1140,
+          "endAt": "2024-07-13T14:39:00",
+          "name": "test-day2-23",
+          "repeat": null,
+          "startAt": "2024-07-13T14:20:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1140,
+          "endAt": "2024-07-13T14:19:00",
+          "name": "test-day2-22",
+          "repeat": null,
+          "startAt": "2024-07-13T14:00:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1140,
+          "endAt": "2024-07-13T13:59:00",
+          "name": "test-day2-21",
+          "repeat": null,
+          "startAt": "2024-07-13T13:40:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1140,
+          "endAt": "2024-07-13T13:39:00",
+          "name": "test-day2-20",
+          "repeat": null,
+          "startAt": "2024-07-13T13:20:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1140,
+          "endAt": "2024-07-13T13:19:00",
+          "name": "test-day2-19",
+          "repeat": null,
+          "startAt": "2024-07-13T13:00:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1140,
+          "endAt": "2024-07-13T12:59:00",
+          "name": "test-day2-18",
+          "repeat": null,
+          "startAt": "2024-07-13T12:40:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1140,
+          "endAt": "2024-07-13T12:39:00",
+          "name": "test-day2-17",
+          "repeat": null,
+          "startAt": "2024-07-13T12:20:00",
+          "status": "active"
+        },
+        {
+          "duration": 1140,
+          "endAt": "2024-07-13T12:19:00",
+          "name": "test-day2-16",
+          "repeat": null,
+          "startAt": "2024-07-13T12:00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1140,
+          "endAt": "2024-07-13T11:59:00",
+          "name": "test-day2-15",
+          "repeat": null,
+          "startAt": "2024-07-13T11:40:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1140,
+          "endAt": "2024-07-13T11:39:00",
+          "name": "test-day2-14",
+          "repeat": null,
+          "startAt": "2024-07-13T11:20:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1140,
+          "endAt": "2024-07-13T11:19:00",
+          "name": "test-day2-13",
+          "repeat": null,
+          "startAt": "2024-07-13T11:00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1140,
+          "endAt": "2024-07-13T10:59:00",
+          "name": "test-day2-12",
+          "repeat": null,
+          "startAt": "2024-07-13T10:40:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1140,
+          "endAt": "2024-07-13T10:39:00",
+          "name": "test-day2-11",
+          "repeat": null,
+          "startAt": "2024-07-13T10:20:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T10:20:00",
+          "name": "test-day2-10",
+          "repeat": null,
+          "startAt": "2024-07-13T10:00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T10:00:00",
+          "name": "test-day2-9",
+          "repeat": null,
+          "startAt": "2024-07-13T09:40:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T09:40:00",
+          "name": "test-day2-8",
+          "repeat": null,
+          "startAt": "2024-07-13T09:20:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T09:20:00",
+          "name": "test-day2-7",
+          "repeat": null,
+          "startAt": "2024-07-13T09:00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T09:00:00",
+          "name": "test-day2-6",
+          "repeat": null,
+          "startAt": "2024-07-13T08:40:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T08:40:00",
+          "name": "test-day2-5",
+          "repeat": null,
+          "startAt": "2024-07-13T08:20:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T08:20:00",
+          "name": "test-day2-4",
+          "repeat": null,
+          "startAt": "2024-07-13T08:00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T08:00:00",
+          "name": "test-day2-3",
+          "repeat": null,
+          "startAt": "2024-07-13T07:40:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T07:40:00",
+          "name": "test-day2-2",
+          "repeat": null,
+          "startAt": "2024-07-13T07:20:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T07:20:00",
+          "name": "test-day2-1",
+          "repeat": null,
+          "startAt": "2024-07-13T07:00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T19:00:00",
+          "name": "test-day1-9",
+          "repeat": null,
+          "startAt": "2024-07-12T18:40:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T18:40:00",
+          "name": "test-day1-8",
+          "repeat": null,
+          "startAt": "2024-07-12T18:20:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T18:20:00",
+          "name": "test-day1-7",
+          "repeat": null,
+          "startAt": "2024-07-12T18:00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 600,
+          "endAt": "2024-07-12T18:00:00",
+          "name": "test-day1-6-2",
+          "repeat": null,
+          "startAt": "2024-07-12T17:50:00",
+          "status": "ended"
+        },
+        {
+          "duration": 600,
+          "endAt": "2024-07-12T17:50:00",
+          "name": "test-day1-6-1",
+          "repeat": null,
+          "startAt": "2024-07-12T17:40:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T17:40:00",
+          "name": "test-day1-5",
+          "repeat": null,
+          "startAt": "2024-07-12T17:20:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T17:20:00",
+          "name": "test-day1-4",
+          "repeat": null,
+          "startAt": "2024-07-12T17:00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T17:00:00",
+          "name": "test-day1-3",
+          "repeat": null,
+          "startAt": "2024-07-12T16:40:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T16:40:00",
+          "name": "test-day1-2",
+          "repeat": null,
+          "startAt": "2024-07-12T16:20:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T16:20:00",
+          "name": "test-day1-1",
+          "repeat": null,
+          "startAt": "2024-07-12T16:00:00",
+          "status": "ended"
+        }
+      ]
+    }
+  },
+  "command": {
+    "attack": [],
+    "build": [],
+    "moveBase": {
+      "x": 31,
+      "y": 164
+    }
+  }
+}

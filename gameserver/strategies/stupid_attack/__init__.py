@@ -1,8 +1,8 @@
 from gameserver.strategy import Strategy
 
-from model import Command, Location
+from model import Command, Location, ZombieType, Direction
 from model.state import State
-from itertools import chain
+from itertools import chain, count
 from typing import Generator
 from queue import Queue
 
@@ -24,6 +24,21 @@ def neighbours_with_diag(loc: Location) -> Generator[Location, None, None]:
         (-1, -1),
     ]:
         yield Location(loc.x + dx, loc.y + dy)
+
+
+def direction_generator(
+    loc: Location, dir: Direction, amount: int | None = None
+) -> Generator[Location, None, None]:
+    dx, dy = {
+        Direction.UNKNOWN: (0, 0),
+        Direction.UP: (0, -1),
+        Direction.DOWN: (0, 1),
+        Direction.LEFT: (-1, 0),
+        Direction.RIGHT: (1, 0),
+    }[dir]
+    gen = count if amount is None else lambda: range(amount)
+    for d in gen():
+        yield Location(loc.x + dx * d, loc.y + dy * d)
 
 
 class StupidAttackStrategy(Strategy):
@@ -99,8 +114,12 @@ class StupidAttackStrategy(Strategy):
         return will_be_built
 
     @staticmethod
-    def calculate_head_location(state: State, will_be_built: list[Location]) -> Location | None:
-        base_cells = set(map(lambda x: x.location, state.current_round.units.base)) | set(will_be_built)
+    def calculate_head_location(
+        state: State, will_be_built: list[Location]
+    ) -> Location | None:
+        base_cells = set(
+            map(lambda x: x.location, state.current_round.units.base)
+        ) | set(will_be_built)
 
         dist: dict[Location | None, int] = {}
         dist[None] = -1
@@ -118,10 +137,25 @@ class StupidAttackStrategy(Strategy):
                     q.put(n)
                     dist[n] = dist[loc] + 1
 
+        in_target_of_liner: set[Location] = set()
+        for zomb in state.current_round.units.zombies:
+            if zomb.type == ZombieType.LINER:
+                first_base_cell = None
+                for loc in direction_generator(
+                    zomb.location, zomb.direction, amount=10
+                ):
+                    if loc in base_cells:
+                        first_base_cell = loc
+                        break
+                if first_base_cell is not None:
+                    for loc in direction_generator(zomb.location, zomb.direction):
+                        if loc not in base_cells:
+                            break
+                        in_target_of_liner.add(loc)
+
         head = state.current_round.units.base_head
         max_loc = None if head is None else head.location
         for loc in dist.keys():
             if dist[loc] > dist[max_loc]:
                 max_loc = loc
         return max_loc
-

@@ -40,10 +40,17 @@ class RoundVisualizer:
     def __add_base(self):
         points = self.__get_points(self.base)
         for point in self.base:
+<<<<<<< HEAD
             self.ax.scatter(point.location.x, 
                             point.location.y, 
                             label='Our base', 
                             marker='*', 
+=======
+            self.ax.scatter(point.location.x,
+                            point.location.y,
+                            label='Our base',
+                            marker='*',
+>>>>>>> c8cb77526e48667c5cbf8522a6c4de394a0fbde6
                             color='green' if point.is_head == False else 'blue',
                             s=100)
 
@@ -117,7 +124,7 @@ class RoundVisualizer:
         self.fig.legend(bbox_to_anchor=(1.04, 1), loc="upper left")
 
         tmpfile = BytesIO()
-        self.fig.savefig(tmpfile, format='png')
+        self.fig.savefig(tmpfile, format='png', dpi=96*2)
         return tmpfile.getvalue()
 
     def visualize(self):
