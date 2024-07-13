@@ -107,7 +107,7 @@ class RoundVisualizer:
         self.__add_zombies()
         self.__add_enemy()
         self.__add_world()
-        plt.legend()
+        plt.legend(bbox_to_anchor=(1.04, 1), loc="upper left")
 
         tmpfile = BytesIO()
         self.fig.savefig(tmpfile, format='png')
@@ -118,7 +118,9 @@ class RoundVisualizer:
         self.__add_zombies()
         self.__add_enemy()
         self.__add_world()
-        plt.legend()
+        plt.legend(bbox_to_anchor=(1.04, 1), loc="upper left")
+
+
         plt.show()
 
 
@@ -135,6 +137,6 @@ def get_png_bytes(passed_round_json):
 
 
 if __name__ == "__main__":
-    round = json.loads(open('./storage/test-day2-6/13.round.json', 'r').read())
+    round = json.loads(open('./storage/test-day2-6/3.round.json', 'r').read())
     visualize_state(round)
     print('done')
