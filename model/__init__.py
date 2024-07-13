@@ -404,7 +404,7 @@ class GetUnitsResponse:
         attackers: list[MyBaseLocation] = []
         used_attackers = []
         attacks = []
-        for zombie in self.zombies:
+        for zombie in self.zombies + self.enemy_bases:
             accumulated_damage = 0
             attackers = []
             for point in self.base:
