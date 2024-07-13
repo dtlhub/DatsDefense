@@ -446,7 +446,6 @@ class GetUnitsResponse:
         possible_attackers = connected_blocks.copy()
         pre, npre = self.__sort_enemies(self.enemy_bases)
         prl, prz, nprz = self.__sort_by_danger(self.zombies)
-        
         if attack_prior:
             uebki = pre + npre + prl + prz + nprz
         else:
