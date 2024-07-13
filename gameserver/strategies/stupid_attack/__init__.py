@@ -35,7 +35,7 @@ class StupidAttackStrategy(Strategy):
 
         center_x = sum(xs) / len(xs)
         center_y = sum(ys) / len(ys)
-        new_head = Location(
+        center = Location(
             x=round(center_x),
             y=round(center_y),
         )
@@ -55,7 +55,12 @@ class StupidAttackStrategy(Strategy):
         non_ocupied = neighbours - base_locations
 
         sorted_by_proximity_to_center = sorted(
-            non_ocupied, key=lambda loc: new_head.distance(loc)
+            non_ocupied, key=lambda loc: center.distance(loc)
         )
         available = sorted_by_proximity_to_center[:limit]
+
+        new_head = None
+        if center in base_locations or center in available:
+            new_head = center
+
         return available, new_head
