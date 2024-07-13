@@ -31,6 +31,9 @@ class Location:
             "y": self.y,
         }
 
+    def __hash__(self):
+        return hash((self.x, self.y))
+
     def distance(self, other: Self) -> float:
         return sqrt((self.x - other.x) ** 2 + (self.y - other.y) ** 2)
 
