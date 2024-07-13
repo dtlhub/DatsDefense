@@ -21,7 +21,7 @@ class McmfAttackStrategy(Strategy):
             build.append(Location(x, y - 1))
             build.append(Location(x, y + 1))
         return Command(
-            attack=[],
-            build=[],
+            attack=attacks,
+            build=build,
             move_base=None,
         )
