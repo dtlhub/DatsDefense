@@ -429,7 +429,7 @@ class GetUnitsResponse:
         pre, npre = self.__sort_enemies(self.enemy_bases)
         prz, nprz = self.__sort_by_danger(self.zombies)
 
-        uebki = pre + prz + npre + nprz
+        uebki = pre + prz + nprz + npre
 
         for zombie in uebki:
             accumulated_damage = 0
