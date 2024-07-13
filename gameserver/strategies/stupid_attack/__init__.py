@@ -34,7 +34,10 @@ class StupidAttackStrategy(Strategy):
     @staticmethod
     def command(state: State) -> Command:
         attacks = state.current_round.units.attack()
-        build, new_center = StupidAttackStrategy.get_builder_commands(state)
+        build = StupidAttackStrategy.get_builder_commands(state)
+
+        new_center = StupidAttackStrategy.calculate_head_location(state, build)
+
         return Command(
             attack=attacks,
             build=build,
@@ -42,7 +45,7 @@ class StupidAttackStrategy(Strategy):
         )
 
     @staticmethod
-    def get_builder_commands(state: State) -> tuple[list[Location], Location | None]:
+    def get_builder_commands(state: State) -> list[Location]:
         xs: list[int] = []
         ys: list[int] = []
         limit = state.current_round.units.player.gold
@@ -53,7 +56,7 @@ class StupidAttackStrategy(Strategy):
         enemy_bases = state.current_round.units.enemy_bases
 
         if len(base) == 0:
-            return [], None
+            return []
 
         for obj in base:
             xs.append(obj.location.x)
@@ -93,14 +96,12 @@ class StupidAttackStrategy(Strategy):
             to_build, key=lambda loc: center.distance(loc)
         )
         will_be_built = sorted_by_proximity_to_center[:limit]
-
-        base_locations: set[Location] = set(map(lambda b: b.location, base))
-        new_head = StupidAttackStrategy.calculate_head_location(base_locations | set(will_be_built))
-
-        return will_be_built, new_head
+        return will_be_built
 
     @staticmethod
-    def calculate_head_location(base_cells: set[Location]) -> Location | None:
+    def calculate_head_location(state: State, will_be_built: list[Location]) -> Location | None:
+        base_cells = set(map(lambda x: x.location, state.current_round.units.base)) | set(will_be_built)
+
         dist: dict[Location | None, int] = {}
         dist[None] = -1
         q: Queue[Location] = Queue()
@@ -113,11 +114,12 @@ class StupidAttackStrategy(Strategy):
         while not q.empty():
             loc = q.get()
             for n in neighbours(loc):
-                if n not in dist:
+                if n not in dist and n in base_cells:
                     q.put(n)
                     dist[n] = dist[loc] + 1
 
-        max_loc = None
+        head = state.current_round.units.base_head
+        max_loc = None if head is None else head.location
         for loc in dist.keys():
             if dist[loc] > dist[max_loc]:
                 max_loc = loc

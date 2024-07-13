@@ -2,6 +2,7 @@ import datetime
 from dataclasses import dataclass
 from typing_extensions import Self
 from enum import Enum
+from functools import cached_property
 from math import sqrt
 
 
@@ -402,6 +403,13 @@ class GetUnitsResponse:
             "turnEndsInMs": self.turn_ends_in_ms,
             "zombies": [zombie.to_json() for zombie in self.zombies],
         }
+
+    @cached_property
+    def base_head(self) -> MyBaseLocation | None:
+        for cell in self.base:
+            if cell.is_head:
+                return cell
+        return None
 
     def __sort_enemies(self, en: list[EnemyBaseLocation]):
         pr = []
