@@ -49,6 +49,9 @@ class RoundVisualizer:
             ZombieType.JUGGERNAUT: 'm',  # Magenta for Juggernaut
             ZombieType.CHAOS_KNIGHT: 'k'  # Black for Chaos Knight
         }
+        if self.zombies == []:
+            return 
+
         for zombie in self.zombies:
             zombie_new_coord = zombie.get_affected_coordinates()[0]
             self.ax.scatter(
@@ -60,8 +63,8 @@ class RoundVisualizer:
 
         for kek in colors.keys():
             self.ax.scatter(
-                zombie.location.x,
-                zombie.location.y,
+                0,
+                0,
                 color=colors.get(kek, 'gray'),  # Default to gray if type not found,
                 label=str(kek),
                 marker='o',
@@ -131,5 +134,5 @@ def get_png_bytes(passed_round_json):
 
 
 if __name__ == "__main__":
-    round = json.loads(open('./storage/test-day2-4/0.round.json', 'r').read())
+    round = json.loads(open('./storage/test-day2-6/13.round.json', 'r').read())
     visualize_state(round)
