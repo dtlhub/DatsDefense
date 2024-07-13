@@ -1,0 +1,1746 @@
+{
+  "game": {
+    "world": {
+      "realmName": "final-2",
+      "zpots": [
+        {
+          "x": 96,
+          "y": 127,
+          "type": "default"
+        },
+        {
+          "x": 96,
+          "y": 124,
+          "type": "default"
+        },
+        {
+          "x": 96,
+          "y": 144,
+          "type": "default"
+        },
+        {
+          "x": 96,
+          "y": 141,
+          "type": "default"
+        },
+        {
+          "x": 96,
+          "y": 140,
+          "type": "default"
+        },
+        {
+          "x": 96,
+          "y": 136,
+          "type": "wall"
+        },
+        {
+          "x": 96,
+          "y": 129,
+          "type": "wall"
+        },
+        {
+          "x": 96,
+          "y": 139,
+          "type": "default"
+        },
+        {
+          "x": 96,
+          "y": 128,
+          "type": "default"
+        },
+        {
+          "x": 96,
+          "y": 137,
+          "type": "default"
+        },
+        {
+          "x": 96,
+          "y": 121,
+          "type": "default"
+        },
+        {
+          "x": 96,
+          "y": 138,
+          "type": "default"
+        },
+        {
+          "x": 96,
+          "y": 120,
+          "type": "wall"
+        },
+        {
+          "x": 96,
+          "y": 143,
+          "type": "default"
+        },
+        {
+          "x": 96,
+          "y": 123,
+          "type": "default"
+        },
+        {
+          "x": 96,
+          "y": 125,
+          "type": "default"
+        },
+        {
+          "x": 96,
+          "y": 126,
+          "type": "default"
+        },
+        {
+          "x": 96,
+          "y": 145,
+          "type": "wall"
+        },
+        {
+          "x": 96,
+          "y": 142,
+          "type": "default"
+        },
+        {
+          "x": 96,
+          "y": 122,
+          "type": "default"
+        }
+      ]
+    },
+    "units": {
+      "base": [
+        {
+          "id": "0190ac49-47d4-7a59-b1d8-86e353fccf4c",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 94,
+          "y": 132
+        },
+        {
+          "id": "0190ac4b-0528-73f6-81ff-296b2bad4def",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 92,
+          "y": 135
+        },
+        {
+          "id": "0190ac49-47d4-7a43-b6aa-b50b179f0d8c",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 96,
+          "y": 131
+        },
+        {
+          "id": "0190ac49-5775-78f8-aa9f-003299546150",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 97,
+          "y": 131
+        },
+        {
+          "id": "0190ac4a-3a05-7037-8035-d9b9a7908568",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 97,
+          "y": 135
+        },
+        {
+          "id": "0190ac4b-14c6-74f5-be18-23f92af5ca2c",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 99,
+          "y": 128
+        },
+        {
+          "id": "0190ac4a-8ff5-719c-b94e-b5feb32257ea",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 93,
+          "y": 134
+        },
+        {
+          "id": "0190ac49-95f4-779e-8995-6204c9409037",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 97,
+          "y": 130
+        },
+        {
+          "id": "0190ac49-8e24-7a9d-954f-32c78659ff06",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 98,
+          "y": 133
+        },
+        {
+          "id": "0190ac4b-2c35-7aa3-bcd6-d2ca9e446666",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 101,
+          "y": 131
+        },
+        {
+          "id": "0190ac4a-68e4-7628-bd30-ec2f8038a375",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 98,
+          "y": 129
+        },
+        {
+          "id": "0190ac4b-3405-784e-9ca4-344ef6cc3fcd",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 98,
+          "y": 137
+        },
+        {
+          "id": "0190ac49-47d4-7a64-b2c9-d12ebe939576",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 94,
+          "y": 133
+        },
+        {
+          "id": "0190ac4a-8ff5-71a4-b8f6-ea3f0568dff2",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 92,
+          "y": 132
+        },
+        {
+          "id": "0190ac4a-8055-7785-ac99-6fb5ca4d91a9",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 98,
+          "y": 135
+        },
+        {
+          "id": "0190ac4a-5946-721d-8d6e-f40660a3a7fc",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 99,
+          "y": 133
+        },
+        {
+          "id": "0190ac4a-0b25-73f4-9405-cd6787f871f6",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 94,
+          "y": 134
+        },
+        {
+          "id": "0190ac4a-edb6-79d9-a556-a5d6078266a6",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 93,
+          "y": 128
+        },
+        {
+          "id": "0190ac49-47d4-7a3d-9a7d-45620e6b0383",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 97,
+          "y": 132
+        },
+        {
+          "id": "0190ac4a-7885-7bb5-a5ee-74e37af7c46c",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 99,
+          "y": 134
+        },
+        {
+          "id": "0190ac49-47d4-7a4b-8ff5-421e3039a38f",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 97,
+          "y": 133
+        },
+        {
+          "id": "0190ac4a-3235-76e3-93d1-80f63a4e2de2",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 93,
+          "y": 133
+        },
+        {
+          "id": "0190ac49-47d4-7a6b-9400-6b1a1e9da4cb",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 95,
+          "y": 134
+        },
+        {
+          "id": "0190ac49-4153-735a-b1fa-970d27ef3c98",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 95,
+          "y": 132
+        },
+        {
+          "id": "0190ac4a-3a05-7031-8107-c939c44c5abb",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 95,
+          "y": 135
+        },
+        {
+          "id": "0190ac4a-edb6-79d2-a098-9a9071666f57",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 99,
+          "y": 136
+        },
+        {
+          "id": "0190ac49-e415-711a-b7fa-33e520b30ec1",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 98,
+          "y": 131
+        },
+        {
+          "id": "0190ac4a-0354-7496-9cfa-ff5ded8d0782",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 98,
+          "y": 130
+        },
+        {
+          "id": "0190ac4a-6116-7328-b6a4-dd9d62e3a8a6",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 99,
+          "y": 130
+        },
+        {
+          "id": "0190ac49-4153-7374-b679-c5b104f9ad1b",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 96,
+          "y": 133
+        },
+        {
+          "id": "0190ac4a-9f95-713b-b0e2-58deef0da76d",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 100,
+          "y": 131
+        },
+        {
+          "id": "0190ac4a-de15-7091-9580-ba6db879a2b2",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 100,
+          "y": 129
+        },
+        {
+          "id": "0190ac4a-6116-7330-ae01-3c43bd02ce43",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 94,
+          "y": 129
+        },
+        {
+          "id": "0190ac4b-3bd4-7d73-8f7a-84a130d956f8",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 94,
+          "y": 127
+        },
+        {
+          "id": "0190ac4b-0528-7409-b729-a3eafad60fd9",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 93,
+          "y": 136
+        },
+        {
+          "id": "0190ac4a-9f95-7152-9d21-e9db6bc5f703",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 99,
+          "y": 135
+        },
+        {
+          "id": "0190ac49-d474-7ab3-a985-b9b6d59390f0",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 97,
+          "y": 134
+        },
+        {
+          "id": "0190ac4a-bed5-7402-bc7f-efc18b46a715",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 100,
+          "y": 134
+        },
+        {
+          "id": "0190ac4b-1c96-7559-9ac2-1b5ed7e42614",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 91,
+          "y": 131
+        },
+        {
+          "id": "0190ac4b-1c96-7563-8135-793071f8dc27",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 91,
+          "y": 133
+        },
+        {
+          "id": "0190ac4a-9f95-714b-b4cb-4f1fe165939f",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 99,
+          "y": 129
+        },
+        {
+          "id": "0190ac4a-12f5-791a-9710-b59520840ac5",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 98,
+          "y": 134
+        },
+        {
+          "id": "0190ac4a-f585-7a05-b44c-a6fc9a50d91b",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 101,
+          "y": 132
+        },
+        {
+          "id": "0190ac4b-3bd4-7d7e-86ba-ad3c161b3342",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 98,
+          "y": 127
+        },
+        {
+          "id": "0190ac4a-de15-7086-8338-27e566bd8cb1",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 100,
+          "y": 130
+        },
+        {
+          "id": "0190ac4a-af35-7a6c-9c16-d1c5e119c6b2",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 92,
+          "y": 134
+        },
+        {
+          "id": "0190ac4a-d646-7522-a0ac-3ef5d18740b3",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 94,
+          "y": 136,
+          "lastAttack": {
+            "x": 94,
+            "y": 141
+          }
+        },
+        {
+          "id": "0190ac4b-3405-783b-a7ac-51c1edddfb8a",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 94,
+          "y": 137,
+          "lastAttack": {
+            "x": 94,
+            "y": 141
+          }
+        },
+        {
+          "id": "0190ac4a-c6a5-7c7a-b00a-40cc6723cd5a",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 92,
+          "y": 130
+        },
+        {
+          "id": "0190ac4a-9f95-7159-856b-dff5ba818c7e",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 93,
+          "y": 129
+        },
+        {
+          "id": "0190ac4a-de15-7079-a158-0975951ce0e1",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 98,
+          "y": 136
+        },
+        {
+          "id": "0190ac4a-de15-709e-b02d-147c4c0f8000",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 100,
+          "y": 135
+        },
+        {
+          "id": "0190ac4a-97c4-75dc-8ff7-fea9c41bdee0",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 92,
+          "y": 131
+        },
+        {
+          "id": "0190ac4a-97c4-75d7-b164-fc978f76c82e",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 100,
+          "y": 133
+        },
+        {
+          "id": "0190ac4a-97c4-75d0-9cda-c86401810b99",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 100,
+          "y": 132
+        },
+        {
+          "id": "0190ac4b-3405-7845-af4f-4be0091bd562",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 101,
+          "y": 130
+        },
+        {
+          "id": "0190ac4a-6116-7337-a419-b72359052daf",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 93,
+          "y": 130
+        },
+        {
+          "id": "0190ac49-4153-7364-b638-57bc99e282d4",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 96,
+          "y": 132
+        },
+        {
+          "id": "0190ac49-5775-7901-98eb-bfbe008112b8",
+          "attack": 40,
+          "health": 300,
+          "isHead": true,
+          "range": 8,
+          "x": 98,
+          "y": 132
+        },
+        {
+          "id": "0190ac4a-12f5-7913-9071-c149970d3c85",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 94,
+          "y": 130
+        },
+        {
+          "id": "0190ac4a-f585-7a0f-861f-d5a0c2f7e74b",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 92,
+          "y": 129
+        },
+        {
+          "id": "0190ac49-4153-736c-90bb-9feea5aa9d90",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 95,
+          "y": 133
+        },
+        {
+          "id": "0190ac4b-3bd4-7d78-9dc2-cdc4f02f4340",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 91,
+          "y": 134
+        },
+        {
+          "id": "0190ac4a-b706-71e9-b2e5-4e91dd5fe217",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 94,
+          "y": 128
+        },
+        {
+          "id": "0190ac49-ebe4-7cfc-9fe9-89e44bd64207",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 95,
+          "y": 130
+        },
+        {
+          "id": "0190ac4a-a764-7e1a-8631-722285bfe8c1",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 93,
+          "y": 135
+        },
+        {
+          "id": "0190ac4a-9f95-7142-b17c-f6b56a775155",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 92,
+          "y": 133
+        },
+        {
+          "id": "0190ac49-ad65-762c-b52e-8043f9450203",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 94,
+          "y": 131
+        },
+        {
+          "id": "0190ac4a-bed5-73f8-a37f-dff47f9e90b9",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 98,
+          "y": 128
+        },
+        {
+          "id": "0190ac4a-49a5-7437-9316-8ddac62c443f",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 93,
+          "y": 131
+        },
+        {
+          "id": "0190ac49-47d4-7a5f-b38a-07a8a250ed45",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 96,
+          "y": 134
+        },
+        {
+          "id": "0190ac4b-14c6-74fa-b75f-966310ee776a",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 101,
+          "y": 133
+        },
+        {
+          "id": "0190ac4a-68e4-761f-932b-e204715d9c9f",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 94,
+          "y": 135
+        },
+        {
+          "id": "0190ac4a-e5e5-7e21-b867-f1b28f771b6f",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 91,
+          "y": 132
+        },
+        {
+          "id": "0190ac4a-1ac5-7139-a303-039d84df4da7",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 99,
+          "y": 132
+        },
+        {
+          "id": "0190ac49-47d4-7a51-91a2-fd75d6dd10ef",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 95,
+          "y": 131
+        },
+        {
+          "id": "0190ac4a-2295-77e4-8cb0-4b705256aa51",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 93,
+          "y": 132
+        },
+        {
+          "id": "0190ac4a-41d5-7255-ac5b-2a83fac24747",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 99,
+          "y": 131
+        }
+      ],
+      "enemyBlocks": [
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 87,
+          "y": 121
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 96,
+          "y": 117
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 93,
+          "y": 118
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 92,
+          "y": 119
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 85,
+          "y": 118
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 88,
+          "y": 117
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 89,
+          "y": 117
+        },
+        {
+          "name": "unknown",
+          "attack": 40,
+          "health": 300,
+          "isHead": true,
+          "range": 8,
+          "x": 86,
+          "y": 120
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 92,
+          "y": 122,
+          "lastAttack": {
+            "x": 97,
+            "y": 122
+          }
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 91,
+          "y": 117
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 86,
+          "y": 117
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 96,
+          "y": 118,
+          "lastAttack": {
+            "x": 97,
+            "y": 122
+          }
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 94,
+          "y": 121,
+          "lastAttack": {
+            "x": 97,
+            "y": 122
+          }
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 94,
+          "y": 117
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 95,
+          "y": 117
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 89,
+          "y": 118
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 92,
+          "y": 118
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 95,
+          "y": 119
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 87,
+          "y": 118
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 97,
+          "y": 117
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 88,
+          "y": 121
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 89,
+          "y": 120
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 90,
+          "y": 119
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 93,
+          "y": 117
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 87,
+          "y": 120
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 87,
+          "y": 117
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 90,
+          "y": 118
+        },
+        {
+          "name": "unknown",
+          "attack": 40,
+          "health": 300,
+          "isHead": true,
+          "range": 8,
+          "x": 111,
+          "y": 140
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 88,
+          "y": 120
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 92,
+          "y": 120
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 94,
+          "y": 119
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 98,
+          "y": 117
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 88,
+          "y": 119
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 89,
+          "y": 119
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 94,
+          "y": 120
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 93,
+          "y": 120
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 92,
+          "y": 121
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 85,
+          "y": 117
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 94,
+          "y": 122
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 90,
+          "y": 117
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 75,
+          "isHead": false,
+          "range": 5,
+          "x": 111,
+          "y": 141
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 95,
+          "y": 118
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 91,
+          "y": 118
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 89,
+          "y": 121
+        },
+        {
+          "name": "unknown",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 91,
+          "y": 120
+        }
+      ],
+      "player": {
+        "enemyBlockKills": 0,
+        "gold": 0,
+        "name": "dtl",
+        "points": 0,
+        "zombieKills": 64
+      },
+      "realmName": "final-2",
+      "turn": 65,
+      "turnEndsInMs": 1783,
+      "zombies": [
+        {
+          "attack": 25,
+          "direction": "left",
+          "health": 21,
+          "id": "45bc1d27-a191-41a3-ad0b-2288d3cfcbb5",
+          "speed": 1,
+          "type": "liner",
+          "waitTurns": 1,
+          "x": 111,
+          "y": 122
+        },
+        {
+          "attack": 31,
+          "direction": "left",
+          "health": 25,
+          "id": "8e2d7ba5-9268-4cd4-91bb-08b36aa3281c",
+          "speed": 1,
+          "type": "liner",
+          "waitTurns": 1,
+          "x": 111,
+          "y": 136
+        },
+        {
+          "attack": 31,
+          "direction": "left",
+          "health": 5,
+          "id": "b4533eab-5d97-4092-ac7b-fa475ac98f52",
+          "speed": 1,
+          "type": "liner",
+          "waitTurns": 1,
+          "x": 93,
+          "y": 141
+        },
+        {
+          "attack": 25,
+          "direction": "left",
+          "health": 21,
+          "id": "f24e5a0f-e5c1-40b2-a1ed-be250bd147cb",
+          "speed": 1,
+          "type": "liner",
+          "waitTurns": 1,
+          "x": 84,
+          "y": 144
+        },
+        {
+          "attack": 31,
+          "direction": "left",
+          "health": 25,
+          "id": "f456f3d8-acb5-4aa7-906f-a31bf7dd872f",
+          "speed": 3,
+          "type": "chaos_knight",
+          "waitTurns": 1,
+          "x": 111,
+          "y": 132
+        },
+        {
+          "attack": 31,
+          "direction": "left",
+          "health": 15,
+          "id": "33650aff-b00e-4944-83f7-2da87a22951a",
+          "speed": 1,
+          "type": "bomber",
+          "waitTurns": 1,
+          "x": 87,
+          "y": 141
+        },
+        {
+          "attack": 31,
+          "direction": "down",
+          "health": 25,
+          "id": "a182f11b-97e2-44a2-8361-1b1699f51db9",
+          "speed": 3,
+          "type": "chaos_knight",
+          "waitTurns": 1,
+          "x": 83,
+          "y": 136
+        },
+        {
+          "attack": 25,
+          "direction": "right",
+          "health": 1,
+          "id": "634efe4c-0e37-4a61-842e-1006c9788c52",
+          "speed": 2,
+          "type": "fast",
+          "waitTurns": 1,
+          "x": 111,
+          "y": 147
+        },
+        {
+          "attack": 31,
+          "direction": "left",
+          "health": 25,
+          "id": "923d523d-68df-4ed4-a8b7-554059ae75f4",
+          "speed": 2,
+          "type": "fast",
+          "waitTurns": 1,
+          "x": 111,
+          "y": 147
+        },
+        {
+          "attack": 999999,
+          "direction": "left",
+          "health": 25,
+          "id": "5b6bba00-43d7-421f-b661-183e9bfd3ef3",
+          "speed": 1,
+          "type": "juggernaut",
+          "waitTurns": 2,
+          "x": 108,
+          "y": 129
+        },
+        {
+          "attack": 31,
+          "direction": "right",
+          "health": 25,
+          "id": "7fa65c8e-2315-40f8-9ed2-d5eca58682d9",
+          "speed": 2,
+          "type": "fast",
+          "waitTurns": 1,
+          "x": 81,
+          "y": 146
+        },
+        {
+          "attack": 999999,
+          "direction": "left",
+          "health": 25,
+          "id": "03a4e870-7daa-4373-9db3-3de3580e513b",
+          "speed": 1,
+          "type": "juggernaut",
+          "waitTurns": 2,
+          "x": 110,
+          "y": 132
+        },
+        {
+          "attack": 31,
+          "direction": "right",
+          "health": 25,
+          "id": "9de62827-d5a1-4b17-af63-565984150909",
+          "speed": 1,
+          "type": "bomber",
+          "waitTurns": 1,
+          "x": 105,
+          "y": 142
+        },
+        {
+          "attack": 25,
+          "direction": "right",
+          "health": 21,
+          "id": "9aa01f5c-71b1-4970-9f00-428af3486267",
+          "speed": 1,
+          "type": "bomber",
+          "waitTurns": 1,
+          "x": 98,
+          "y": 147
+        },
+        {
+          "attack": 31,
+          "direction": "right",
+          "health": 25,
+          "id": "70b1c206-e01e-43eb-9d4a-ca23252a10e3",
+          "speed": 1,
+          "type": "normal",
+          "waitTurns": 1,
+          "x": 97,
+          "y": 141
+        },
+        {
+          "attack": 31,
+          "direction": "up",
+          "health": 25,
+          "id": "dde1eb0f-c64d-49db-9718-5d7642ae0e6d",
+          "speed": 3,
+          "type": "chaos_knight",
+          "waitTurns": 1,
+          "x": 83,
+          "y": 137
+        },
+        {
+          "attack": 25,
+          "direction": "left",
+          "health": 11,
+          "id": "5dcebb53-e02f-4e3c-af8f-372b8b4fd78f",
+          "speed": 1,
+          "type": "liner",
+          "waitTurns": 1,
+          "x": 85,
+          "y": 141
+        },
+        {
+          "attack": 31,
+          "direction": "left",
+          "health": 25,
+          "id": "c1bb60ff-2d70-4df3-87d0-715b7826e2b0",
+          "speed": 1,
+          "type": "bomber",
+          "waitTurns": 1,
+          "x": 86,
+          "y": 143
+        },
+        {
+          "attack": 31,
+          "direction": "left",
+          "health": 25,
+          "id": "95e94289-e2c9-40b0-9dcc-64c388f5c72c",
+          "speed": 2,
+          "type": "fast",
+          "waitTurns": 1,
+          "x": 109,
+          "y": 126
+        },
+        {
+          "attack": 19,
+          "direction": "left",
+          "health": 17,
+          "id": "0751f4b4-2b62-4601-99fd-772a98da7441",
+          "speed": 1,
+          "type": "normal",
+          "waitTurns": 1,
+          "x": 90,
+          "y": 147
+        },
+        {
+          "attack": 25,
+          "direction": "left",
+          "health": 21,
+          "id": "64ed4ee5-8987-4beb-90b2-4f23ebe8303a",
+          "speed": 1,
+          "type": "liner",
+          "waitTurns": 1,
+          "x": 110,
+          "y": 125
+        },
+        {
+          "attack": 31,
+          "direction": "left",
+          "health": 25,
+          "id": "3c5f2bd7-b934-4603-ad31-d2ebf75d48f8",
+          "speed": 2,
+          "type": "fast",
+          "waitTurns": 1,
+          "x": 95,
+          "y": 123
+        },
+        {
+          "attack": 31,
+          "direction": "right",
+          "health": 25,
+          "id": "ba8a0200-0a07-44f5-b650-003b2664c33a",
+          "speed": 1,
+          "type": "normal",
+          "waitTurns": 1,
+          "x": 102,
+          "y": 143
+        },
+        {
+          "attack": 999999,
+          "direction": "left",
+          "health": 25,
+          "id": "a409b3a1-a26d-4fc3-810b-8dca6a9ad748",
+          "speed": 1,
+          "type": "juggernaut",
+          "waitTurns": 2,
+          "x": 95,
+          "y": 128
+        },
+        {
+          "attack": 25,
+          "direction": "left",
+          "health": 11,
+          "id": "b6cde7c3-11d3-4d93-88eb-7d6c26dc649a",
+          "speed": 1,
+          "type": "liner",
+          "waitTurns": 1,
+          "x": 81,
+          "y": 142
+        },
+        {
+          "attack": 31,
+          "direction": "right",
+          "health": 25,
+          "id": "2e7e9774-4e68-4ce2-bb49-86237fdce648",
+          "speed": 1,
+          "type": "normal",
+          "waitTurns": 1,
+          "x": 85,
+          "y": 131
+        },
+        {
+          "attack": 19,
+          "direction": "left",
+          "health": 17,
+          "id": "29e215b4-9267-47ee-a635-ca8ebcbed945",
+          "speed": 1,
+          "type": "bomber",
+          "waitTurns": 1,
+          "x": 106,
+          "y": 125
+        },
+        {
+          "attack": 31,
+          "direction": "right",
+          "health": 25,
+          "id": "06be0157-3b53-441d-a7a2-5651ce457d73",
+          "speed": 2,
+          "type": "fast",
+          "waitTurns": 1,
+          "x": 97,
+          "y": 147
+        },
+        {
+          "attack": 19,
+          "direction": "right",
+          "health": 17,
+          "id": "14c8020f-f692-456c-aa14-80f5ca04200d",
+          "speed": 1,
+          "type": "normal",
+          "waitTurns": 1,
+          "x": 102,
+          "y": 147
+        },
+        {
+          "attack": 31,
+          "direction": "right",
+          "health": 25,
+          "id": "cb70e66b-e130-4b27-8e82-169f7c3d9330",
+          "speed": 1,
+          "type": "bomber",
+          "waitTurns": 1,
+          "x": 99,
+          "y": 144
+        },
+        {
+          "attack": 31,
+          "direction": "right",
+          "health": 25,
+          "id": "bdd11706-1f18-4539-b243-b0aae8f4601d",
+          "speed": 1,
+          "type": "bomber",
+          "waitTurns": 1,
+          "x": 104,
+          "y": 143
+        }
+      ]
+    },
+    "rounds": {
+      "gameName": "zombidef",
+      "now": "2024-07-13T13:32:10",
+      "rounds": [
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T17:05:00",
+          "name": "final-10",
+          "repeat": null,
+          "startAt": "2024-07-13T16:45:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T16:40:00",
+          "name": "final-9",
+          "repeat": null,
+          "startAt": "2024-07-13T16:20:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T16:15:00",
+          "name": "final-8",
+          "repeat": null,
+          "startAt": "2024-07-13T15:55:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T15:50:00",
+          "name": "final-7",
+          "repeat": null,
+          "startAt": "2024-07-13T15:30:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T15:25:00",
+          "name": "final-6",
+          "repeat": null,
+          "startAt": "2024-07-13T15:05:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T15:00:00",
+          "name": "final-5",
+          "repeat": null,
+          "startAt": "2024-07-13T14:40:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T14:35:00",
+          "name": "final-4",
+          "repeat": null,
+          "startAt": "2024-07-13T14:15:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T14:10:00",
+          "name": "final-3",
+          "repeat": null,
+          "startAt": "2024-07-13T13:50:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T13:45:00",
+          "name": "final-2",
+          "repeat": null,
+          "startAt": "2024-07-13T13:25:00",
+          "status": "active"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T13:20:00",
+          "name": "final-1",
+          "repeat": null,
+          "startAt": "2024-07-13T13:00:00",
+          "status": "ended"
+        }
+      ]
+    }
+  },
+  "command": {
+    "attack": [
+      {
+        "blockId": "0190ac4b-0528-7409-b729-a3eafad60fd9",
+        "target": {
+          "x": 93,
+          "y": 141
+        }
+      },
+      {
+        "blockId": "0190ac4a-2295-77e4-8cb0-4b705256aa51",
+        "target": {
+          "x": 95,
+          "y": 128
+        }
+      },
+      {
+        "blockId": "0190ac49-47d4-7a43-b6aa-b50b179f0d8c",
+        "target": {
+          "x": 95,
+          "y": 128
+        }
+      },
+      {
+        "blockId": "0190ac49-ad65-762c-b52e-8043f9450203",
+        "target": {
+          "x": 95,
+          "y": 128
+        }
+      },
+      {
+        "blockId": "0190ac4b-3405-783b-a7ac-51c1edddfb8a",
+        "target": {
+          "x": 97,
+          "y": 141
+        }
+      },
+      {
+        "blockId": "0190ac4b-3405-784e-9ca4-344ef6cc3fcd",
+        "target": {
+          "x": 97,
+          "y": 141
+        }
+      },
+      {
+        "blockId": "0190ac4b-3bd4-7d73-8f7a-84a130d956f8",
+        "target": {
+          "x": 95,
+          "y": 123
+        }
+      },
+      {
+        "blockId": "0190ac4b-3bd4-7d7e-86ba-ad3c161b3342",
+        "target": {
+          "x": 95,
+          "y": 123
+        }
+      }
+    ],
+    "build": [],
+    "moveBase": {
+      "x": 98,
+      "y": 132
+    }
+  }
+}
