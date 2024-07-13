@@ -13,18 +13,21 @@ class StupidAttackStrategy(Strategy):
     def command(state: State) -> Command:
         attacks = state.current_round.units.attack()
         base = state.current_round.units.base
-        build: list[Location] = []
+        build: set[Location] = set()
+        base_locations: set[Location] = set()
         for b in base:
             x, y = b.location.x, b.location.y
-            build.append(Location(x - 1, y))
-            build.append(Location(x + 1, y))
-            build.append(Location(x, y - 1))
-            build.append(Location(x, y + 1))
+            base_locations.add(Location(x, y))
+            build.add(Location(x - 1, y))
+            build.add(Location(x + 1, y))
+            build.add(Location(x, y - 1))
+            build.add(Location(x, y + 1))
+
         return Command(
             attack=attacks,
-            build=build,
+            build=list(build - base_locations),
             move_base=None,
         )
 
-    @staticmethod
-    def get_builder_commands()
+    # @staticmethod
+    # def get_builder_commands()
