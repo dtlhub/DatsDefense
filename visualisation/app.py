@@ -5,7 +5,7 @@ from base64 import b64encode
 from flask import Flask, jsonify, render_template
 
 from gameserver.storage import RoundStorage
-from visualisation.visualizer import get_png_bytes
+from visualizer import get_png_bytes
 
 
 def create_app() -> Flask:

@@ -50,10 +50,11 @@ class RoundVisualizer:
             ZombieType.CHAOS_KNIGHT: 'k'  # Black for Chaos Knight
         }
         if self.zombies == []:
-            return 
+            return
 
         for zombie in self.zombies:
             zombie_new_coord = zombie.get_affected_coordinates()[0]
+            print(zombie.location.x, zombie_new_coord[0], zombie.direction)
             self.ax.scatter(
                 zombie.location.x,
                 zombie.location.y,
@@ -91,6 +92,7 @@ class RoundVisualizer:
                 color=colors.get(zpot.type, 'gray'),  # Default to gray if type not found,
                 marker=markers.get(zpot.type, '.'),
             )
+
         for kek in colors.keys():
             self.ax.scatter(
                 zpot.x,
@@ -136,3 +138,4 @@ def get_png_bytes(passed_round_json):
 if __name__ == "__main__":
     round = json.loads(open('./storage/test-day2-6/13.round.json', 'r').read())
     visualize_state(round)
+    print('done')
