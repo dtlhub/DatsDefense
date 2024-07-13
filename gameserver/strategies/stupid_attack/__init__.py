@@ -74,7 +74,8 @@ class StupidAttackStrategy(Strategy):
     @staticmethod
     def command(state: State) -> Command:
         attacks = state.current_round.units.attack(
-            StupidAttackStrategy.head_connected_blocks(state)
+            StupidAttackStrategy.head_connected_blocks(state),
+            prioritize_enemies=False,
         )
         build = StupidAttackStrategy.build_circle(state)
 
@@ -136,20 +137,20 @@ class StupidAttackStrategy(Strategy):
 
         def calculate_weight(loc: Location) -> float:
             dist = center.distance(loc)
-            atc = get_attractiveness(
-                state,
-                loc,
-                explore_radius=3,
-                preset=Preset(
-                    wall=1.0,
-                    zpot=1.0,
-                    zombie=1.0,
-                    enemy=0.1,
-                    empty=0.5,
-                    my_base=1.0,
-                ),
-            )
-            return dist * atc
+            # atc = get_attractiveness(
+            #     state,
+            #     loc,
+            #     explore_radius=3,
+            #     preset=Preset(
+            #         wall=1.0,
+            #         zpot=1.0,
+            #         zombie=1.0,
+            #         enemy=1.0,
+            #         empty=1.0,
+            #         my_base=1.0,
+            #     ),
+            # )
+            return -dist
 
         sorted_by_proximity_to_center = sorted(
             to_build,

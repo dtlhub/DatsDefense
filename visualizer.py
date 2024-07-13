@@ -21,11 +21,12 @@ URL = 'http://0.0.0.0:1234'
 
 
 class RoundVisualizer:
-    def __init__(self, round):
+    def __init__(self, round: PassedRound):
         self.world = round.game.world
         self.zombies = round.game.units.zombies
         self.enemies = round.game.units.enemy_bases
         self.base = round.game.units.base
+        self.round = round
         self.fig, self.ax = plt.subplots()
 
     def __get_points(self, obj: list[Zombie] | list[EnemyBaseLocation] | list[MyBaseLocation]):
@@ -115,6 +116,11 @@ class RoundVisualizer:
         self.__add_enemy()
         self.__add_world()
         self.fig.legend(bbox_to_anchor=(1.04, 1), loc="upper left")
+
+        head = self.round.game.units.base_head
+        health = head.health if head is not None else 0
+
+        self.fig.suptitle(f'base_health = {health}; gold = {self.round.game.units.player.gold}', fontsize=16)
 
         tmpfile = BytesIO()
         self.fig.savefig(tmpfile, format='png', dpi=96*2)

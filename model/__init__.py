@@ -131,7 +131,6 @@ class MyBaseLocation:
     last_attack: Location | None
     location: Location
 
-
     def __hash__(self):
         return hash(self.location)
 
@@ -364,13 +363,16 @@ class Zombie:
             case Direction.LEFT:
                 return (-1, 0)
 
-
     def get_affected_coordinates(self) -> list[(int, int)]:
-        """че надо написать неебаться хуйню да со свитчами по типу
-        """
+        """че надо написать неебаться хуйню да со свитчами по типу"""
         zombie_type = self.type
         direction = Zombie.direction_map(self.direction)
-        return [(self.location.x + direction[0] * self.speed, self.location.y + direction[1] * self.speed)]
+        return [
+            (
+                self.location.x + direction[0] * self.speed,
+                self.location.y + direction[1] * self.speed,
+            )
+        ]
 
 
 @dataclass
@@ -431,8 +433,11 @@ class GetUnitsResponse:
         npr = []
 
         for zm in zmbs:
-            if (zm.type == ZombieType.JUGGERNAUT or 
-                    zm.type == ZombieType.BOMBER or zm.type == ZombieType.CHAOS_KNIGHT):
+            if (
+                zm.type == ZombieType.JUGGERNAUT
+                or zm.type == ZombieType.BOMBER
+                or zm.type == ZombieType.CHAOS_KNIGHT
+            ):
                 pr.append(zm)
             elif zm.type == ZombieType.LINER:
                 prl.append(zm)
@@ -440,13 +445,15 @@ class GetUnitsResponse:
                 npr.append(zm)
         return prl, pr, npr
 
-    def attack(self, connected_blocks: set[MyBaseLocation], attack_prior=False) -> list[AttackCommand]:
+    def attack(
+        self, connected_blocks: set[MyBaseLocation], prioritize_enemies=False
+    ) -> list[AttackCommand]:
         attackers: list[MyBaseLocation] = []
         attacks = []
         possible_attackers = connected_blocks.copy()
         pre, npre = self.__sort_enemies(self.enemy_bases)
         prl, prz, nprz = self.__sort_by_danger(self.zombies)
-        if attack_prior:
+        if prioritize_enemies:
             uebki = pre + npre + prl + prz + nprz
         else:
             uebki = prl + pre + prz + nprz + npre
