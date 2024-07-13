@@ -64,6 +64,7 @@ class Runner(threading.Thread):
             return self._cached_round
 
     def run_round(self, storage: RoundStorage) -> bool:
+        now = datetime.datetime.now()
         with self._strategy_lock:
             if self._next_round_strategy_name is not None:
                 self._strategy = ALL_STRATEGIES[self._next_round_strategy_name]
@@ -91,6 +92,9 @@ class Runner(threading.Thread):
                 command=accepted_command.accepted,
             )
         )
+
+        end = datetime.datetime.now()
+        logger.info(f"Made move in {(end - now).total_seconds()} seconds")
         return "you are dead" not in accepted_command.errors
 
     def play_until_dead(self, storage: RoundStorage):

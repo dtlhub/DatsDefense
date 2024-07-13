@@ -1,13 +1,17 @@
 from pathlib import Path
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 
 from gameserver.storage import RoundStorage
 
 
-def create_app(storage: RoundStorage) -> Flask:
+def create_app() -> Flask:
     app = Flask(__name__)
+
     storage_base = Path.cwd() / "storage"
+
+    def get_game_storage(game: str):
+        return RoundStorage(storage_base / game)
 
     @app.get("/api/games")
     def get_games():
@@ -19,19 +23,15 @@ def create_app(storage: RoundStorage) -> Flask:
 
     @app.get("/api/<game>")
     def get_game(game):
-        storage = RoundStorage(storage_base / game)
+        storage = get_game_storage(game)
         return jsonify(storage.get_stored())
 
-    @app.get("/api/current_game")
-    def get_current(game):
-        return jsonify(storage.get_stored())
-
-    @app.get("/api/current_game/round/<index>")
-    def get_round(index):
-        return jsonify(storage.get_stored()[int(index)])
+    @app.get("/api/<game>/round/<round>")
+    def get_round(game, round):
+        return jsonify(get_game_storage(game).get_stored()[int(round)])
 
     @app.get("/game/<game>")
     def view_game(game):
-        return index
+        return render_template("game.html")
 
     return app

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>State</title>
+  </head>
+  <body>
+    <img />
+    <script>
+      const img = document.querySelector("img");
+
+      async function getRound() {
+        const params = new URLSearchParams(document.location.search);
+        const game = window.location.pathname.substr(6).trim("/");
+        let round = params.get("round");
+
+        console.log(`/api/${game}`);
+        if (round === null) {
+          let response = await fetch(`/api/${game}`);
+          let game = await response.json();
+          console.log(game);
+        }
+      }
+
+      getRound().then((round) => {});
+    </script>
+  </body>
+</html>

@@ -183,11 +183,11 @@ class EnemyBaseLocation:
             last_attack = Location.from_json(la)
 
         return cls(
-            name=json["name"],
+            name=json.get("name", "unknown"),
             attack=json["attack"],
             health=json["health"],
             is_head=is_head,
-            range=json["range"],
+            range=json.get("range", 8 if is_head else 5),
             last_attack=last_attack,
             location=Location.from_json(json),
         )
