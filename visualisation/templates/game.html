@@ -33,9 +33,9 @@
         let update = params.get("update");
 
         if (update === null) {
-          return false;
+          return 0;
         } else {
-          return update === "1";
+          return parseInt(update);
         }
       }
 
@@ -52,10 +52,10 @@
       });
 
       getUpdate().then((update) => {
-        if (update) {
+        if (update > 0) {
           setTimeout(() => {
             window.location.reload()
-          }, 2000);
+          }, update * 1000);
         }
       });
 
