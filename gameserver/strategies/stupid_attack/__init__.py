@@ -2,11 +2,6 @@ from gameserver.strategy import Strategy
 
 from model import Command, Location
 from model.state import State
-from math import sqrt
-
-
-def distance(x1: float, y1: float, x2: float, y2: float) -> float:
-    return x1
 
 
 class StupidAttackStrategy(Strategy):
