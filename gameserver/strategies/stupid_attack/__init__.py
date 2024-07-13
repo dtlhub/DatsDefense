@@ -45,17 +45,19 @@ class StupidAttackStrategy(Strategy):
             base_locations.add(b.location)
 
         neighbours: set[Location] = set()
+        def add_neighbour(loc: Location):
+            if loc not in base_locations:
+                neighbours.add(loc)
+
         for b in base:
             x, y = b.location.x, b.location.y
-            base_locations.add(Location(x, y))
-            neighbours.add(Location(x - 1, y))
-            neighbours.add(Location(x + 1, y))
-            neighbours.add(Location(x, y - 1))
-            neighbours.add(Location(x, y + 1))
-        non_ocupied = neighbours - base_locations
+            add_neighbour(Location(x - 1, y))
+            add_neighbour(Location(x + 1, y))
+            add_neighbour(Location(x, y - 1))
+            add_neighbour(Location(x, y + 1))
 
         sorted_by_proximity_to_center = sorted(
-            non_ocupied, key=lambda loc: center.distance(loc)
+            neighbours, key=lambda loc: center.distance(loc)
         )
         available = sorted_by_proximity_to_center[:limit]
 
