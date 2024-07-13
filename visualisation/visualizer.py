@@ -7,7 +7,8 @@ from model import (
     Zombie, 
     ZombieType, 
     EnemyBaseLocation, 
-    Zpot, 
+    Zpot,
+    ZpotType,
     Location
 )
 
@@ -68,10 +69,35 @@ class RoundVisualizer:
         points = self.__get_points(self.enemies)
         self.ax.scatter(points[0], points[1], label='Enemy', marker='*', color='red', s=100)
 
+    def __add_world(self):
+        colors = {
+            ZpotType.DEFAULT: 'r',  # Green for Normal
+            ZpotType.WALL: 'gray',  # Blue for Fast
+        }
+        markers = {
+            ZpotType.DEFAULT: '^',  # Green for Normal
+            ZpotType.WALL: 's',  # Blue for Fast
+        }
+        for zpot in self.world.zpots:
+            self.ax.scatter(
+                zpot.x,
+                zpot.y,
+                color=colors.get(zpot.type, 'gray'),  # Default to gray if type not found,
+                marker=markers.get(zpot.type, '.'), 
+            )
+        for kek in colors.keys():
+            self.ax.scatter(
+                zpot.x,
+                zpot.y,
+                color=colors.get(kek, 'gray'),  # Default to gray if type not found,
+                label=str(kek),
+                marker=markers.get(kek, '.'), 
+            )
     def visualize(self):
         self.__add_base()
         self.__add_zombies()
         self.__add_enemy()
+        self.__add_world()
         plt.legend()
         plt.show()
 
