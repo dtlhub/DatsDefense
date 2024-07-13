@@ -1,13 +1,13 @@
 from gameserver.strategy import Strategy
 
-from model import Command
-from model.state import State, Location
+from model import Command, Location
+from model.state import State
 
 
 class StupidAttackStrategy(Strategy):
     @staticmethod
     def name() -> str:
-        return "stupid attack"
+        return "stupid_attack"
 
     @staticmethod
     def command(state: State) -> Command:
