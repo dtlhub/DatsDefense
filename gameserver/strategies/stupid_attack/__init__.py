@@ -45,7 +45,10 @@ def direction_generator(
 
 
 def get_attractiveness(
-    state: State, start: Location, explore_radius: int, preset: Preset
+    state: State,
+    start: Location,
+    explore_radius: int,
+    preset: Preset = Preset(),
 ) -> float:
     seen: set[Location] = set()
     q = deque()
@@ -137,20 +140,20 @@ class StupidAttackStrategy(Strategy):
 
         def calculate_weight(loc: Location) -> float:
             dist = center.distance(loc)
-            # atc = get_attractiveness(
-            #     state,
-            #     loc,
-            #     explore_radius=3,
-            #     preset=Preset(
-            #         wall=1.0,
-            #         zpot=1.0,
-            #         zombie=1.0,
-            #         enemy=1.0,
-            #         empty=1.0,
-            #         my_base=1.0,
-            #     ),
-            # )
-            return -dist
+            atc = get_attractiveness(
+                state,
+                loc,
+                explore_radius=4,
+                preset=Preset(
+                    wall=0.2,
+                    zpot=1.0,
+                    zombie=2.0,
+                    enemy=0.5,
+                    empty=0.8,
+                    my_base=1.0,
+                ),
+            )
+            return dist * atc
 
         sorted_by_proximity_to_center = sorted(
             to_build,

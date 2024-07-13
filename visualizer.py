@@ -12,12 +12,12 @@ from model import (
     EnemyBaseLocation,
     Zpot,
     ZpotType,
-    Location
+    Location,
 )
 from functools import lru_cache
 
 
-URL = 'http://0.0.0.0:1234'
+URL = "http://0.0.0.0:1234"
 
 
 class RoundVisualizer:
@@ -29,7 +29,9 @@ class RoundVisualizer:
         self.round = round
         self.fig, self.ax = plt.subplots()
 
-    def __get_points(self, obj: list[Zombie] | list[EnemyBaseLocation] | list[MyBaseLocation]):
+    def __get_points(
+        self, obj: list[Zombie] | list[EnemyBaseLocation] | list[MyBaseLocation]
+    ):
         plot_points_x = []
         plot_points_y = []
         for base_points in obj:
@@ -41,22 +43,24 @@ class RoundVisualizer:
     def __add_base(self):
         points = self.__get_points(self.base)
         for point in self.base:
-            self.ax.scatter(point.location.x,
-                            point.location.y,
-                            label='Our base',
-                            marker='*',
-                            color='green' if point.is_head == False else 'blue',
-                            s=100)
+            self.ax.scatter(
+                point.location.x,
+                point.location.y,
+                label="Our base",
+                marker="*",
+                color="green" if point.is_head == False else "blue",
+                s=100,
+            )
 
     def __add_zombies(self):
         # types later
         colors = {
-            ZombieType.NORMAL: 'g',  # Green for Normal
-            ZombieType.FAST: 'b',  # Blue for Fast
-            ZombieType.BOMBER: 'c',  # Cyan for Bomber
-            ZombieType.LINER: 'y',  # Yellow for Liner
-            ZombieType.JUGGERNAUT: 'm',  # Magenta for Juggernaut
-            ZombieType.CHAOS_KNIGHT: 'k'  # Black for Chaos Knight
+            ZombieType.NORMAL: "g",  # Green for Normal
+            ZombieType.FAST: "b",  # Blue for Fast
+            ZombieType.BOMBER: "c",  # Cyan for Bomber
+            ZombieType.LINER: "y",  # Yellow for Liner
+            ZombieType.JUGGERNAUT: "m",  # Magenta for Juggernaut
+            ZombieType.CHAOS_KNIGHT: "k",  # Black for Chaos Knight
         }
         if self.zombies == []:
             return
@@ -66,48 +70,54 @@ class RoundVisualizer:
             self.ax.scatter(
                 zombie.location.x,
                 zombie.location.y,
-                color=colors.get(zombie.type, 'gray'),  # Default to gray if type not found,
-                marker='o',
+                color=colors.get(
+                    zombie.type, "gray"
+                ),  # Default to gray if type not found,
+                marker="o",
             )
 
         for kek in colors.keys():
             self.ax.scatter(
                 zombie.location.x,
                 zombie.location.y,
-                color=colors.get(kek, 'gray'),  # Default to gray if type not found,
+                color=colors.get(kek, "gray"),  # Default to gray if type not found,
                 label=str(kek),
-                marker='o',
-                s=30
+                marker="o",
+                s=30,
             )
 
     def __add_enemy(self):
         points = self.__get_points(self.enemies)
-        self.ax.scatter(points[0], points[1], label='Enemy', marker='*', color='red', s=100)
+        self.ax.scatter(
+            points[0], points[1], label="Enemy", marker="*", color="red", s=100
+        )
 
     def __add_world(self):
         colors = {
-            ZpotType.DEFAULT: 'r',  # Green for Normal
-            ZpotType.WALL: 'gray',  # Blue for Fast
+            ZpotType.DEFAULT: "r",  # Green for Normal
+            ZpotType.WALL: "gray",  # Blue for Fast
         }
         markers = {
-            ZpotType.DEFAULT: '^',  # Green for Normal
-            ZpotType.WALL: 's',  # Blue for Fast
+            ZpotType.DEFAULT: "^",  # Green for Normal
+            ZpotType.WALL: "s",  # Blue for Fast
         }
         for zpot in self.world.zpots:
             self.ax.scatter(
                 zpot.x,
                 zpot.y,
-                color=colors.get(zpot.type, 'gray'),  # Default to gray if type not found,
-                marker=markers.get(zpot.type, '.'),
+                color=colors.get(
+                    zpot.type, "gray"
+                ),  # Default to gray if type not found,
+                marker=markers.get(zpot.type, "."),
             )
 
         for kek in colors.keys():
             self.ax.scatter(
                 zpot.x,
                 zpot.y,
-                color=colors.get(kek, 'gray'),  # Default to gray if type not found,
+                color=colors.get(kek, "gray"),  # Default to gray if type not found,
                 label=str(kek),
-                marker=markers.get(kek, '.'),
+                marker=markers.get(kek, "."),
             )
 
     def get_png_bytes(self):
@@ -120,10 +130,13 @@ class RoundVisualizer:
         head = self.round.game.units.base_head
         health = head.health if head is not None else 0
 
-        self.fig.suptitle(f'base_health = {health}; gold = {self.round.game.units.player.gold}', fontsize=16)
+        self.fig.suptitle(
+            f"base_health = {health}; gold = {self.round.game.units.player.gold}; turn = {self.round.game.units.turn}",
+            fontsize=16,
+        )
 
         tmpfile = BytesIO()
-        self.fig.savefig(tmpfile, format='png', dpi=96*2)
+        self.fig.savefig(tmpfile, format="png", dpi=96 * 2)
         return tmpfile.getvalue()
 
     def visualize(self):
@@ -144,7 +157,7 @@ def visualize_state(passed_round_json):
 
 @lru_cache(256)
 def get_png_bytes(game: str, round_index: str):
-    with open(Path.cwd() / "storage" / game / f'{round_index}.round.json', 'r') as f:
+    with open(Path.cwd() / "storage" / game / f"{round_index}.round.json", "r") as f:
         data = json.load(f)
     round = PassedRound.from_json(data)
     vis = RoundVisualizer(round)
@@ -154,7 +167,6 @@ def get_png_bytes(game: str, round_index: str):
 
 
 if __name__ == "__main__":
-    round = json.loads(open('./storage/test-day2-6/3.round.json', 'r').read())
+    round = json.loads(open("./storage/test-day2-6/3.round.json", "r").read())
     visualize_state(round)
-    print('done')
-
+    print("done")
