@@ -1,4 +1,5 @@
 import requests
+import json
 from matplotlib import pyplot as plt
 from model.state import PassedRound
 from model import (
@@ -18,7 +19,7 @@ class RoundVisualizer:
     def __init__(self, round):
         self.world = round.game.world
         self.zombies = round.game.units.zombies
-        self.enemies = round.game.units.enemies
+        self.enemies = round.game.units.enemy_bases
         self.base = round.game.units.base
         self.fig, self.ax = plt.subplots()
 
@@ -28,41 +29,59 @@ class RoundVisualizer:
         for base_points in obj:
             plot_points_x.append(base_points.location.x)
             plot_points_y.append(base_points.location.y)
-            
-        pass
 
+        return (plot_points_x, plot_points_y)
+            
     def __add_base(self):
         points = self.__get_points(self.base)
-        self.ax.scatter(points[0], points[1], marker='*', color='green')
+        self.ax.scatter(points[0], points[1], label='Our base', marker='*', color='green', s=100)
 
     def __add_zombies(self):
         # types later
         colors = {
-            Zombie.NORMAL: 'g',  # Green for Normal
-            Zombie.FAST: 'b',  # Blue for Fast
-            Zombie.BOMBER: 'o',  # Orange for Bomber
-            Zombie.LINER: 'y',  # Yellow for Liner
-            Zombie.JUGGERNAUT: 'm',  # Magenta for Juggernaut
-            Zombie.CHAOS_KNIGHT: 'k'  # Black for Chaos Knight
+            ZombieType.NORMAL: 'g',  # Green for Normal
+            ZombieType.FAST: 'b',  # Blue for Fast
+            ZombieType.BOMBER: 'c',  # Cyan for Bomber
+            ZombieType.LINER: 'y',  # Yellow for Liner
+            ZombieType.JUGGERNAUT: 'm',  # Magenta for Juggernaut
+            ZombieType.CHAOS_KNIGHT: 'k'  # Black for Chaos Knight
         }
         for zombie in self.zombies:
             self.ax.scatter(
-                zombie.location['x'],
-                zombie.location['y'],
-                color=colors.get(zombie.type, 'gray'),  # Default to gray if type not found
+                zombie.location.x,
+                zombie.location.y,
+                color=colors.get(zombie.type, 'gray'),  # Default to gray if type not found,
                 marker='o', 
             )
-        pass
+
+        for kek in colors.keys():
+            self.ax.scatter(
+                zombie.location.x,
+                zombie.location.y,
+                color=colors.get(kek, 'gray'),  # Default to gray if type not found,
+                label=str(kek),
+                marker='o',
+                s=30
+            )
     
     def __add_enemy(self):
-        points = self.__get_points(self.base)
-        self.ax.scatter(points[0], points[1], marker='*', color='red')
+        points = self.__get_points(self.enemies)
+        self.ax.scatter(points[0], points[1], label='Enemy', marker='*', color='red', s=100)
 
     def visualize(self):
+        self.__add_base()
+        self.__add_zombies()
+        self.__add_enemy()
+        plt.legend()
         plt.show()
-
 
 
 def visualize_state(passed_round_json):
     round = PassedRound.from_json(passed_round_json)
-    world = round.game.world
+    vis = RoundVisualizer(round)
+    vis.visualize()
+
+
+if __name__ == "__main__":
+    round = json.loads(open('./storage/test-day2-4/0.round.json', 'r').read())
+    visualize_state(round)
