@@ -31,10 +31,10 @@ def direction_generator(
 ) -> Generator[Location, None, None]:
     dx, dy = {
         Direction.UNKNOWN: (0, 0),
-        Direction.UP: (1, 0),
-        Direction.DOWN: (-1, 0),
-        Direction.LEFT: (0, -1),
-        Direction.RIGHT: (0, 1),
+        Direction.UP: (0, -1),
+        Direction.DOWN: (0, 1),
+        Direction.LEFT: (-1, 0),
+        Direction.RIGHT: (1, 0),
     }[dir]
     gen = count if amount is None else lambda: range(amount)
     for d in gen():
