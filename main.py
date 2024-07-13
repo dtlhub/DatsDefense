@@ -14,7 +14,7 @@ PRODUCTION_HOST = "https://games.datsteam.dev"
 
 TOKEN = "66843ff3b401c66843ff3b401f"
 
-STORAGE = Path.cwd() / "storage"
+STORAGE = Path.cwd() / "storage" / "test-day2-4"
 
 logging.basicConfig(level=logging.DEBUG)
 

@@ -1,4 +1,6 @@
 import time
+import logging
+import traceback
 import threading
 from typing import cast
 
@@ -8,6 +10,9 @@ from .consumer import ApiConsumer
 from .storage import RoundStorage
 from .strategy import Strategy
 from .strategies import ALL_STRATEGIES
+
+
+logger = logging.getLogger("runner")
 
 
 class Runner(threading.Thread):
@@ -58,7 +63,7 @@ class Runner(threading.Thread):
             )
             return self._cached_round
 
-    def run_round(self):
+    def run_round(self) -> bool:
         with self._strategy_lock:
             if self._next_round_strategy_name is not None:
                 self._strategy = ALL_STRATEGIES[self._next_round_strategy_name]
@@ -78,17 +83,37 @@ class Runner(threading.Thread):
             with self._strategy_lock:
                 if self.next_round_strategy is None:
                     self.next_round_strategy = cast(str, next_strategy)
-        self._api.send_command(command)
 
+        accepted_command = self._api.send_command(command)
         self._storage.add(
             PassedRound(
                 game=self.get_round_cached(),
-                command=command,
+                command=accepted_command.accepted,
             )
         )
+        return "you are dead" not in accepted_command.errors
 
     def run(self):
-        while True:
-            current_round = self.get_round_cached()
-            time.sleep(current_round.units.turn_ends_in_ms / 1000)
-            self.run_round()
+        round_started = False
+        while not round_started:
+            try:
+                response = self._api.play()
+                logger.info(f"{response.starts_in_sec = }")
+                time.sleep(1)
+            except Exception:
+                round_started = True
+
+        is_alive = True
+        while is_alive:
+            try:
+                is_alive = self.run_round()
+            except Exception as ex:
+                logger.error(f"Failed to run iteration: {ex}")
+                print(traceback.format_exc())
+            else:
+                current_round = self.get_round_cached()
+                sleep_seconds = current_round.units.turn_ends_in_ms / 1000
+                logger.debug(f"Sleeping for {sleep_seconds} seconds")
+                time.sleep(sleep_seconds)
+
+        logger.info("Player is dead, quitting round")

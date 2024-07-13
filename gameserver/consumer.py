@@ -44,11 +44,11 @@ class ApiConsumer:
         return model.PlayResponse.from_json(response.json())
 
     def get_units_around(self) -> model.GetUnitsResponse:
-        response = self.s.get(self.url("/play/zombidef/units/"))
+        response = self.s.get(self.url("/play/zombidef/units"))
         return model.GetUnitsResponse.from_json(response.json())
 
     def get_world_around(self) -> model.GetWorldResponse:
-        response = self.s.get(self.url("/play/zombidef/world/"))
+        response = self.s.get(self.url("/play/zombidef/world"))
         return model.GetWorldResponse.from_json(response.json())
 
     def get_game_rounds(self) -> model.GetRoundsResponse:

@@ -59,8 +59,8 @@ class Command:
             move_base = Location.from_json(obj)
 
         return cls(
-            attack=[AttackCommand.from_json(obj) for obj in json.get("attack")],
-            build=[Location.from_json(obj) for obj in json.get("obj")],
+            attack=[AttackCommand.from_json(obj) for obj in (json.get("attack") or [])],
+            build=[Location.from_json(obj) for obj in (json.get("obj") or [])],
             move_base=move_base,
         )
 
@@ -83,7 +83,7 @@ class CommandResponse:
     def from_json(cls, json) -> Self:
         return cls(
             accepted=Command.from_json(json["acceptedCommands"]),
-            errors=json["errors"],
+            errors=json["errors"] or [],
         )
 
     def to_json(self):
@@ -116,32 +116,42 @@ class MyBaseLocation:
     health: int
     is_head: bool
     range: int
-    last_attack: Location
+    last_attack: Location | None
     location: Location
 
     @classmethod
     def from_json(cls, json) -> Self:
+        is_head = json.get("isHead")
+        if is_head is None:
+            is_head = json["attack"] == 40
+
+        last_attack = None
+        if (la := json.get("lastAttack")) is not None:
+            last_attack = Location.from_json(la)
+
         return cls(
             id=json["id"],
             attack=json["attack"],
             health=json["health"],
-            is_head=json["isHead"],
+            is_head=is_head,
             range=json["range"],
-            last_attack=Location.from_json(json["lastAttack"]),
+            last_attack=last_attack,
             location=Location.from_json(json),
         )
 
     def to_json(self):
-        return {
+        json = {
             "id": self.id,
             "attack": self.attack,
             "health": self.health,
             "isHead": self.is_head,
             "range": self.range,
-            "lastAttack": self.last_attack.to_json(),
             "x": self.location.x,
             "y": self.location.y,
         }
+        if self.last_attack is not None:
+            json["lastAttack"] = self.last_attack.to_json()
+        return json
 
 
 @dataclass
@@ -151,38 +161,48 @@ class EnemyBaseLocation:
     health: int
     is_head: bool
     range: int
-    last_attack: Location
+    last_attack: Location | None
     location: Location
 
     @classmethod
     def from_json(cls, json) -> Self:
+        is_head = json.get("isHead")
+        if is_head is None:
+            is_head = json["attack"] == 40
+
+        last_attack = None
+        if (la := json.get("lastAttack")) is not None:
+            last_attack = Location.from_json(la)
+
         return cls(
             name=json["str"],
             attack=json["attack"],
             health=json["health"],
-            is_head=json["isHead"],
+            is_head=is_head,
             range=json["range"],
-            last_attack=Location.from_json(json["lastAttack"]),
+            last_attack=last_attack,
             location=Location.from_json(json),
         )
 
     def to_json(self):
-        return {
+        json = {
             "name": self.name,
             "attack": self.attack,
             "health": self.health,
             "isHead": self.is_head,
             "range": self.range,
-            "lastAttack": self.last_attack.to_json(),
             "x": self.location.x,
             "y": self.location.y,
         }
+        if self.last_attack is not None:
+            json["lastAttack"] = self.last_attack.to_json()
+        return json
 
 
 @dataclass
 class Player:
     enemy_block_kills: int
-    game_ended_at: datetime.datetime
+    game_ended_at: str
     gold: int
     name: str
     points: int
@@ -192,7 +212,7 @@ class Player:
     def from_json(cls, json) -> Self:
         return cls(
             enemy_block_kills=json["enemyBlockKills"],
-            game_ended_at=datetime.datetime.fromisoformat(json["gameEndedAt"]),
+            game_ended_at=json["gameEndedAt"],
             gold=json["gold"],
             name=json["name"],
             points=json["points"],
@@ -202,7 +222,7 @@ class Player:
     def to_json(self):
         return {
             "enemyBlockKills": self.enemy_block_kills,
-            "gameEndedAt": self.game_ended_at.isoformat(),
+            "gameEndedAt": self.game_ended_at,
             "gold": self.gold,
             "name": self.name,
             "points": self.points,
@@ -328,15 +348,15 @@ class GetUnitsResponse:
     @classmethod
     def from_json(cls, json) -> Self:
         return cls(
-            base=[MyBaseLocation.from_json(obj) for obj in json["base"]],
+            base=[MyBaseLocation.from_json(obj) for obj in (json["base"] or [])],
             enemy_bases=[
-                EnemyBaseLocation.from_json(obj) for obj in json["enemyBlocks"]
+                EnemyBaseLocation.from_json(obj) for obj in (json["enemyBlocks"] or [])
             ],
             player=Player.from_json(json["player"]),
             realm_name=json["realmName"],
             turn=json["turn"],
             turn_ends_in_ms=json["turnEndsInMs"],
-            zombies=[Zombie.from_json(obj) for obj in json["zombies"]],
+            zombies=[Zombie.from_json(obj) for obj in (json["zombies"] or [])],
         )
 
     def to_json(self):
@@ -423,7 +443,7 @@ class GetWorldResponse:
     def from_json(cls, json) -> Self:
         return cls(
             realm_name=json["realmName"],
-            zpots=[Zpot.from_json(obj) for obj in json["zpots"]],
+            zpots=[Zpot.from_json(obj) for obj in (json["zpots"] or [])],
         )
 
     def to_json(self):
@@ -477,7 +497,7 @@ class GetRoundsResponse:
         return cls(
             game_name=json["gameName"],
             now=json["now"],
-            rounds=[GameRound.from_json(obj) for obj in json["rounds"]],
+            rounds=[GameRound.from_json(obj) for obj in (json["rounds"] or [])],
         )
 
     def to_json(self):
