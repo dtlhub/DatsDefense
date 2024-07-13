@@ -423,14 +423,17 @@ class GetUnitsResponse:
 
     def __sort_by_danger(self, zmbs: list[Zombie]):
         pr = []
+        prl = []
         npr = []
 
         for zm in zmbs:
-            if zm.type == ZombieType.JUGGERNAUT or zm.type == ZombieType.LINER:
+            if zm.type == ZombieType.JUGGERNAUT:
                 pr.append(zm)
+            elif zm.type == ZombieType.LINER:
+                prl.append(zm)
             else:
                 npr.append(zm)
-        return pr, npr
+        return prl, pr, npr
 
     def attack(self) -> list[AttackCommand]:
         attackers: list[MyBaseLocation] = []
@@ -438,9 +441,9 @@ class GetUnitsResponse:
         attacks = []
         possible_attackers = self.base.copy()
         pre, npre = self.__sort_enemies(self.enemy_bases)
-        prz, nprz = self.__sort_by_danger(self.zombies)
+        prl, prz, nprz = self.__sort_by_danger(self.zombies)
 
-        uebki = pre + prz + nprz + npre
+        uebki = prl + pre + prz + nprz + npre
 
         for zombie in uebki:
             accumulated_damage = 0
