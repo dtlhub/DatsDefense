@@ -60,7 +60,7 @@
             getRound().then((round) => {
               getMaxRound().then((maxRound) => {
                 round = clamp(round - 1, 0, maxRound);
-                window.location.href = `/game/${game}?round=${round + 1}`;
+                window.location.href = `/game/${game}?round=${round}`;
               });
             });
           } else if (code == 39) {
@@ -68,7 +68,7 @@
             getRound().then((round) => {
               getMaxRound().then((maxRound) => {
                 round = clamp(round + 1, 0, maxRound);
-                window.location.href = `/game/${game}?round=${round + 1}`;
+                window.location.href = `/game/${game}?round=${round}`;
               });
             });
           }
