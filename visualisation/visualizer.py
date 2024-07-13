@@ -3,10 +3,10 @@ import json
 from matplotlib import pyplot as plt
 from model.state import PassedRound
 from model import (
-    MyBaseLocation, 
-    Zombie, 
-    ZombieType, 
-    EnemyBaseLocation, 
+    MyBaseLocation,
+    Zombie,
+    ZombieType,
+    EnemyBaseLocation,
     Zpot,
     ZpotType,
     Location
@@ -32,7 +32,7 @@ class RoundVisualizer:
             plot_points_y.append(base_points.location.y)
 
         return (plot_points_x, plot_points_y)
-            
+
     def __add_base(self):
         points = self.__get_points(self.base)
         self.ax.scatter(points[0], points[1], label='Our base', marker='*', color='green', s=100)
@@ -54,7 +54,7 @@ class RoundVisualizer:
                 zombie.location.x,
                 zombie.location.y,
                 color=colors.get(zombie.type, 'gray'),  # Default to gray if type not found,
-                marker='o', 
+                marker='o',
             )
 
         for kek in colors.keys():
@@ -66,7 +66,7 @@ class RoundVisualizer:
                 marker='o',
                 s=30
             )
-    
+
     def __add_enemy(self):
         points = self.__get_points(self.enemies)
         self.ax.scatter(points[0], points[1], label='Enemy', marker='*', color='red', s=100)
@@ -85,7 +85,7 @@ class RoundVisualizer:
                 zpot.x,
                 zpot.y,
                 color=colors.get(zpot.type, 'gray'),  # Default to gray if type not found,
-                marker=markers.get(zpot.type, '.'), 
+                marker=markers.get(zpot.type, '.'),
             )
         for kek in colors.keys():
             self.ax.scatter(
@@ -93,7 +93,7 @@ class RoundVisualizer:
                 zpot.y,
                 color=colors.get(kek, 'gray'),  # Default to gray if type not found,
                 label=str(kek),
-                marker=markers.get(kek, '.'), 
+                marker=markers.get(kek, '.'),
             )
     def visualize(self):
         self.__add_base()
@@ -101,7 +101,7 @@ class RoundVisualizer:
         self.__add_enemy()
         self.__add_world()
         plt.legend()
-        plt.show()
+        fig = plt.figure()
 
 
 def visualize_state(passed_round_json):

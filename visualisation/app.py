@@ -30,4 +30,8 @@ def create_app(storage: RoundStorage) -> Flask:
     def get_round(index):
         return jsonify(storage.get_stored()[int(index)])
 
+    @app.get("/game/<game>")
+    def view_game(game):
+        return index
+
     return app

@@ -1,11 +1,12 @@
 import json
-import logging
 from pathlib import Path
 
 from model.state import PassedRound
 
+from logger import logger as globlog
 
-logger = logging.getLogger("storage")
+
+logger = globlog.getChild("storage")
 
 
 def load(path: Path) -> list[PassedRound]:

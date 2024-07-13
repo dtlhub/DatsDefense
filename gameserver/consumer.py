@@ -1,10 +1,10 @@
-import logging
+from logger import logger as globlog
 import requests
 
 import model
 
 
-logger = logging.getLogger("api")
+logger = globlog.getChild("api")
 
 
 class ApiConsumer:

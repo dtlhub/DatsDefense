@@ -1,4 +1,3 @@
-import logging
 from pathlib import Path
 
 import gameserver.consumer
@@ -13,8 +12,6 @@ PRODUCTION_HOST = "https://games.datsteam.dev"
 TOKEN = "66843ff3b401c66843ff3b401f"
 
 STORAGE = Path.cwd() / "storage"
-
-logging.basicConfig(level=logging.DEBUG)
 
 
 def main():

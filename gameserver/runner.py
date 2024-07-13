@@ -1,5 +1,4 @@
 import time
-import logging
 import datetime
 import traceback
 import threading
@@ -13,8 +12,10 @@ from .storage import RoundStorage
 from .strategy import Strategy
 from .strategies import ALL_STRATEGIES
 
+from logger import logger as globlog
 
-logger = logging.getLogger("runner")
+
+logger = globlog.getChild("runner")
 
 
 class Runner(threading.Thread):
@@ -99,6 +100,11 @@ class Runner(threading.Thread):
                 is_alive = self.run_round(storage)
             except Exception as ex:
                 logger.error(f"Failed to run iteration: {ex}")
+                if "too many requests" in str(ex):
+                    logger.warning("Encountered too many requests; going to sleep for 2 seconds")
+                    time.sleep(2)
+                    continue
+
                 print(traceback.format_exc())
             else:
                 current_round = self.get_round_cached()

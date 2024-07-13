@@ -1,0 +1,507 @@
+{
+  "game": {
+    "world": {
+      "realmName": "test-day2-6",
+      "zpots": [
+        {
+          "x": 428,
+          "y": 540,
+          "type": "default"
+        },
+        {
+          "x": 437,
+          "y": 540,
+          "type": "default"
+        },
+        {
+          "x": 420,
+          "y": 529,
+          "type": "default"
+        },
+        {
+          "x": 420,
+          "y": 533,
+          "type": "default"
+        },
+        {
+          "x": 420,
+          "y": 532,
+          "type": "default"
+        },
+        {
+          "x": 420,
+          "y": 538,
+          "type": "default"
+        },
+        {
+          "x": 433,
+          "y": 540,
+          "type": "default"
+        },
+        {
+          "x": 435,
+          "y": 536,
+          "type": "default"
+        },
+        {
+          "x": 434,
+          "y": 540,
+          "type": "default"
+        },
+        {
+          "x": 418,
+          "y": 540,
+          "type": "default"
+        },
+        {
+          "x": 425,
+          "y": 540,
+          "type": "default"
+        },
+        {
+          "x": 435,
+          "y": 527,
+          "type": "default"
+        },
+        {
+          "x": 420,
+          "y": 535,
+          "type": "default"
+        },
+        {
+          "x": 432,
+          "y": 540,
+          "type": "default"
+        },
+        {
+          "x": 435,
+          "y": 530,
+          "type": "default"
+        },
+        {
+          "x": 435,
+          "y": 537,
+          "type": "default"
+        },
+        {
+          "x": 438,
+          "y": 540,
+          "type": "default"
+        },
+        {
+          "x": 435,
+          "y": 525,
+          "type": "default"
+        },
+        {
+          "x": 435,
+          "y": 539,
+          "type": "default"
+        },
+        {
+          "x": 420,
+          "y": 528,
+          "type": "default"
+        },
+        {
+          "x": 422,
+          "y": 540,
+          "type": "default"
+        },
+        {
+          "x": 423,
+          "y": 540,
+          "type": "default"
+        },
+        {
+          "x": 431,
+          "y": 540,
+          "type": "default"
+        },
+        {
+          "x": 420,
+          "y": 536,
+          "type": "default"
+        },
+        {
+          "x": 426,
+          "y": 540,
+          "type": "default"
+        },
+        {
+          "x": 420,
+          "y": 530,
+          "type": "default"
+        },
+        {
+          "x": 435,
+          "y": 532,
+          "type": "default"
+        },
+        {
+          "x": 435,
+          "y": 535,
+          "type": "default"
+        },
+        {
+          "x": 420,
+          "y": 527,
+          "type": "default"
+        },
+        {
+          "x": 420,
+          "y": 537,
+          "type": "default"
+        },
+        {
+          "x": 420,
+          "y": 540,
+          "type": "default"
+        },
+        {
+          "x": 435,
+          "y": 534,
+          "type": "default"
+        },
+        {
+          "x": 435,
+          "y": 538,
+          "type": "default"
+        },
+        {
+          "x": 435,
+          "y": 526,
+          "type": "default"
+        },
+        {
+          "x": 421,
+          "y": 540,
+          "type": "default"
+        },
+        {
+          "x": 420,
+          "y": 539,
+          "type": "default"
+        },
+        {
+          "x": 435,
+          "y": 533,
+          "type": "default"
+        },
+        {
+          "x": 420,
+          "y": 534,
+          "type": "default"
+        },
+        {
+          "x": 420,
+          "y": 526,
+          "type": "default"
+        },
+        {
+          "x": 427,
+          "y": 540,
+          "type": "default"
+        },
+        {
+          "x": 435,
+          "y": 540,
+          "type": "default"
+        },
+        {
+          "x": 420,
+          "y": 531,
+          "type": "default"
+        },
+        {
+          "x": 419,
+          "y": 540,
+          "type": "default"
+        },
+        {
+          "x": 420,
+          "y": 525,
+          "type": "default"
+        },
+        {
+          "x": 436,
+          "y": 540,
+          "type": "default"
+        },
+        {
+          "x": 424,
+          "y": 540,
+          "type": "default"
+        },
+        {
+          "x": 429,
+          "y": 540,
+          "type": "default"
+        },
+        {
+          "x": 435,
+          "y": 531,
+          "type": "default"
+        },
+        {
+          "x": 435,
+          "y": 529,
+          "type": "default"
+        },
+        {
+          "x": 435,
+          "y": 528,
+          "type": "default"
+        },
+        {
+          "x": 417,
+          "y": 540,
+          "type": "default"
+        },
+        {
+          "x": 430,
+          "y": 540,
+          "type": "default"
+        }
+      ]
+    },
+    "units": {
+      "base": [
+        {
+          "id": "0190ab44-535a-767c-bf30-5a188b4224aa",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 427,
+          "y": 533
+        },
+        {
+          "id": "0190ab44-535a-766c-a5b1-b68f7db55746",
+          "attack": 40,
+          "health": 300,
+          "isHead": true,
+          "range": 8,
+          "x": 427,
+          "y": 532
+        },
+        {
+          "id": "0190ab44-535a-767f-ab50-78065bb2169a",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 428,
+          "y": 533
+        },
+        {
+          "id": "0190ab44-535a-7678-a07f-3d30c56789d5",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 428,
+          "y": 532
+        }
+      ],
+      "enemyBlocks": [],
+      "player": {
+        "enemyBlockKills": 0,
+        "gold": 10,
+        "name": "dtl",
+        "points": 0,
+        "zombieKills": 0
+      },
+      "realmName": "test-day2-6",
+      "turn": 0,
+      "turnEndsInMs": 0,
+      "zombies": []
+    },
+    "rounds": {
+      "gameName": "zombidef-test",
+      "now": "2024-07-13T08:45:01",
+      "rounds": [
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T11:00:00",
+          "name": "test-day2-12",
+          "repeat": 100,
+          "startAt": "2024-07-13T10:40:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T10:40:00",
+          "name": "test-day2-11",
+          "repeat": null,
+          "startAt": "2024-07-13T10:20:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T10:20:00",
+          "name": "test-day2-10",
+          "repeat": null,
+          "startAt": "2024-07-13T10:00:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T10:00:00",
+          "name": "test-day2-9",
+          "repeat": null,
+          "startAt": "2024-07-13T09:40:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T09:40:00",
+          "name": "test-day2-8",
+          "repeat": null,
+          "startAt": "2024-07-13T09:20:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T09:20:00",
+          "name": "test-day2-7",
+          "repeat": null,
+          "startAt": "2024-07-13T09:00:00",
+          "status": "not started"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T09:00:00",
+          "name": "test-day2-6",
+          "repeat": null,
+          "startAt": "2024-07-13T08:40:00",
+          "status": "active"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T08:40:00",
+          "name": "test-day2-5",
+          "repeat": null,
+          "startAt": "2024-07-13T08:20:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T08:20:00",
+          "name": "test-day2-4",
+          "repeat": null,
+          "startAt": "2024-07-13T08:00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T08:00:00",
+          "name": "test-day2-3",
+          "repeat": null,
+          "startAt": "2024-07-13T07:40:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T07:40:00",
+          "name": "test-day2-2",
+          "repeat": null,
+          "startAt": "2024-07-13T07:20:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-13T07:20:00",
+          "name": "test-day2-1",
+          "repeat": null,
+          "startAt": "2024-07-13T07:00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T19:00:00",
+          "name": "test-day1-9",
+          "repeat": null,
+          "startAt": "2024-07-12T18:40:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T18:40:00",
+          "name": "test-day1-8",
+          "repeat": null,
+          "startAt": "2024-07-12T18:20:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T18:20:00",
+          "name": "test-day1-7",
+          "repeat": null,
+          "startAt": "2024-07-12T18:00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 600,
+          "endAt": "2024-07-12T18:00:00",
+          "name": "test-day1-6-2",
+          "repeat": null,
+          "startAt": "2024-07-12T17:50:00",
+          "status": "ended"
+        },
+        {
+          "duration": 600,
+          "endAt": "2024-07-12T17:50:00",
+          "name": "test-day1-6-1",
+          "repeat": null,
+          "startAt": "2024-07-12T17:40:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T17:40:00",
+          "name": "test-day1-5",
+          "repeat": null,
+          "startAt": "2024-07-12T17:20:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T17:20:00",
+          "name": "test-day1-4",
+          "repeat": null,
+          "startAt": "2024-07-12T17:00:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T17:00:00",
+          "name": "test-day1-3",
+          "repeat": null,
+          "startAt": "2024-07-12T16:40:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T16:40:00",
+          "name": "test-day1-2",
+          "repeat": null,
+          "startAt": "2024-07-12T16:20:00",
+          "status": "ended"
+        },
+        {
+          "duration": 1200,
+          "endAt": "2024-07-12T16:20:00",
+          "name": "test-day1-1",
+          "repeat": null,
+          "startAt": "2024-07-12T16:00:00",
+          "status": "ended"
+        }
+      ]
+    }
+  },
+  "command": {
+    "attack": [],
+    "build": []
+  }
+}
