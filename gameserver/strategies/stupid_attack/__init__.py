@@ -1,6 +1,6 @@
 from gameserver.strategy import Strategy
 
-from model import Command, Location, ZombieType, Direction
+from model import Command, Location, ZombieType, Direction, MyBaseLocation
 from model.state import State
 from itertools import chain, count
 from typing import Generator
@@ -48,7 +48,7 @@ class StupidAttackStrategy(Strategy):
 
     @staticmethod
     def command(state: State) -> Command:
-        attacks = state.current_round.units.attack()
+        attacks = state.current_round.units.attack(StupidAttackStrategy.head_connected_blocks(state))
         build = StupidAttackStrategy.get_builder_commands(state)
 
         new_center = StupidAttackStrategy.calculate_head_location(state, build)
@@ -163,14 +163,14 @@ class StupidAttackStrategy(Strategy):
         return max_loc
 
     @staticmethod
-    def head_connected_blocks(state: State) -> set[Location]:
+    def head_connected_blocks(state: State) -> set[MyBaseLocation]:
         head = state.current_round.units.base_head
         if head is None:
             return set()
 
-        base_cells = set(
-            map(lambda x: x.location, state.current_round.units.base)
-        )
+        loc_to_mbloc = {b.location: b for b in state.current_round.units.base}
+
+        base_cells = set(map(lambda x: x.location, state.current_round.units.base))
         used: set[Location] = {head.location}
         q = Queue()
         q.put(head.location)
@@ -180,5 +180,4 @@ class StupidAttackStrategy(Strategy):
                 if n not in used and n in base_cells:
                     q.put(n)
                     used.add(n)
-        return used
-
+        return {loc_to_mbloc[loc] for loc in used}

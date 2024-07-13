@@ -131,6 +131,10 @@ class MyBaseLocation:
     last_attack: Location | None
     location: Location
 
+
+    def __hash__(self):
+        return hash(self.location)
+
     @classmethod
     def from_json(cls, json) -> Self:
         is_head = json.get("isHead")
@@ -435,9 +439,8 @@ class GetUnitsResponse:
                 npr.append(zm)
         return prl, pr, npr
 
-    def attack(self, connected_blocks=self.base) -> list[AttackCommand]:
+    def attack(self, connected_blocks: set[MyBaseLocation]) -> list[AttackCommand]:
         attackers: list[MyBaseLocation] = []
-        used_attackers = []
         attacks = []
         possible_attackers = connected_blocks.copy()
         pre, npre = self.__sort_enemies(self.enemy_bases)
