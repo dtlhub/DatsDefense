@@ -416,9 +416,9 @@ class GetUnitsResponse:
     def __sort_by_danger(self, zmbs: list[Zombie]):
         pr = []
         npr = []
-        
+
         for zm in zmbs:
-            if point.type == ZombieType.JUGGERNAUT or zm.type == ZombieType.LINER:
+            if zm.type == ZombieType.JUGGERNAUT or zm.type == ZombieType.LINER:
                 pr.append(zm)
             else:
                 npr.append(zm)

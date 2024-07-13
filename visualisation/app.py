@@ -26,8 +26,11 @@ def create_app() -> Flask:
 
     @app.get("/api/<game>")
     def get_game(game):
-        storage = get_game_storage(game)
-        return jsonify({"rounds": len(storage.get_stored())})
+        rounds = 0
+        for file in (storage_base / game).iterdir():
+            if file.name.endswith(".round.json"):
+                rounds += 1
+        return jsonify({"rounds": rounds})
 
     @app.get("/api/<game>/round/<round>")
     def get_round(game, round):

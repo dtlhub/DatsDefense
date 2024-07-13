@@ -4,6 +4,7 @@ from model import Command, Location
 from model.state import State
 from itertools import chain
 from typing import Generator
+from queue import Queue
 
 
 def neighbours(loc: Location) -> Generator[Location, None, None]:
@@ -91,11 +92,34 @@ class StupidAttackStrategy(Strategy):
         sorted_by_proximity_to_center = sorted(
             to_build, key=lambda loc: center.distance(loc)
         )
-        available = sorted_by_proximity_to_center[:limit]
+        will_be_built = sorted_by_proximity_to_center[:limit]
 
-        new_head = None
         base_locations: set[Location] = set(map(lambda b: b.location, base))
-        if center in base_locations or center in available:
-            new_head = center
+        new_head = StupidAttackStrategy.calculate_head_location(base_locations | set(will_be_built))
 
-        return available, new_head
+        return will_be_built, new_head
+
+    @staticmethod
+    def calculate_head_location(base_cells: set[Location]) -> Location | None:
+        dist: dict[Location | None, int] = {}
+        dist[None] = -1
+        q: Queue[Location] = Queue()
+
+        for b in base_cells:
+            if all(n for n in neighbours(b)):
+                q.put(b)
+                dist[b] = 1
+
+        while not q.empty():
+            loc = q.get()
+            for n in neighbours(loc):
+                if n not in dist:
+                    q.put(n)
+                    dist[n] = dist[loc] + 1
+
+        max_loc = None
+        for loc in dist.keys():
+            if dist[loc] > dist[max_loc]:
+                max_loc = loc
+        return max_loc
+
