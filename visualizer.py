@@ -64,8 +64,8 @@ class RoundVisualizer:
 
         for kek in colors.keys():
             self.ax.scatter(
-                0,
-                0,
+                zombie.location.x,
+                zombie.location.y,
                 color=colors.get(kek, 'gray'),  # Default to gray if type not found,
                 label=str(kek),
                 marker='o',
