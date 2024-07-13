@@ -7,7 +7,7 @@ from model.state import State
 class StupidAttackStrategy(Strategy):
     @staticmethod
     def name() -> str:
-        return "stupid attack"
+        return "stupid_attack"
 
     @staticmethod
     def command(state: State) -> Command:

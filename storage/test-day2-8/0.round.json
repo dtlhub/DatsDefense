@@ -4,13 +4,94 @@
       "realmName": "test-day2-8",
       "zpots": [
         {
+<<<<<<< HEAD
           "x": 0,
           "y": 0,
+=======
+          "x": 64,
+          "y": 107,
+          "type": "default"
+        },
+        {
+          "x": 64,
+          "y": 112,
+          "type": "default"
+        },
+        {
+          "x": 64,
+          "y": 127,
+          "type": "default"
+        },
+        {
+          "x": 64,
+          "y": 106,
+          "type": "default"
+        },
+        {
+          "x": 64,
+          "y": 124,
+          "type": "default"
+        },
+        {
+          "x": 64,
+          "y": 109,
+          "type": "default"
+        },
+        {
+          "x": 64,
+          "y": 123,
+          "type": "default"
+        },
+        {
+          "x": 64,
+          "y": 122,
+          "type": "default"
+        },
+        {
+          "x": 64,
+          "y": 113,
+          "type": "wall"
+        },
+        {
+          "x": 64,
+          "y": 111,
+          "type": "default"
+        },
+        {
+          "x": 64,
+          "y": 125,
+          "type": "default"
+        },
+        {
+          "x": 64,
+          "y": 121,
+          "type": "default"
+        },
+        {
+          "x": 64,
+          "y": 126,
+          "type": "default"
+        },
+        {
+          "x": 64,
+          "y": 120,
+          "type": "wall"
+        },
+        {
+          "x": 64,
+          "y": 108,
+          "type": "default"
+        },
+        {
+          "x": 64,
+          "y": 110,
+>>>>>>> d3eb7e7b5345b523c267c22ebe260fe7b688e0d0
           "type": "default"
         }
       ]
     },
     "units": {
+<<<<<<< HEAD
       "base": [],
       "enemyBlocks": [],
       "player": {
@@ -24,11 +105,66 @@
       "realmName": "test-day2-8",
       "turn": 65,
       "turnEndsInMs": 173,
+=======
+      "base": [
+        {
+          "id": "0190ab68-f259-7813-b2e4-7ef34f01422b",
+          "attack": 40,
+          "health": 300,
+          "isHead": true,
+          "range": 8,
+          "x": 63,
+          "y": 116
+        },
+        {
+          "id": "0190ab68-f259-7824-99ce-e91fef664af3",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 63,
+          "y": 117
+        },
+        {
+          "id": "0190ab68-f259-781b-af93-5cdd71b17859",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 64,
+          "y": 116
+        },
+        {
+          "id": "0190ab68-f259-782b-8032-8250fb99fb62",
+          "attack": 10,
+          "health": 100,
+          "isHead": false,
+          "range": 5,
+          "x": 64,
+          "y": 117
+        }
+      ],
+      "enemyBlocks": [],
+      "player": {
+        "enemyBlockKills": 0,
+        "gold": 10,
+        "name": "dtl",
+        "points": 0,
+        "zombieKills": 0
+      },
+      "realmName": "test-day2-8",
+      "turn": 0,
+      "turnEndsInMs": 0,
+>>>>>>> d3eb7e7b5345b523c267c22ebe260fe7b688e0d0
       "zombies": []
     },
     "rounds": {
       "gameName": "zombidef-test",
+<<<<<<< HEAD
       "now": "2024-07-13T09:27:11",
+=======
+      "now": "2024-07-13T09:25:00",
+>>>>>>> d3eb7e7b5345b523c267c22ebe260fe7b688e0d0
       "rounds": [
         {
           "duration": 1200,
