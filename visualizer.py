@@ -39,7 +39,13 @@ class RoundVisualizer:
 
     def __add_base(self):
         points = self.__get_points(self.base)
-        self.ax.scatter(points[0], points[1], label='Our base', marker='*', color='green', s=100)
+        for point in self.base:
+            self.ax.scatter(point.location.x, 
+                            point.location.y, 
+                            label='Our base', 
+                            marker='*', 
+                            color='green' if point.is_head == False else 'blue', 
+                            s=100)
 
     def __add_zombies(self):
         # types later
