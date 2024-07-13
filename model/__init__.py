@@ -440,14 +440,17 @@ class GetUnitsResponse:
                 npr.append(zm)
         return prl, pr, npr
 
-    def attack(self, connected_blocks: set[MyBaseLocation]) -> list[AttackCommand]:
+    def attack(self, connected_blocks: set[MyBaseLocation], attack_prior=False) -> list[AttackCommand]:
         attackers: list[MyBaseLocation] = []
         attacks = []
         possible_attackers = connected_blocks.copy()
         pre, npre = self.__sort_enemies(self.enemy_bases)
         prl, prz, nprz = self.__sort_by_danger(self.zombies)
-
-        uebki = prl + pre + prz + nprz + npre
+        
+        if attack_prior:
+            uebki = pre + npre + prl + prz + nprz
+        else:
+            uebki = prl + pre + prz + nprz + npre
         can_kill = []
         cannot = []
 
