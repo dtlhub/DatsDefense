@@ -443,9 +443,6 @@ class GetUnitsResponse:
                     accumulated_damage += point.attack
                 if accumulated_damage >= zombie.health:
                     break
-            else:
-                # Если не брейкнулся изза того что аккумулированыный урон больше хп зомби
-                continue
             for attacker in attackers:
                 attacks.append(AttackCommand(attacker.id, zombie.location))
                 possible_attackers.remove(attacker)
