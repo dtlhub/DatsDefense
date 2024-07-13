@@ -49,7 +49,6 @@ class RoundVisualizer:
         }
         for zombie in self.zombies:
             zombie_new_coord = zombie.get_affected_coordinates()[0]
-            print(zombie.location.x, zombie_new_coord[0], zombie.direction)
             self.ax.scatter(
                 zombie.location.x,
                 zombie.location.y,
