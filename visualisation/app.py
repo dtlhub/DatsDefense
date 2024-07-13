@@ -1,8 +1,11 @@
+import json
 from pathlib import Path
+from base64 import b64encode
 
 from flask import Flask, jsonify, render_template
 
 from gameserver.storage import RoundStorage
+from visualisation.visualizer import get_png_bytes
 
 
 def create_app() -> Flask:
@@ -19,16 +22,20 @@ def create_app() -> Flask:
         for f in storage_base.iterdir():
             if f.name.startswith("game"):
                 games.append(f.name)
-        return jsonify({})
+        return jsonify(games)
 
     @app.get("/api/<game>")
     def get_game(game):
         storage = get_game_storage(game)
-        return jsonify(storage.get_stored())
+        return jsonify({"rounds": len(storage.get_stored())})
 
     @app.get("/api/<game>/round/<round>")
     def get_round(game, round):
-        return jsonify(get_game_storage(game).get_stored()[int(round)])
+        with open(storage_base / game / f'{round}.round.json', 'r') as f:
+            jsn = json.load(f)
+        return jsonify({
+            "data": get_png_bytes(jsn)
+        })
 
     @app.get("/game/<game>")
     def view_game(game):

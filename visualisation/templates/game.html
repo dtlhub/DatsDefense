@@ -9,21 +9,32 @@
     <img />
     <script>
       const img = document.querySelector("img");
+      const game = window.location.pathname.substr(6).trim("/");
 
       async function getRound() {
         const params = new URLSearchParams(document.location.search);
-        const game = window.location.pathname.substr(6).trim("/");
         let round = params.get("round");
 
-        console.log(`/api/${game}`);
         if (round === null) {
           let response = await fetch(`/api/${game}`);
-          let game = await response.json();
-          console.log(game);
+          let gameInfo = await response.json();
+          round = gameInfo.rounds - 1;
         }
+
+        return round;
       }
 
-      getRound().then((round) => {});
+      async function getImage(roundIndex) {
+        let response = await fetch(`/api/${game}/round/${roundIndex}`);
+        let json = await response.json();
+        return json.data;
+      }
+
+      getRound().then((round) => {
+        getImage(round).then((data) => {
+          console.log(data);
+        });
+      });
     </script>
   </body>
 </html>
