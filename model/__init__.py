@@ -448,6 +448,8 @@ class GetUnitsResponse:
         prl, prz, nprz = self.__sort_by_danger(self.zombies)
 
         uebki = prl + pre + prz + nprz + npre
+        can_kill = []
+        cannot = []
 
         for zombie in uebki:
             accumulated_damage = 0
@@ -457,7 +459,21 @@ class GetUnitsResponse:
                     attackers.append(point)
                     accumulated_damage += point.attack
                 if accumulated_damage >= zombie.health:
+                    can_kill.append(zombie)
                     break
+            else:
+                cannot.append(zombie)
+
+        for zombie in can_kill + cannot:
+            accumulated_damage = 0
+            attackers = []
+            for point in possible_attackers:
+                if point.location.distance(zombie.location) <= point.range:
+                    attackers.append(point)
+                    accumulated_damage += point.attack
+                if accumulated_damage >= zombie.health:
+                    break
+
             for attacker in attackers:
                 attacks.append(AttackCommand(attacker.id, zombie.location))
                 possible_attackers.remove(attacker)
