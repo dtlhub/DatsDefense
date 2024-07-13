@@ -20,12 +20,14 @@ class StupidAttackStrategy(Strategy):
         )
 
     @staticmethod
-    def get_builder_commands(state: State) -> tuple[list[Location], Location]:
+    def get_builder_commands(state: State) -> tuple[list[Location], Location | None]:
         xs: list[int] = []
         ys: list[int] = []
         limit = state.current_round.units.player.gold
 
         base = state.current_round.units.base
+        if len(base) == 0:
+            return [], None
 
         for b in base:
             xs.append(b.location.x)
@@ -35,7 +37,7 @@ class StupidAttackStrategy(Strategy):
         center_y = sum(ys) / len(ys)
         new_head = Location(
             x=round(center_x),
-            y=round(center_y)
+            y=round(center_y),
         )
 
         base_locations: set[Location] = set()
@@ -57,4 +59,3 @@ class StupidAttackStrategy(Strategy):
         )
         available = sorted_by_proximity_to_center[:limit]
         return available, new_head
-
