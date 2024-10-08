@@ -1,11 +1,14 @@
 import pygame
 import time
 import sys
+from random import randint
 
 BLACK = (0, 0, 0)
 WHITE = (200, 200, 200)
+YELLOW = (255, 255, 0)
+RED = (255, 0, 0)
 WINDOW_HEIGHT = 1000
-WINDOW_WIDTH = 1000
+WINDOW_WIDTH = 1300
 
 # assume that (0, 0) is center of grid
 CAMERA_COORD_X = 0
@@ -26,6 +29,17 @@ SPRITE_SIZE = BLOCK_SIZE
 
 # experimental buggy feature
 ZOOM_CENTERED_ENABLED = False
+
+# FOR LEFT MENU
+MENU_X = 200
+pygame.font.init()
+FONT = pygame.font.SysFont('JetBrains Mono', 20)
+
+
+# GAME_INFO assume we renew it every round
+ROUND = 1337
+BASE_HEALTH = 30
+MAX_BASE_HEALT = 100
 
 IMAGE = pygame.image.load("player.png").convert_alpha()
 
@@ -58,6 +72,7 @@ def main():
     while True:
         SCREEN.fill(BLACK)
         draw_grid()
+        draw_text()
         for event in pygame.event.get():
             """
             if event.type == pygame.KEYDOWN:
@@ -141,17 +156,18 @@ def compute_screen_bounds():
 
 
 PLAYERS = []
-from random import randint
-for i in range(10**4):
-    x = randint(0, 10**3)
-    y = randint(0, 10**3)
+for i in range(10**3):
+    x = randint(0, 10**2)
+    y = randint(0, 10**2)
     player = Player((x, y))
     PLAYERS.append(player)
 
 
 def draw_player(player: Player):
     try:
-        SCREEN.blit(player.image, player.rect) # Рисуем игрока
+        if player.rect.x < MENU_X:
+            return
+        SCREEN.blit(player.image, player.rect)
     except Exception as e:
         print(e)
         # exception if player not in camera
@@ -161,7 +177,7 @@ def draw_player(player: Player):
 def draw_grid():
     block_size = int(BLOCK_SIZE // ZOOM) #Set the size of the grid block
     x_bound, y_bound = compute_screen_bounds()
-    for x in range(0, WINDOW_WIDTH, block_size):
+    for x in range(MENU_X, WINDOW_WIDTH, block_size):
         for y in range(0, WINDOW_HEIGHT, block_size):
             try:
                 rect = pygame.Rect(x, y, block_size, block_size)
@@ -171,4 +187,24 @@ def draw_grid():
                 continue
 
 
+def draw_text():
+    text_surface = FONT.render('ROUND NUMBER', False, WHITE)
+    SCREEN.blit(text_surface, (10, 10))
+
+    text_surface = FONT.render(str(ROUND), False, WHITE)
+    SCREEN.blit(text_surface, (10, 50))
+
+    text_surface = FONT.render('BASE HEALTH', False, WHITE)
+    SCREEN.blit(text_surface, (10, 90))
+
+    color_coef = BASE_HEALTH / MAX_BASE_HEALT
+    if 0.75 <= color_coef <= 1:
+        color = WHITE
+    elif 0.35 <= color_coef < 0.75:
+        color = YELLOW
+    else:
+        color = RED
+
+    text_surface = FONT.render(f'{BASE_HEALTH} / {MAX_BASE_HEALT}', False, color)
+    SCREEN.blit(text_surface, (10, 130))
 main()
